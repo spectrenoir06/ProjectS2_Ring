@@ -20,7 +20,8 @@ public class Bouclier extends Capacite {
     @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
     @Override
     public void use(Perso p) {
-        // TODO Auto-generated method stub
+    	System.out.println(this.getPerso().getNom() + " pare");
+        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getParadePuissance() + " ]" );
     }
 
     @objid ("c3145c17-3708-4879-8965-4e0934f2e1b3")
@@ -47,9 +48,25 @@ public class Bouclier extends Capacite {
     @Override
     public String toString() {
         String s = "Bouclier";
-        s = s + "    | maniabilite    =    " + this.maniabilite;
-        s = s + "    | protection    =    " + this.protection + "    |";
+        s = s + "	| maniabilite	=	" + this.maniabilite;
+        s = s + "	| protection	=	" + this.protection + "	|";
         return s;
     }
+
+	@Override
+	public double getReussite() {
+		return ( (this.getPerso().getDexterite() * this.maniabilite) / 10000.0);
+	}
+
+	@Override
+	public double getParadePuissance() {
+		return (this.getPerso().getForce() * this.protection / 100.0);
+	}
+
+	@Override
+	public double getAttaquePuissance() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }

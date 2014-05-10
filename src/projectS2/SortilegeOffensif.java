@@ -20,6 +20,8 @@ public class SortilegeOffensif extends Capacite {
     @objid ("7638945c-a33f-4603-87ac-988d6e7c81f7")
     @Override
     public void use(Perso p) {
+        System.out.println(this.getPerso().getNom() + " utilise s.offensif sur " + p.getNom());
+        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
     }
 
     @objid ("f95d7c3e-2791-401e-bb25-1f627b307000")
@@ -46,9 +48,25 @@ public class SortilegeOffensif extends Capacite {
     @Override
     public String toString() {
         String s = "S.Offensif";
-        s = s + "    | facilite    =    " + this.facilite;
-        s = s + "     | efficacite    =    " + this.efficacite + "    |";
+        s = s + "	| facilite	=	" + this.facilite;
+        s = s + "	| efficacite	=	" + this.efficacite + "	|";
         return s;
     }
+    
+    @Override
+    public double getReussite(){
+    	return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );
+    }
+    
+	@Override
+	public double getParadePuissance() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getAttaquePuissance() {
+		return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
+	}
 
 }

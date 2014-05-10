@@ -25,8 +25,10 @@ public class Epee extends Capacite {
     public void use(Perso p) {
         if (p==super.getPerso()){
             System.out.println(this.getPerso().getNom() + " pare");
+            System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getParadePuissance() + " ]" );
         }else{
             System.out.println(this.getPerso().getNom() + " attaque " + p.getNom());
+            System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
         }
     }
 
@@ -59,14 +61,26 @@ public class Epee extends Capacite {
     public void setManiabilite(int maniabilite) {
         this.maniabilite = maniabilite;
     }
+    
+    public double getReussite(){
+    	return ( this.getPerso().getDexterite() * this.maniabilite / 10000.0);
+    }
+    
+    public double getAttaquePuissance(){
+    	return ( this.getPerso().getForce() * this.impact / 100.0 );
+    }
+    
+    public double getParadePuissance(){
+    	return ( this.getPerso().getForce() * this.parade / 100.0 );
+    }
 
     @objid ("b881c18c-c582-40cd-bba2-ff2bdfb8f1ff")
     @Override
     public String toString() {
         String s = "Eppe";
-        s = s + "    | impact    =    " + this.impact;
-        s = s + "    | parade    =    " + this.parade;
-        s = s + "    | maniabilite    =    " + this.maniabilite + "    |";
+        s = s + "	| impact	=	" + this.impact;
+        s = s + "	| parade	=	" + this.parade;
+        s = s + "	| maniabilite	=	" + this.maniabilite + "	|";
         return s;
     }
 
