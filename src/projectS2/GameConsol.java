@@ -57,18 +57,93 @@ public class GameConsol extends Game {
         }
     }
 
+    public Capacite createCapacite(){
+    	int impact, para, facilite, protection, efficacite;
+    	while(true){
+            try{
+                Capacite c = null;
+                
+                System.out.println("Capacite :\n");
+                System.out.println("0 	:	Epee");
+                System.out.println("1 	:	Bouclier");
+                System.out.println("2 	:	Remede");
+                System.out.println("3 	:	SortilegeOffensif");
+                System.out.println("4 	:	SortilegeDefensif");
+                System.out.println("5 	:	SortilegeGuerisseur");
+                
+                int type = scan.nextInt();
+                              
+                switch (type) {
+                case 0: // Guerrier
+                    System.out.println("Impact:");
+                    impact = scan.nextInt();
+                    System.out.println("Parade:");
+                    para = scan.nextInt();
+                    System.out.println("Maniabilite:");
+                    int maniabilite = scan.nextInt();
+                    c = new Epee(impact, para, maniabilite); 
+                    break;
+                case 1: // Bouclier
+                    System.out.println("Maniabilite:");
+                    maniabilite = scan.nextInt();
+                    System.out.println("Protection:");
+                    protection = scan.nextInt();
+                    c = new Bouclier(maniabilite, protection);                     
+                    break;
+                case 2: // Remede
+                    System.out.println("Facilite:");
+                    facilite = scan.nextInt();
+                    System.out.println("Efficacite:");
+                    efficacite = scan.nextInt();
+                    c = new Remede(facilite, efficacite);
+                    break;
+                case 3: // SortilegeOffensif
+                    System.out.println("Facilite:");
+                    facilite = scan.nextInt();
+                    System.out.println("Efficacite:");
+                    efficacite = scan.nextInt();
+                    c = new SortilegeOffensif(facilite, efficacite);
+                    break;
+                case 4: // SortilegeDefensif
+                    System.out.println("Facilite:");
+                    facilite = scan.nextInt();
+                    System.out.println("Efficacite:");
+                    efficacite = scan.nextInt();
+                    c = new SortilegeDefensif(facilite, efficacite);
+                    break;
+                case 5: // SortilegeGuerisseur
+                    System.out.println("Facilite:");
+                    facilite = scan.nextInt();
+                    System.out.println("Efficacite:");
+                    efficacite = scan.nextInt();
+                    c = new SortilegeGuerisseur(facilite, efficacite);
+                    break;
+                default :
+                    throw new Exception("Capacite inconnue");
+                }
+                return c;
+            }catch(InputMismatchException e){
+                System.out.println("erreur entre un integer");
+                scan.next();
+            }catch(Exception e){
+                System.out.println(e.getMessage());
+            }
+    	}
+    	
+    }
+    
     @objid ("d16f1106-157e-4b44-b3d4-dd0b591f3177")
     public void consol() {
         System.out.println("+-----------------------------+");
         System.out.println("| 1 - Cree perso1             |");
         System.out.println("| 2 - Cree perso2             |");
-        System.out.println("| 3 - Use Capacite            |");
+        System.out.println("| 3 - Cree Capacite           |");
         //System.out.println("|                             |");
         //System.out.println("|                             |");
         //System.out.println("|                             |");
         //System.out.println("|                             |");
         System.out.println("+-----------------------------+");
-        System.out.print("cmd : ");
+        System.out.println("cmd : ");
         try{
             switch (scan.nextInt()) {
             case 1:
@@ -79,11 +154,16 @@ public class GameConsol extends Game {
                 super.setPerso2(createPerso());
                 System.out.println(this.getPerso2());
                 break;
+            case 3:
+            	Capacite c = this.createCapacite();
+            	System.out.println(c);
+                break;
             default:
                 break;
             }
         }catch(InputMismatchException e){
             System.out.println("erreur entre un integer");
+            scan.next();
         }
     }
 
