@@ -10,6 +10,7 @@
     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
     <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
@@ -166,6 +167,22 @@ this.efficacite = efficacite;
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="f45df682-4e14-4142-a5a5-6a294fc9ec8e"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[System.out.println(this.getPerso().getNom() + " utilise s.offensif sur " + p.getNom());
+System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -474,7 +491,7 @@ this.efficacite = efficacite;
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[String s = "S.Offensif";
 s = s + "    | facilite    =    " + this.facilite;
-s = s + "     | efficacite    =    " + this.efficacite + "    |";
+s = s + "    | efficacite    =    " + this.efficacite + "    |";
 ]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -482,6 +499,233 @@ s = s + "     | efficacite    =    " + this.efficacite + "    |";
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getReussite" mc="Operation" uid="2d98bcd8-62ed-48f1-b8bb-f1b60a5e6b4b"/>
+          <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getReussite]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="b0c97a18-106a-47c6-a977-0a95e592f43f"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="7b94bc5a-c9ee-4408-aa4a-1942220c2b50"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@Override]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="bbbe4552-c77b-40fd-a96c-fb4a65cf8be3"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getParadePuissance" mc="Operation" uid="4f4fce42-d7f1-4e33-afa6-2c5cd545670c"/>
+          <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getParadePuissance]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="1967efad-19ff-444b-bf4a-edaefa8166b8"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="67059d36-73c5-40e7-9d8e-65068c45d712"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@Override]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="50624dc2-19ea-40a7-873e-63601cd09544"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="00c37f27-19e2-4412-b8b7-fbd1b70a297d"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getAttaquePuissance" mc="Operation" uid="1b9696cb-b605-4731-8541-7a2b62aa62f3"/>
+          <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getAttaquePuissance]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="9d3057b7-b231-46db-8d23-354d1d0ad0a9"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="4abaa1b4-8799-4585-bff5-c199b25972c9"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@Override]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="3278a4c2-4d75-44b4-9a82-4de2a6edf1e6"/>
+                <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -515,7 +759,7 @@ s = s + "     | efficacite    =    " + this.efficacite + "    |";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="ec2353b4-7e51-48e4-a674-aede45a1868e"/>
+                <ID name="" mc="TaggedValue" uid="9978b262-d8f7-4046-911e-9703531096b8"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -555,7 +799,7 @@ s = s + "     | efficacite    =    " + this.efficacite + "    |";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="ddaac709-51a2-4fa6-8271-39fea1d53989"/>
+                <ID name="" mc="TaggedValue" uid="4f911002-2503-4e45-b339-961d09fc1aa3"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

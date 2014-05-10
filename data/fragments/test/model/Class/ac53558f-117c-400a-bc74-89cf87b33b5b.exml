@@ -1453,7 +1453,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="940a7728-f21d-42ac-b65f-85af9530af30"/>
+                <ID name="" mc="TaggedValue" uid="15af5750-a4cc-4c23-adb3-519b8c17b49e"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1493,7 +1493,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="e6027068-7302-4ca2-90df-1cb60194a494"/>
+                <ID name="" mc="TaggedValue" uid="d5edf5e1-68dd-41ca-b1fe-9d3425aa1f9d"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1533,7 +1533,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="91564f61-210b-4301-9826-aba270445d70"/>
+                <ID name="" mc="TaggedValue" uid="79630dd3-4db7-4325-b128-5dc94625e022"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1573,7 +1573,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="bdba9508-d629-49be-93ca-d7a28ed23427"/>
+                <ID name="" mc="TaggedValue" uid="976e5bda-ef59-4b86-804e-e40b5ab223a2"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1613,7 +1613,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="f1e7f409-ac6b-475f-af1d-568c958d4d3a"/>
+                <ID name="" mc="TaggedValue" uid="d6dfda34-c6dd-43e8-bd4a-60e9f799d55a"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1653,7 +1653,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="2bb10394-40ab-49be-b23b-f258bc78a45b"/>
+                <ID name="" mc="TaggedValue" uid="ad0fdb24-f937-48a8-a752-b75dba617e1d"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1693,7 +1693,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d9627a40-0e85-4b3a-9520-58ec8c208f7d"/>
+                <ID name="" mc="TaggedValue" uid="ea3f68c4-acf4-4f58-8a35-e1ab0d414d25"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1786,7 +1786,7 @@ for (Capacite c : this.capacite){
                       <ID name="" mc="TagParameter" uid="6efd889e-ed93-4b8f-a4b1-4726053bff19"/>
                       <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                       <ATTRIBUTES>
-                        <ATT name="Value"><![CDATA[List]]></ATT>
+                        <ATT name="Value"><![CDATA[ArrayList]]></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>

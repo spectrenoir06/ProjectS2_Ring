@@ -47,27 +47,30 @@ public class Remede extends Capacite {
     @Override
     public String toString() {
         String s = "Remede";
-        s = s + "	| facilite	=	" + this.facilite;
-        s = s + "	| efficacite	=	" + this.efficacite + "	|";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "    | efficacite    =    " + this.efficacite + "    |";
         return s;
     }
 
-	@Override
-	public double getReussite() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("6ac79c40-7d26-43e5-8633-081270566b6a")
+    @Override
+    public double getReussite() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	public double getParadePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("174c8658-0c19-44ef-a537-e317067d92de")
+    @Override
+    public double getParadePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	public double getAttaquePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("c7be97b7-2b61-4d48-bc8d-cb23a4aea2ed")
+    @Override
+    public double getAttaquePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
 }

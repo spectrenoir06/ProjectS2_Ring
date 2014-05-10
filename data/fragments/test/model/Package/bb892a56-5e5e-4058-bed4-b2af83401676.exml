@@ -2,6 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="util" version="3">
   <DEPS>
     <ID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
+    <COMPID name="ArrayList" mc="Class" uid="b92c4217-f320-4fa1-a3e2-7e5d489627cc"/>
     <COMPID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
     <COMPID name="List" mc="Interface" uid="c83eaf2e-a802-424a-99c8-2471fbc412e7"/>
     <COMPID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
@@ -25,6 +26,7 @@
         <COMPID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
         <COMPID name="List" mc="Interface" uid="c83eaf2e-a802-424a-99c8-2471fbc412e7"/>
         <COMPID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+        <COMPID name="ArrayList" mc="Class" uid="b92c4217-f320-4fa1-a3e2-7e5d489627cc"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

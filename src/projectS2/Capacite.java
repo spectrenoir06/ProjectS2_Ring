@@ -26,9 +26,14 @@ public abstract class Capacite {
 
     @objid ("2274b715-70cf-436f-ad8f-bc0bc27b432a")
     public abstract String toString();
-    
+
+    @objid ("34ed52e3-dbc3-4b18-bfaf-23be1d7973ea")
     public abstract double getReussite();
+
+    @objid ("f1373d01-5f06-4c67-8f6b-9c6c4fac1a74")
     public abstract double getParadePuissance();
+
+    @objid ("76d3ad14-7a09-42ab-a571-697c91170cf8")
     public abstract double getAttaquePuissance();
 
 }

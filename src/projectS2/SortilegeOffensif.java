@@ -48,25 +48,28 @@ public class SortilegeOffensif extends Capacite {
     @Override
     public String toString() {
         String s = "S.Offensif";
-        s = s + "	| facilite	=	" + this.facilite;
-        s = s + "	| efficacite	=	" + this.efficacite + "	|";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "    | efficacite    =    " + this.efficacite + "    |";
         return s;
     }
-    
-    @Override
-    public double getReussite(){
-    	return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );
-    }
-    
-	@Override
-	public double getParadePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
-	@Override
-	public double getAttaquePuissance() {
-		return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
-	}
+    @objid ("2d98bcd8-62ed-48f1-b8bb-f1b60a5e6b4b")
+    @Override
+    public double getReussite() {
+        return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );
+    }
+
+    @objid ("4f4fce42-d7f1-4e33-afa6-2c5cd545670c")
+    @Override
+    public double getParadePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @objid ("1b9696cb-b605-4731-8541-7a2b62aa62f3")
+    @Override
+    public double getAttaquePuissance() {
+        return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
+    }
 
 }

@@ -20,7 +20,7 @@ public class Bouclier extends Capacite {
     @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
     @Override
     public void use(Perso p) {
-    	System.out.println(this.getPerso().getNom() + " pare");
+        System.out.println(this.getPerso().getNom() + " pare");
         System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getParadePuissance() + " ]" );
     }
 
@@ -48,25 +48,28 @@ public class Bouclier extends Capacite {
     @Override
     public String toString() {
         String s = "Bouclier";
-        s = s + "	| maniabilite	=	" + this.maniabilite;
-        s = s + "	| protection	=	" + this.protection + "	|";
+        s = s + "    | maniabilite    =    " + this.maniabilite;
+        s = s + "    | protection    =    " + this.protection + "    |";
         return s;
     }
 
-	@Override
-	public double getReussite() {
-		return ( (this.getPerso().getDexterite() * this.maniabilite) / 10000.0);
-	}
+    @objid ("a0a62c16-f43d-41a5-bf21-d0721eac1b50")
+    @Override
+    public double getReussite() {
+        return ( (this.getPerso().getDexterite() * this.maniabilite) / 10000.0);
+    }
 
-	@Override
-	public double getParadePuissance() {
-		return (this.getPerso().getForce() * this.protection / 100.0);
-	}
+    @objid ("2c6a75da-4f7e-42ab-ba03-df3814a7e5be")
+    @Override
+    public double getParadePuissance() {
+        return (this.getPerso().getForce() * this.protection / 100.0);
+    }
 
-	@Override
-	public double getAttaquePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("cefb9962-a69c-4704-ab09-aed47c41a9f8")
+    @Override
+    public double getAttaquePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
 }

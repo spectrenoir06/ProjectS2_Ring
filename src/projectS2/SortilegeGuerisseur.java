@@ -46,27 +46,30 @@ public class SortilegeGuerisseur extends Capacite {
     @Override
     public String toString() {
         String s = "S.Gueriss.";
-        s = s + "	| facilite	=	" + this.facilite;
-        s = s + "	| efficacite	=	" + this.efficacite + "	|";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "    | efficacite    =    " + this.efficacite + "    |";
         return s;
     }
 
-	@Override
-	public double getReussite() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("2f78e301-005e-4b37-8d27-368e2eb73d01")
+    @Override
+    public double getReussite() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	public double getParadePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("5539fff8-21de-4bba-b8a8-c7371403be8a")
+    @Override
+    public double getParadePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
-	@Override
-	public double getAttaquePuissance() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+    @objid ("71d57ff6-6710-4974-b955-2bdefa3c04d4")
+    @Override
+    public double getAttaquePuissance() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
 
 }
