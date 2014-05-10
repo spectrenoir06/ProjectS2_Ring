@@ -4,11 +4,12 @@
     <ID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
     <EXTID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
     <EXTID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+    <EXTID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
     <EXTID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+    <EXTID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-    <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
-    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="003800a8-0000-0165-0000-000000000000"/>
+    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
@@ -321,14 +322,13 @@ try{
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="OwnedAttribute">
+      <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="scan" mc="Attribute" uid="5b624830-accc-4f23-a3db-0454bc4f643b"/>
+          <ID name="scan" mc="AssociationEnd" uid="6de8e41a-6d57-47e7-a1e5-8c1d22bfe816"/>
           <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
           <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"><![CDATA[new Scanner(System.in)]]></ATT>
-            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Aggregation">KindIsComposition</ATT>
+            <ATT name="IsChangeable">true</ATT>
             <ATT name="Changeable">AccesNone</ATT>
             <ATT name="IsDerived">false</ATT>
             <ATT name="IsOrdered">false</ATT>
@@ -342,28 +342,61 @@ try{
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <COMP relation="Tag">
+            <LINK relation="Target">
+              <ID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+            </LINK>
+            <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="087ccbc1-328f-4d78-a36f-2982f3af62d4"/>
+                <ID name="" mc="AssociationEnd" uid="bc22f91e-f2d2-491f-ade9-bfc453f5be87"/>
                 <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
                 <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <COMP relation="Actual">
+                  <COMP relation="Opposite">
+                    <COMPID name="scan" mc="AssociationEnd" uid="6de8e41a-6d57-47e7-a1e5-8c1d22bfe816"/>
+                  </COMP>
+                  <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="TagParameter" uid="18f8068b-588a-46c6-96f9-023d9e8f3523"/>
+                      <ID name="" mc="Association" uid="a5a8fa34-b754-418c-a11e-dd1e9cd75e46"/>
                       <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
                       <ATTRIBUTES>
-                        <ATT name="Value"><![CDATA[Scanner]]></ATT>
+                        <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
                       </ATTRIBUTES>
                       <DEPENDENCIES></DEPENDENCIES>
                     </OBJECT>
                   </COMP>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="003800a8-0000-0165-0000-000000000000"/>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="a5a8fa34-b754-418c-a11e-dd1e9cd75e46"/>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="3bcb6903-ab7f-46cb-8ff4-cefbc41de489"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[new Scanner(System.in)]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -387,44 +420,25 @@ try{
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <LINK relation="Extension">
-        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
-      </LINK>
-      <COMP relation="Tag">
+      <COMP relation="OwnedImport">
         <OBJECT>
-          <ID name="" mc="TaggedValue" uid="ff8a1501-7827-4726-bab7-798e65890b12"/>
+          <ID name="" mc="ElementImport" uid="6fa9f04f-330b-4aa5-a8ee-e182ee0909f1"/>
           <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
           <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <COMP relation="Actual">
-              <OBJECT>
-                <ID name="" mc="TagParameter" uid="197ef2b1-70d4-4c12-8782-5bafcd108b56"/>
-                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-                <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[java.util.InputMismatchException]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="TagParameter" uid="a574946d-5c6e-4f81-b5d7-96498305f92f"/>
-                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-                <ATTRIBUTES>
-                  <ATT name="Value"><![CDATA[java.util.Scanner]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES></DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <LINK relation="Definition">
-              <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+            <LINK relation="ImportedElement">
+              <ID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

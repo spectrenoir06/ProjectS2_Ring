@@ -1,7 +1,6 @@
 package projectS2;
 
 import java.util.ArrayList;
-import java.util.List;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("ac53558f-117c-400a-bc74-89cf87b33b5b")
@@ -28,7 +27,7 @@ public abstract class Perso {
     private int experience;
 
     @objid ("5172a4ed-002a-4132-8afd-0e675031d82d")
-    private List<Capacite> capacite = new ArrayList<Capacite> ();
+    private ArrayList<Capacite> capacite = new ArrayList<Capacite> ();
 
     @objid ("21dc0070-6226-4621-b73e-79bfd1170da0")
     public Perso(String nom, int force, int dexterite, int intelligence, int concentration) throws PersoException {
@@ -47,10 +46,7 @@ public abstract class Perso {
             throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
         }
     }
-    
-    public void initVitalite(){
-    	this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
-    }
+
     @objid ("b9d243b6-d86a-4548-a13e-9c3776551ec0")
     int getForce() {
         return this.force;
@@ -124,22 +120,10 @@ public abstract class Perso {
     @objid ("216756fb-4d26-490c-b7fe-c73511aed9f0")
     public String getInfo(String type) {
         return ("Je suis "+ this.nom +" un " + type  +" de niveau " + this.getExperience() 
-            + "\n -force        	: "     + this.force
-            + "\n -dexterite    	: "     + this.dexterite
-            + "\n -intelligence 	: "     + this.intelligence
-            + "\n -concentration	: " 	+ this.concentration + "\n" + this.getInfoCapacite()  );
-    }
-    
-    public String getInfoCapacite(){
-    	String s = "Capacite de " + this.nom + ":\n\n";
-    	int i = 0;
-    	for (Capacite c : this.capacite){
-    		s = s + i + " : " + c.toString() + "\n";
-    		i++;
-    	}
-    	
-    	
-    	return s;
+            + "\n -force            : "     + this.force
+            + "\n -dexterite        : "     + this.dexterite
+            + "\n -intelligence     : "     + this.intelligence
+            + "\n -concentration    : "     + this.concentration + "\n" + this.getInfoCapacite()  );
     }
 
     @objid ("8e0f7c13-46de-467f-871c-3fb5189493b2")
@@ -157,6 +141,22 @@ public abstract class Perso {
     @objid ("9c2eb4b2-57ff-4e1e-941a-fa5f6c738f22")
     void use(int i, Perso cible) {
         this.capacite.get(i).use(cible);
+    }
+
+    @objid ("051d6133-974d-4856-80b4-b6adef097425")
+    public void initVitalite() {
+        this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
+    }
+
+    @objid ("9b329fa5-5bfe-4ad1-99ed-8f36088c041d")
+    public String getInfoCapacite() {
+        String s = "Capacite de " + this.nom + ":\n\n";
+        int i = 0;
+        for (Capacite c : this.capacite){
+            s = s + i + " : " + c.toString() + "\n";
+            i++;
+        }
+        return s;
     }
 
 }

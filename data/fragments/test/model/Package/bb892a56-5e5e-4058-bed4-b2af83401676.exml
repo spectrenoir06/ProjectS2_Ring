@@ -1,0 +1,49 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="util" version="3">
+  <DEPS>
+    <ID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
+    <COMPID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
+    <COMPID name="List" mc="Interface" uid="c83eaf2e-a802-424a-99c8-2471fbc412e7"/>
+    <COMPID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+    <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
+    <PID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[util]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
+        <COMPID name="List" mc="Interface" uid="c83eaf2e-a802-424a-99c8-2471fbc412e7"/>
+        <COMPID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="5aa3afb8-605c-4bb1-9ce8-9e1c5de17259"/>
+          <PID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

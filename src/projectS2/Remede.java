@@ -10,13 +10,14 @@ public class Remede extends Capacite {
     @objid ("a51f6917-cad5-4ab4-8ece-084a026b385b")
     private int efficacite;
 
+    @objid ("5f2187a1-a2ce-4d50-84fd-b4355348e1a1")
     public Remede(int facilite, int efficacite) {
-    	super();
-    	this.facilite 	= facilite;
-    	this.efficacite	= efficacite;
+        super();
+        this.facilite     = facilite;
+        this.efficacite    = efficacite;
     }
 
-	@objid ("bdb7bad0-c16f-470d-9019-3b5175d57cdb")
+    @objid ("bdb7bad0-c16f-470d-9019-3b5175d57cdb")
     public int getFacilite() {
         return facilite;
     }
@@ -42,12 +43,13 @@ public class Remede extends Capacite {
         // TODO Auto-generated method stub
     }
 
-	@Override
-	public String toString() {
-		String s = "Remede";
-		s = s + "	| facilite	=	" + this.facilite;
-		s = s + " 	| efficacite	=	" + this.efficacite + "	|";
-		return s;
-	}
+    @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
+    @Override
+    public String toString() {
+        String s = "Remede";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "     | efficacite    =    " + this.efficacite + "    |";
+        return s;
+    }
 
 }

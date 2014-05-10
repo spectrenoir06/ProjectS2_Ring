@@ -7,9 +7,9 @@
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
     <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
@@ -75,32 +75,9 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <COMP relation="Tag">
-                    <OBJECT>
-                      <ID name="" mc="TaggedValue" uid="40e2653d-e53d-4035-9a61-573e2bf1aa29"/>
-                      <PID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <COMP relation="Actual">
-                          <OBJECT>
-                            <ID name="" mc="TagParameter" uid="51a8c735-6736-4e6d-b13a-38898bac0774"/>
-                            <PID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
-                            <ATTRIBUTES>
-                              <ATT name="Value"><![CDATA[String]]></ATT>
-                              <ATT name="status">1970354901745664</ATT>
-                            </ATTRIBUTES>
-                            <DEPENDENCIES></DEPENDENCIES>
-                          </OBJECT>
-                        </COMP>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
               <OBJECT>
@@ -259,32 +236,9 @@ if ((force >= (dexterite + 10))
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <COMP relation="Tag">
-                    <OBJECT>
-                      <ID name="" mc="TaggedValue" uid="15f5daf4-b0fe-4a71-be6c-4d1710fe8cdf"/>
-                      <PID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <COMP relation="Actual">
-                          <OBJECT>
-                            <ID name="" mc="TagParameter" uid="243bea43-085f-4570-be82-9796520daa7b"/>
-                            <PID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
-                            <ATTRIBUTES>
-                              <ATT name="Value"><![CDATA[String]]></ATT>
-                              <ATT name="status">1970354901745664</ATT>
-                            </ATTRIBUTES>
-                            <DEPENDENCIES></DEPENDENCIES>
-                          </OBJECT>
-                        </COMP>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>

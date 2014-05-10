@@ -11,12 +11,11 @@ public class SortilegeGuerisseur extends Capacite {
     private int efficacite;
 
     @objid ("27a1ddeb-dfc5-4b6b-872d-194587056bcc")
-    public SortilegeGuerisseur(int facilite,int efficacite) {
+    public SortilegeGuerisseur(int facilite, int efficacite) {
         super();
         this.facilite = facilite;
         this.efficacite = efficacite;
     }
-
 
     @objid ("930cb00d-d9a9-48f0-b562-380e5da4129d")
     @Override
@@ -43,12 +42,13 @@ public class SortilegeGuerisseur extends Capacite {
         this.efficacite = efficacite;
     }
 
-	@Override
-	public String toString() {
-		String s = "S.Gueriss.";
-		s = s + "	| facilite	=	" + this.facilite;
-		s = s + " 	| efficacite	=	" + this.efficacite + "	|";
-		return s;
-	}
+    @objid ("f45552d4-3bad-46f1-aa3e-afbf63fd9bf2")
+    @Override
+    public String toString() {
+        String s = "S.Gueriss.";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "     | efficacite    =    " + this.efficacite + "    |";
+        return s;
+    }
 
 }

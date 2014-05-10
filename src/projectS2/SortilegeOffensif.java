@@ -11,7 +11,7 @@ public class SortilegeOffensif extends Capacite {
     private int efficacite;
 
     @objid ("0e6ec284-b0d8-49c2-ad30-b421748be7f2")
-    public SortilegeOffensif(int facilite,int efficacite) {
+    public SortilegeOffensif(int facilite, int efficacite) {
         super();
         this.facilite = facilite;
         this.efficacite = efficacite;
@@ -42,13 +42,13 @@ public class SortilegeOffensif extends Capacite {
         this.efficacite = efficacite;
     }
 
-	@Override
-	public String toString() {
-		String s = "S.Offensif";
-		s = s + "	| facilite	=	" + this.facilite;
-		s = s + " 	| efficacite	=	" + this.efficacite + "	|";
-		return s;
-	}
-
+    @objid ("bb31c821-0e62-430f-9cbb-33543f2d8733")
+    @Override
+    public String toString() {
+        String s = "S.Offensif";
+        s = s + "    | facilite    =    " + this.facilite;
+        s = s + "     | efficacite    =    " + this.efficacite + "    |";
+        return s;
+    }
 
 }

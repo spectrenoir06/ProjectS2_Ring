@@ -10,13 +10,14 @@ public class Bouclier extends Capacite {
     @objid ("ef1fb900-e25b-4f68-a9d0-3501bf6a2756")
     private int protection;
 
+    @objid ("57a1386a-d2d6-470b-bd32-f9a0faf6807a")
     public Bouclier(int maniabilite, int protection) {
-    	super();
-		this.maniabilite 	= maniabilite;
-		this.protection		= protection;
-	}
+        super();
+        this.maniabilite     = maniabilite;
+        this.protection        = protection;
+    }
 
-	@objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
+    @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
     @Override
     public void use(Perso p) {
         // TODO Auto-generated method stub
@@ -42,12 +43,13 @@ public class Bouclier extends Capacite {
         this.protection = protection;
     }
 
-	@Override
-	public String toString() {
-		String s = "Bouclier";
-		s = s + "	| maniabilite	=	" + this.maniabilite;
-		s = s + "	| protection	=	" + this.protection + "	|";
-		return s;
-	}
+    @objid ("f7c44198-99cd-41f8-bc67-1aa8d55d31b8")
+    @Override
+    public String toString() {
+        String s = "Bouclier";
+        s = s + "    | maniabilite    =    " + this.maniabilite;
+        s = s + "    | protection    =    " + this.protection + "    |";
+        return s;
+    }
 
 }

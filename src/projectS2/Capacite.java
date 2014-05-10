@@ -23,7 +23,8 @@ public abstract class Capacite {
     public void setPerso(Perso perso) {
         this.perso = perso;
     }
-    
+
+    @objid ("2274b715-70cf-436f-ad8f-bc0bc27b432a")
     public abstract String toString();
 
 }

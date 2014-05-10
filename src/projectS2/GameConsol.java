@@ -6,7 +6,7 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("b5d42879-bdfb-452c-acd5-681f01be34fa")
 public class GameConsol extends Game {
-    @objid ("5b624830-accc-4f23-a3db-0454bc4f643b")
+    @objid ("6de8e41a-6d57-47e7-a1e5-8c1d22bfe816")
      Scanner scan = new Scanner(System.in);
 
     @objid ("a8f88020-6c78-4846-9945-7e9c4f6f8c9a")
@@ -59,19 +59,20 @@ public class GameConsol extends Game {
         }
     }
 
-    public Capacite createCapacite(){
-    	int impact, para, facilite, protection, efficacite;
-    	while(true){
+    @objid ("4c3ee0b0-9f06-4cf8-91e3-f61722997873")
+    public Capacite createCapacite() {
+        int impact, para, facilite, protection, efficacite;
+        while(true){
             try{
                 Capacite c = null;
                 
                 System.out.println("Capacite :\n");
-                System.out.println("0 	:	Epee");
-                System.out.println("1 	:	Bouclier");
-                System.out.println("2 	:	Remede");
-                System.out.println("3 	:	SortilegeOffensif");
-                System.out.println("4 	:	SortilegeDefensif");
-                System.out.println("5 	:	SortilegeGuerisseur");
+                System.out.println("0     :    Epee");
+                System.out.println("1     :    Bouclier");
+                System.out.println("2     :    Remede");
+                System.out.println("3     :    SortilegeOffensif");
+                System.out.println("4     :    SortilegeDefensif");
+                System.out.println("5     :    SortilegeGuerisseur");
                 
                 int type = scan.nextInt();
                               
@@ -130,10 +131,9 @@ public class GameConsol extends Game {
             }catch(Exception e){
                 System.out.println(e.getMessage());
             }
-    	}
-    	
+        }
     }
-    
+
     @objid ("d16f1106-157e-4b44-b3d4-dd0b591f3177")
     public void consol() {
         System.out.println("+-----------------------------+");
@@ -157,8 +157,8 @@ public class GameConsol extends Game {
                 System.out.println(this.getPerso2());
                 break;
             case 3:
-            	Capacite c = this.createCapacite();
-            	System.out.println(c);
+                Capacite c = this.createCapacite();
+                System.out.println(c);
                 break;
             default:
                 break;

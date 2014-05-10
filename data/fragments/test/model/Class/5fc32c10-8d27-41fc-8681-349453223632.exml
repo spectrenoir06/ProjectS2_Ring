@@ -2,10 +2,10 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Main" version="3">
   <DEPS>
     <ID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
+    <EXTID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
-    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
     <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
   </DEPS>
   <OBJECT>
@@ -38,6 +38,21 @@
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="dc05b9ce-028e-4d74-bfc5-66e2794f5299"/>
+                <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="IO">
               <OBJECT>
                 <ID name="args" mc="Parameter" uid="6ecb9d8b-e6f6-491b-9dd5-542d4a79c747"/>
@@ -57,6 +72,9 @@
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
                   <COMP relation="Tag">
                     <OBJECT>
                       <ID name="" mc="TaggedValue" uid="8f3f3d4e-ce75-4e96-9a9f-6efb9ffe08c9"/>
@@ -82,57 +100,7 @@
                         </LINK>
                       </DEPENDENCIES>
                     </OBJECT>
-                    <OBJECT>
-                      <ID name="" mc="TaggedValue" uid="a7edb66f-4038-43d0-a9ac-9a6c85706577"/>
-                      <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES>
-                        <COMP relation="Actual">
-                          <OBJECT>
-                            <ID name="" mc="TagParameter" uid="cf52a7be-ddb9-4d16-ad11-8b29aaf93ef9"/>
-                            <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
-                            <ATTRIBUTES>
-                              <ATT name="Value"><![CDATA[String]]></ATT>
-                              <ATT name="status">1970354901745664</ATT>
-                            </ATTRIBUTES>
-                            <DEPENDENCIES></DEPENDENCIES>
-                          </OBJECT>
-                        </COMP>
-                        <LINK relation="Definition">
-                          <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="00380080-0000-01a4-0000-000000000000"/>
-                        </LINK>
-                      </DEPENDENCIES>
-                    </OBJECT>
                   </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="TaggedValue" uid="43f7fc3d-fee5-4448-8b4b-ba9002432330"/>
-                <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Actual">
-                    <OBJECT>
-                      <ID name="" mc="TagParameter" uid="2bf22f75-4d15-4708-84fb-f00f97087a23"/>
-                      <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
-                      <ATTRIBUTES>
-                        <ATT name="Value"><![CDATA[Exception]]></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaThrownException" mc="TagType" uid="003800a8-0000-017c-0000-000000000000"/>
-                  </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>

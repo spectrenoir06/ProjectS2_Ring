@@ -8,6 +8,7 @@
     <COMPID name="Joueur" mc="Actor" uid="3cc65aec-396d-4498-b8de-58e3a1b7fc79"/>
     <COMPID name="Use Case diagram" mc="UseCaseDiagram" uid="0d82d50e-79cf-4712-a9c1-8ad587891104"/>
     <COMPID name="Utiliser capacite" mc="UseCase" uid="1a46c448-b24e-4e09-a0ba-0afb27416148"/>
+    <COMPID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
     <COMPID name="overview diagram" mc="ClassDiagram" uid="94c4057f-562d-48fe-9f57-1408ef52af20"/>
     <COMPID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
   </DEPS>
@@ -31,6 +32,7 @@
         <COMPID name="Utiliser capacite" mc="UseCase" uid="1a46c448-b24e-4e09-a0ba-0afb27416148"/>
         <COMPID name="Capitulation" mc="UseCase" uid="55d07d4a-fc33-4279-b149-e3ad2f4352b1"/>
         <COMPID name="Creer Capacite" mc="UseCase" uid="aa7eded4-f0a4-4f32-99dc-eb503d88c225"/>
+        <COMPID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
       </COMP>
       <COMP relation="Product">
         <COMPID name="overview diagram" mc="ClassDiagram" uid="94c4057f-562d-48fe-9f57-1408ef52af20"/>

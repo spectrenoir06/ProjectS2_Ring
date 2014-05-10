@@ -15,7 +15,7 @@ public class Epee extends Capacite {
 
     @objid ("710720c3-8c3c-4036-84f9-d24e23b8ddce")
     public Epee(int imp, int para, int mani) {
-    	super();
+        super();
         this.impact = imp;
         this.parade = para;
         this.maniabilite = mani;
@@ -60,14 +60,14 @@ public class Epee extends Capacite {
         this.maniabilite = maniabilite;
     }
 
-	@Override
-	public String toString() {
-		String s = "Eppe";
-		s = s + "	| impact	=	" + this.impact;
-		s = s + "	| parade	=	" + this.parade;
-		s = s + "	| maniabilite	=	" + this.maniabilite + "	|";
-				
-		return s;
-	}
+    @objid ("b881c18c-c582-40cd-bba2-ff2bdfb8f1ff")
+    @Override
+    public String toString() {
+        String s = "Eppe";
+        s = s + "    | impact    =    " + this.impact;
+        s = s + "    | parade    =    " + this.parade;
+        s = s + "    | maniabilite    =    " + this.maniabilite + "    |";
+        return s;
+    }
 
 }

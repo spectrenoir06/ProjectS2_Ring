@@ -23,7 +23,7 @@
   </DEPS>
   <OBJECT>
     <ID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
-    <PID name="test" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+    <PID name="ProjectS2_Ring" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
       <ATT name="IsAbstract">false</ATT>
