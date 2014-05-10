@@ -127,7 +127,7 @@ public abstract class Perso {
             + "\n -force        	: "     + this.force
             + "\n -dexterite    	: "     + this.dexterite
             + "\n -intelligence 	: "     + this.intelligence
-            + "\n -concentration	: " 	+ this.concentration + "\n"  );
+            + "\n -concentration	: " 	+ this.concentration + "\n" + this.getInfoCapacite()  );
     }
     
     public String getInfoCapacite(){

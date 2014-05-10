@@ -46,6 +46,8 @@ public class GameConsol extends Game {
                 default :
                     throw new Exception("Classe inconnue");
                 }
+                p.addCapacite(this.createCapacite());
+                p.addCapacite(this.createCapacite());
                 return p;
             }catch(PersoException e){
                 System.out.println(e.getMessage());
