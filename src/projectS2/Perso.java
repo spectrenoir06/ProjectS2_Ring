@@ -47,7 +47,10 @@ public abstract class Perso {
             throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
         }
     }
-
+    
+    public void initVitalite(){
+    	this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
+    }
     @objid ("b9d243b6-d86a-4548-a13e-9c3776551ec0")
     int getForce() {
         return this.force;
