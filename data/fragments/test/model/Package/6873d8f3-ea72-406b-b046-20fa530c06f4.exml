@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="ProjectS2_Ring" version="3">
+  <DEPS>
+    <ID name="ProjectS2_Ring" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+    <COMPID name="Capitulation" mc="UseCase" uid="55d07d4a-fc33-4279-b149-e3ad2f4352b1"/>
+    <COMPID name="Creer Capacite" mc="UseCase" uid="aa7eded4-f0a4-4f32-99dc-eb503d88c225"/>
+    <COMPID name="Creer combattant" mc="UseCase" uid="695bb70d-025e-4bf3-b03c-7305d87832d0"/>
+    <COMPID name="Joueur" mc="Actor" uid="3cc65aec-396d-4498-b8de-58e3a1b7fc79"/>
+    <COMPID name="Use Case diagram" mc="UseCaseDiagram" uid="0d82d50e-79cf-4712-a9c1-8ad587891104"/>
+    <COMPID name="Utiliser capacite" mc="UseCase" uid="1a46c448-b24e-4e09-a0ba-0afb27416148"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="94c4057f-562d-48fe-9f57-1408ef52af20"/>
+    <COMPID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="ProjectS2_Ring" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+    <PID name="test" mc="Project" uid="8a408c0e-c0e0-42d0-ab88-adb4901d0654"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[ProjectS2_Ring]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+        <COMPID name="Joueur" mc="Actor" uid="3cc65aec-396d-4498-b8de-58e3a1b7fc79"/>
+        <COMPID name="Creer combattant" mc="UseCase" uid="695bb70d-025e-4bf3-b03c-7305d87832d0"/>
+        <COMPID name="Utiliser capacite" mc="UseCase" uid="1a46c448-b24e-4e09-a0ba-0afb27416148"/>
+        <COMPID name="Capitulation" mc="UseCase" uid="55d07d4a-fc33-4279-b149-e3ad2f4352b1"/>
+        <COMPID name="Creer Capacite" mc="UseCase" uid="aa7eded4-f0a4-4f32-99dc-eb503d88c225"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="94c4057f-562d-48fe-9f57-1408ef52af20"/>
+        <COMPID name="Use Case diagram" mc="UseCaseDiagram" uid="0d82d50e-79cf-4712-a9c1-8ad587891104"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

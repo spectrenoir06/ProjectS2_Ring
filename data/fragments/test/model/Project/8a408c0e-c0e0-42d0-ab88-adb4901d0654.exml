@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="test" version="3">
+  <DEPS>
+    <ID name="test" mc="Project" uid="8a408c0e-c0e0-42d0-ab88-adb4901d0654"/>
+    <COMPID name="test" mc="DiagramSet" uid="6331dc72-625b-44f0-bd4a-4c175a1b31f1"/>
+    <COMPID name="test" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="test" mc="Project" uid="8a408c0e-c0e0-42d0-ab88-adb4901d0654"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[test]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="test" mc="DiagramSet" uid="6331dc72-625b-44f0-bd4a-4c175a1b31f1"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="test" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,430 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GameConsol" version="3">
+  <DEPS>
+    <ID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+    <EXTID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
+    <EXTID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+    <EXTID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="003800a8-0000-0165-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+    <PID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[GameConsol]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="createPerso" mc="Operation" uid="a8f88020-6c78-4846-9945-7e9c4f6f8c9a"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[createPerso]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="bdda59a1-b0b2-43ad-8ff9-4de97fb502e7"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="cf3306e2-9fbf-4f8d-a0e8-d992896d216f"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[while(true){
+    try{
+        Perso p = null;
+        
+        System.out.println("Classe : ");
+        String classe = scan.next();
+        
+        System.out.println("Name :");
+        String name = scan.next();
+        
+        System.out.println("force : ");
+        int force = scan.nextInt();
+        
+        System.out.println("dexterite : ");
+        int dexterite = scan.nextInt();
+        
+        System.out.println("intelligence : ");
+        int intelligence = scan.nextInt();
+        
+        System.out.println("concentration : ");
+        int concentration = scan.nextInt();
+        
+        switch (classe) {
+        case "guerrier":
+             p = new Guerrier(name, force, dexterite, intelligence, concentration);
+             break;
+        case "mage":
+             p = new Mage(name, force, dexterite, intelligence, concentration);
+             break;
+        case "athlete":
+             p = new Athlete(name, force, dexterite, intelligence, concentration);
+             break;
+        default :
+            throw new Exception("Classe inconnue");
+        }
+        p.addCapacite(this.createCapacite());
+        p.addCapacite(this.createCapacite());
+        return p;
+    }catch(PersoException e){
+        System.out.println(e.getMessage());
+    }catch(InputMismatchException e){
+        System.out.println("erreur entre un integer");
+    }catch(Exception e){
+        System.out.println(e.getMessage());
+    }
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="createCapacite" mc="Operation" uid="4c3ee0b0-9f06-4cf8-91e3-f61722997873"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[createCapacite]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="4bb01cf9-3d90-452f-a0e5-351c8db2238b"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="0c641c76-fa63-47a6-8ad4-8c1a20860dbb"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[int impact, para, facilite, protection, efficacite;
+while(true){
+    try{
+        Capacite c = null;
+        
+        System.out.println("Capacite :\n");
+        System.out.println("0     :    Epee");
+        System.out.println("1     :    Bouclier");
+        System.out.println("2     :    Remede");
+        System.out.println("3     :    SortilegeOffensif");
+        System.out.println("4     :    SortilegeDefensif");
+        System.out.println("5     :    SortilegeGuerisseur");
+        
+        int type = scan.nextInt();
+                      
+        switch (type) {
+        case 0: // Guerrier
+            System.out.println("Impact:");
+            impact = scan.nextInt();
+            System.out.println("Parade:");
+            para = scan.nextInt();
+            System.out.println("Maniabilite:");
+            int maniabilite = scan.nextInt();
+            c = new Epee(impact, para, maniabilite); 
+            break;
+        case 1: // Bouclier
+            System.out.println("Maniabilite:");
+            maniabilite = scan.nextInt();
+            System.out.println("Protection:");
+            protection = scan.nextInt();
+            c = new Bouclier(maniabilite, protection);                     
+            break;
+        case 2: // Remede
+            System.out.println("Facilite:");
+            facilite = scan.nextInt();
+            System.out.println("Efficacite:");
+            efficacite = scan.nextInt();
+            c = new Remede(facilite, efficacite);
+            break;
+        case 3: // SortilegeOffensif
+            System.out.println("Facilite:");
+            facilite = scan.nextInt();
+            System.out.println("Efficacite:");
+            efficacite = scan.nextInt();
+            c = new SortilegeOffensif(facilite, efficacite);
+            break;
+        case 4: // SortilegeDefensif
+            System.out.println("Facilite:");
+            facilite = scan.nextInt();
+            System.out.println("Efficacite:");
+            efficacite = scan.nextInt();
+            c = new SortilegeDefensif(facilite, efficacite);
+            break;
+        case 5: // SortilegeGuerisseur
+            System.out.println("Facilite:");
+            facilite = scan.nextInt();
+            System.out.println("Efficacite:");
+            efficacite = scan.nextInt();
+            c = new SortilegeGuerisseur(facilite, efficacite);
+            break;
+        default :
+            throw new Exception("Capacite inconnue");
+        }
+        return c;
+    }catch(InputMismatchException e){
+        System.out.println("erreur entre un integer");
+        scan.next();
+    }catch(Exception e){
+        System.out.println(e.getMessage());
+    }
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="consol" mc="Operation" uid="d16f1106-157e-4b44-b3d4-dd0b591f3177"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[consol]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="88240914-649e-4959-baeb-6096f24dab4e"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[System.out.println("+-----------------------------+");
+System.out.println("| 1 - Cree perso1             |");
+System.out.println("| 2 - Cree perso2             |");
+System.out.println("| 3 - Cree Capacite           |");
+//System.out.println("|                             |");
+//System.out.println("|                             |");
+//System.out.println("|                             |");
+//System.out.println("|                             |");
+System.out.println("+-----------------------------+");
+System.out.println("cmd : ");
+try{
+    switch (scan.nextInt()) {
+    case 1:
+        super.setPerso1(createPerso());
+        System.out.println(this.getPerso1());
+        break;
+    case 2:
+        super.setPerso2(createPerso());
+        System.out.println(this.getPerso2());
+        break;
+    case 3:
+        Capacite c = this.createCapacite();
+        System.out.println(c);
+        break;
+    default:
+        break;
+    }
+}catch(InputMismatchException e){
+    System.out.println("erreur entre un integer");
+    scan.next();
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="scan" mc="Attribute" uid="5b624830-accc-4f23-a3db-0454bc4f643b"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[new Scanner(System.in)]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">PackageVisibility</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[scan]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="087ccbc1-328f-4d78-a36f-2982f3af62d4"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Actual">
+                    <OBJECT>
+                      <ID name="" mc="TagParameter" uid="18f8068b-588a-46c6-96f9-023d9e8f3523"/>
+                      <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                      <ATTRIBUTES>
+                        <ATT name="Value"><![CDATA[Scanner]]></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaTypeExpr" mc="TagType" uid="003800a8-0000-0165-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="" mc="Generalization" uid="7587b433-096b-47ed-824e-df77c1e4deeb"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="ff8a1501-7827-4726-bab7-798e65890b12"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Actual">
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="197ef2b1-70d4-4c12-8782-5bafcd108b56"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.util.InputMismatchException]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="TagParameter" uid="a574946d-5c6e-4f81-b5d7-96498305f92f"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Value"><![CDATA[java.util.Scanner]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES></DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaImport" mc="TagType" uid="003800a8-0000-0155-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

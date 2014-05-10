@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="projectS2" version="3">
+  <DEPS>
+    <ID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+    <COMPID name="Athlete" mc="Class" uid="3b77d382-6f41-4706-b8fb-4ada146d0e49"/>
+    <COMPID name="Bouclier" mc="Class" uid="00ca71f7-3659-487b-88f1-78c4fc3a1a0a"/>
+    <COMPID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
+    <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+    <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+    <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+    <COMPID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+    <COMPID name="GameSDL" mc="Class" uid="008f8ab3-ceab-4d45-976f-aee90a00dde8"/>
+    <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
+    <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
+    <COMPID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
+    <COMPID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+    <COMPID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
+    <COMPID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
+    <COMPID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
+    <COMPID name="SortilegeGuerisseur" mc="Class" uid="b9a641c0-2695-481f-b92e-debb8df7c13a"/>
+    <COMPID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+    <PID name="test" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[projectS2]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+        <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+        <COMPID name="SortilegeGuerisseur" mc="Class" uid="b9a641c0-2695-481f-b92e-debb8df7c13a"/>
+        <COMPID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
+        <COMPID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+        <COMPID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+        <COMPID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
+        <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
+        <COMPID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
+        <COMPID name="GameSDL" mc="Class" uid="008f8ab3-ceab-4d45-976f-aee90a00dde8"/>
+        <COMPID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+        <COMPID name="Bouclier" mc="Class" uid="00ca71f7-3659-487b-88f1-78c4fc3a1a0a"/>
+        <COMPID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
+        <COMPID name="Athlete" mc="Class" uid="3b77d382-6f41-4706-b8fb-4ada146d0e49"/>
+        <COMPID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
+        <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
+        <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
