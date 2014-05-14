@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("ac53558f-117c-400a-bc74-89cf87b33b5b")
-public abstract class Perso {
+public abstract class Perso{
     @objid ("24b23d41-fa2a-4577-95c5-6b14447dc56f")
     private String nom;
 

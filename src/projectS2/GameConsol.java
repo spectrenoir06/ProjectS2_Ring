@@ -15,8 +15,15 @@ public class GameConsol extends Game {
             try{
                 Perso p = null;
                 
-                System.out.println("Classe : ");
-                String classe = scan.next();
+                System.out.println( "Classe : \n"
+                				+	" 1 - Guerrier\n"
+                				+	" 2 - Mage\n"
+                				+	" 3 - Athlete\n"
+                				+	"cmd : ");
+                int classe = scan.nextInt();
+                if (classe < 1 || classe > 3){
+                	throw new Exception("Classe inconnue");
+                }
                 
                 System.out.println("Name :");
                 String name = scan.next();
@@ -34,17 +41,15 @@ public class GameConsol extends Game {
                 int concentration = scan.nextInt();
                 
                 switch (classe) {
-                case "guerrier":
+                case 1:
                      p = new Guerrier(name, force, dexterite, intelligence, concentration);
                      break;
-                case "mage":
+                case 2:
                      p = new Mage(name, force, dexterite, intelligence, concentration);
                      break;
-                case "athlete":
+                case 3:
                      p = new Athlete(name, force, dexterite, intelligence, concentration);
                      break;
-                default :
-                    throw new Exception("Classe inconnue");
                 }
                 p.addCapacite(this.createCapacite());
                 p.addCapacite(this.createCapacite());
@@ -75,56 +80,66 @@ public class GameConsol extends Game {
                 System.out.println("5     :    SortilegeGuerisseur");
                 
                 int type = scan.nextInt();
-                              
-                switch (type) {
-                case 0: // Guerrier
-                    System.out.println("Impact:");
-                    impact = scan.nextInt();
-                    System.out.println("Parade:");
-                    para = scan.nextInt();
-                    System.out.println("Maniabilite:");
-                    int maniabilite = scan.nextInt();
-                    c = new Epee(impact, para, maniabilite); 
-                    break;
-                case 1: // Bouclier
-                    System.out.println("Maniabilite:");
-                    maniabilite = scan.nextInt();
-                    System.out.println("Protection:");
-                    protection = scan.nextInt();
-                    c = new Bouclier(maniabilite, protection);                     
-                    break;
-                case 2: // Remede
-                    System.out.println("Facilite:");
-                    facilite = scan.nextInt();
-                    System.out.println("Efficacite:");
-                    efficacite = scan.nextInt();
-                    c = new Remede(facilite, efficacite);
-                    break;
-                case 3: // SortilegeOffensif
-                    System.out.println("Facilite:");
-                    facilite = scan.nextInt();
-                    System.out.println("Efficacite:");
-                    efficacite = scan.nextInt();
-                    c = new SortilegeOffensif(facilite, efficacite);
-                    break;
-                case 4: // SortilegeDefensif
-                    System.out.println("Facilite:");
-                    facilite = scan.nextInt();
-                    System.out.println("Efficacite:");
-                    efficacite = scan.nextInt();
-                    c = new SortilegeDefensif(facilite, efficacite);
-                    break;
-                case 5: // SortilegeGuerisseur
-                    System.out.println("Facilite:");
-                    facilite = scan.nextInt();
-                    System.out.println("Efficacite:");
-                    efficacite = scan.nextInt();
-                    c = new SortilegeGuerisseur(facilite, efficacite);
-                    break;
-                default :
-                    throw new Exception("Capacite inconnue");
+                
+                if (type < 0 || type > 5 ){
+                	throw new Exception("Capacite inconnue");
                 }
-                return c;
+                              
+                while (true){
+                	try {
+		                switch (type) {
+		                case 0: // Guerrier
+		                    System.out.println("Impact:");
+		                    impact = scan.nextInt();
+		                    System.out.println("Parade:");
+		                    para = scan.nextInt();
+		                    System.out.println("Maniabilite:");
+		                    int maniabilite = scan.nextInt();
+		                    c = new Epee(impact, para, maniabilite);
+		                    break;
+		                case 1: // Bouclier
+		                    System.out.println("Maniabilite:");
+		                    maniabilite = scan.nextInt();
+		                    System.out.println("Protection:");
+		                    protection = scan.nextInt();
+		                    c = new Bouclier(maniabilite, protection);                     
+		                    break;
+		                case 2: // Remede
+		                    System.out.println("Facilite:");
+		                    facilite = scan.nextInt();
+		                    System.out.println("Efficacite:");
+		                    efficacite = scan.nextInt();
+		                    c = new Remede(facilite, efficacite);
+		                    break;
+		                case 3: // SortilegeOffensif
+		                    System.out.println("Facilite:");
+		                    facilite = scan.nextInt();
+		                    System.out.println("Efficacite:");
+		                    efficacite = scan.nextInt();
+		                    c = new SortilegeOffensif(facilite, efficacite);
+		                    break;
+		                case 4: // SortilegeDefensif
+		                    System.out.println("Facilite:");
+		                    facilite = scan.nextInt();
+		                    System.out.println("Efficacite:");
+		                    efficacite = scan.nextInt();
+		                    c = new SortilegeDefensif(facilite, efficacite);
+		                    break;
+		                case 5: // SortilegeGuerisseur
+		                    System.out.println("Facilite:");
+		                    facilite = scan.nextInt();
+		                    System.out.println("Efficacite:");
+		                    efficacite = scan.nextInt();
+		                    c = new SortilegeGuerisseur(facilite, efficacite);
+		                    break;
+		                }
+		                return c;
+                	}
+                	catch(InputMismatchException e){
+                		scan.next();
+                		System.out.println("erreur entre un integer");
+                	}
+                }
             }catch(InputMismatchException e){
                 System.out.println("erreur entre un integer");
                 scan.next();

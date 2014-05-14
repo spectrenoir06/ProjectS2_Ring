@@ -6,7 +6,9 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 public class Main {
     @objid ("c1635a43-d42f-4224-8ae1-643760026bd3")
     public static void main(String[] args) throws Exception {
-        Perso test1 = new Guerrier("Jebediah",60,40,0,0);
+        
+    	/*
+    	Perso test1 = new Guerrier("Jebediah",60,40,0,0);
         Perso test2 = new Mage("Bill",15,15,30,30);
         //Perso test3 = new Athlete("Bob",20,20,20,20);
         
@@ -28,9 +30,9 @@ public class Main {
         test1.addCapacite(cap4);
         test1.addCapacite(cap5);
         test1.addCapacite(cap6);
-        
-        
-        test1.use(1, test2);
+        */
+       
+        //test1.use(0,test2);
         //test1.use(0, test1);
         
         //System.out.println(test1);
@@ -39,6 +41,9 @@ public class Main {
         //GameConsol game = new GameConsol();
         
         //game.consol();
+    	
+
+    	
     }
 
 }

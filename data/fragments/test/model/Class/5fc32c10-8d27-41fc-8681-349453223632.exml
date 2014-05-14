@@ -109,7 +109,8 @@
                 <ID name="" mc="Note" uid="9d6dc075-095e-4a6d-93f6-fc0cd6e2cb00"/>
                 <PID name="Main" mc="Class" uid="5fc32c10-8d27-41fc-8681-349453223632"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[Perso test1 = new Guerrier("Jebediah",60,40,0,0);
+                  <ATT name="Content"><![CDATA[/*
+Perso test1 = new Guerrier("Jebediah",60,40,0,0);
 Perso test2 = new Mage("Bill",15,15,30,30);
 //Perso test3 = new Athlete("Bob",20,20,20,20);
 
@@ -131,17 +132,17 @@ test1.addCapacite(cap3);
 test1.addCapacite(cap4);
 test1.addCapacite(cap5);
 test1.addCapacite(cap6);
-
-
-test1.use(1, test2);
+*/
+       
+//test1.use(0,test2);
 //test1.use(0, test1);
 
 //System.out.println(test1);
 
 
-//GameConsol game = new GameConsol();
+GameConsol game = new GameConsol();
 
-//game.consol();
+game.consol();
 ]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
