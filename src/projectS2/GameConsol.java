@@ -59,8 +59,9 @@ public class GameConsol {
                 System.out.println(e.getMessage());
             }catch(InputMismatchException e){
                 System.out.println("erreur entre un integer");
+                scan.next();
             }catch(Exception e){
-                System.out.println(e.getMessage());
+                e.printStackTrace();
             }
         }
     }
