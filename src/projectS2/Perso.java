@@ -46,23 +46,7 @@ public abstract class Perso {
             throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
         }
     }
-    public Perso(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
-    	this.experience = exp;
-        if ( (force+dexterite+intelligence+concentration) <= 100 + this.experience)
-        {
-            //System.out.println("perso conforme");
-            this.nom = nom;
-            this.force = force;
-            this.dexterite = dexterite;
-            this.intelligence = intelligence;
-            this.concentration = concentration;
-        }
-        else
-        {
-            throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
-        }
-    }
-    
+
     @objid ("b9d243b6-d86a-4548-a13e-9c3776551ec0")
     int getForce() {
         return this.force;
@@ -190,6 +174,24 @@ public abstract class Perso {
     @objid ("88c20f55-3b02-4c64-9589-8e21783cb538")
     public void resetVitalite() {
         this.vitalite = 200 - (this.force + this.dexterite + this.intelligence + this.concentration) + this.experience * 3;
+    }
+
+    @objid ("483426c0-0ca4-4178-998c-093310b4f94f")
+    public Perso(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
+        this.experience = exp;
+        if ( (force+dexterite+intelligence+concentration) <= 100 + this.experience)
+        {
+            //System.out.println("perso conforme");
+            this.nom = nom;
+            this.force = force;
+            this.dexterite = dexterite;
+            this.intelligence = intelligence;
+            this.concentration = concentration;
+        }
+        else
+        {
+            throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
+        }
     }
 
 }

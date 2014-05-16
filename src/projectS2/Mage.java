@@ -13,15 +13,6 @@ public class Mage extends Perso {
             throw new PersoException("Erreur mage non conforme\n");
         }
     }
-    
-    public Mage(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
-        super(nom,exp, force, dexterite, intelligence, concentration);
-        if ((intelligence >= (Math.max(force,dexterite) + 15)) && (concentration >= Math.max(force,dexterite) + 15)){
-            
-        }else{
-            throw new PersoException("Erreur mage non conforme\n");
-        }
-    }
 
     @objid ("5d584aa6-6075-4bb0-8fdc-5f21ebaf0602")
     public String toString() {
@@ -32,6 +23,16 @@ public class Mage extends Perso {
     @Override
     public String serialise() {
         return getSerialise("mage");
+    }
+
+    @objid ("9012d071-049c-425c-b9a4-30a08743b42c")
+    public Mage(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
+        super(nom,exp, force, dexterite, intelligence, concentration);
+        if ((intelligence >= (Math.max(force,dexterite) + 15)) && (concentration >= Math.max(force,dexterite) + 15)){
+            
+        }else{
+            throw new PersoException("Erreur mage non conforme\n");
+        }
     }
 
 }

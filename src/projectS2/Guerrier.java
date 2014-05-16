@@ -17,18 +17,6 @@ public class Guerrier extends Perso {
         }
     }
 
-    public Guerrier(String nom,int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
-        super(nom, exp ,force, dexterite, intelligence, concentration);
-        
-        if ((force >= (dexterite + 10))
-                && ((dexterite + 10) >= (intelligence + 10))
-                && ((intelligence + 10) >= concentration)) {
-        //System.out.println("guerrier conforme");
-        } else {
-            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
-        }
-    }
-    
     @objid ("155649d5-b9e6-40a2-901e-ec5b096488fd")
     public String toString() {
         return super.getInfo("guerrier");
@@ -38,6 +26,19 @@ public class Guerrier extends Perso {
     @Override
     public String serialise() {
         return getSerialise("guerrier");
+    }
+
+    @objid ("4416b9a3-f9ae-4601-9000-02e72ae675bb")
+    public Guerrier(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
+        super(nom, exp ,force, dexterite, intelligence, concentration);
+        
+        if ((force >= (dexterite + 10))
+                && ((dexterite + 10) >= (intelligence + 10))
+                && ((intelligence + 10) >= concentration)) {
+        //System.out.println("guerrier conforme");
+        } else {
+            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
+        }
     }
 
 }

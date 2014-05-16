@@ -156,17 +156,17 @@ public class GameConsol {
     @objid ("d16f1106-157e-4b44-b3d4-dd0b591f3177")
     public void consol() {
         System.out.println("+-----------------------------+");
-        System.out.println("| 1 - Cree perso1             |");
-        System.out.println("| 2 - Cree perso2             |");
-        System.out.println("| 3 - Add Capacite perso1     |");
-        System.out.println("| 4 - Voir perso1             |");
-        System.out.println("| 5 - Voir perso2             |");
-        System.out.println("| 6 - 1 Use capa1 sur 2       |");
-        System.out.println("| 7 - 1 use capa1 sur lui     |");
-        System.out.println("| 8 - serialise perso1        |");
-        System.out.println("| 9 - combat perso1/perso2    |");
-        //System.out.println("| 7 - 1 use capa1 sur lui     |");
-        //System.out.println("| 7 - 1 use capa1 sur lui     |");
+        System.out.println("| 1  - Cree perso1            |");
+        System.out.println("| 2  - Cree perso2            |");
+        System.out.println("| 3  - Add Capacite perso1    |");
+        System.out.println("| 4  - Voir perso1            |");
+        System.out.println("| 5  - Voir perso2            |");
+        System.out.println("| 6  - 1 Use capa1 sur 2      |");
+        System.out.println("| 7  - 1 use capa1 sur lui    |");
+        System.out.println("| 8  - serialise perso1       |");
+        System.out.println("| 9  - combat perso1/perso2   |");
+        System.out.println("| 10 - save perso1 in file    |");
+        System.out.println("| 11 - load perso1 from file  |");
         System.out.println("+-----------------------------+");
         System.out.println("cmd : ");
         try{
@@ -202,10 +202,11 @@ public class GameConsol {
                 game.duel();
                 break;
             case 10:
-                game.save(game.getPerso1(), "test.perso");
+                game.save(game.getPerso1(), "perso1.perso");
                 break;
             case 11:
-                System.out.println(game.load("test.perso"));
+                game.setPerso1(game.load("perso1.perso"));
+                game.setPerso2(game.load("perso2.perso"));
                 break;
             default:
                 break;
@@ -222,7 +223,6 @@ public class GameConsol {
         
         while(true){
             consol.consol();
-            consol.game.getPerso1();
         }
     }
 

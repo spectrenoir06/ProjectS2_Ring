@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3c87cb07-e5b2-4706-ac36-e5a91104d80f")
@@ -39,61 +38,67 @@ public class Game {
     public void setPerso2(Perso perso2) {
         this.perso2 = perso2;
     }
-    
-    public void duel(){
-    	perso1.resetVitalite();
-    	perso2.resetVitalite();
-    	System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
-    	System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
+
+    @objid ("4b18d94b-4d14-4dfb-979d-1358e4f6824f")
+    public void duel() {
+        if (this.perso1 != null && this.perso2 != null){
+            perso1.resetVitalite();
+            perso2.resetVitalite();
+            System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
+            System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());    
+        }else{
+            System.out.println("perso1 ou perso2 n'existe pas");
+        }
     }
-    
-    public boolean save(Perso perso, String file){
-    	System.out.println("write start");
-		
-    	PrintStream p = null;
-		FileOutputStream out;
-		
-		try {
-			out = new FileOutputStream(file);
-			p = new PrintStream( out );
-			p.print(perso.serialise());
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-			return false;
-		}finally{
-			p.close();
-		}
-		System.out.println("write done in "+ file);
-		return true;
+
+    @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
+    public boolean save(Perso perso, String file) {
+        System.out.println("write start");
+        
+        PrintStream p = null;
+        FileOutputStream out;
+        
+        try {
+            out = new FileOutputStream(file);
+            p = new PrintStream( out );
+            p.print(perso.serialise());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }finally{
+            p.close();
+        }
+        System.out.println("write done in "+ file);
+        return true;
     }
-    
-    public Perso load(String file){
-    	
-    	InputStream in ;
-		BufferedInputStream bin ;
-		Scanner sc ;
-		Perso p = null;
-		
-		try {
-			in = new FileInputStream(file);
-			bin = new BufferedInputStream(in);
-			sc = new Scanner(bin);
-		
-			String s;
-			
-			//while(sc.hasNextLine()){
-			s = sc.nextLine();
-			StringTokenizer st = new StringTokenizer(s,";");
-			
-			String classe 	= st.nextToken();
-			String name 	= st.nextToken();
-			int exp 		= new Integer(st.nextToken());
-			int force 		= new Integer(st.nextToken());
-			int dexterite	= new Integer(st.nextToken());
-			int inteligence	= new Integer(st.nextToken());
-			int conc		= new Integer(st.nextToken());
-				
-			switch (classe) {
+
+    @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
+    public Perso load(String file) {
+        InputStream in ;
+        BufferedInputStream bin ;
+        Scanner sc ;
+        Perso p = null;
+        
+        try {
+            in = new FileInputStream(file);
+            bin = new BufferedInputStream(in);
+            sc = new Scanner(bin);
+        
+            String s;
+            
+            //while(sc.hasNextLine()){
+            s = sc.nextLine();
+            StringTokenizer st = new StringTokenizer(s,";");
+            
+            String classe     = st.nextToken();
+            String name     = st.nextToken();
+            int exp         = new Integer(st.nextToken());
+            int force         = new Integer(st.nextToken());
+            int dexterite    = new Integer(st.nextToken());
+            int inteligence    = new Integer(st.nextToken());
+            int conc        = new Integer(st.nextToken());
+                
+            switch (classe) {
                 case "guerrier":
                      p = new Guerrier(name,exp,force,dexterite,inteligence,conc);
                      break;
@@ -104,17 +109,17 @@ public class Game {
                      p = new Athlete(name,exp,force,dexterite,inteligence,conc);
                      break;
                 }
-			
-			while(sc.hasNextLine()){
-				s = sc.nextLine();
-				st = new StringTokenizer(s,";");
-				Capacite c = null;
-				switch (st.nextToken()) {
+            
+            while(sc.hasNextLine()){
+                s = sc.nextLine();
+                st = new StringTokenizer(s,";");
+                Capacite c = null;
+                switch (st.nextToken()) {
                 case "eppe":
                      c = new Epee(new Integer(st.nextToken()), new Integer(st.nextToken()), new Integer(st.nextToken()));
                      break;
                 case "bouclier":
-                	c = new Bouclier(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                    c = new Bouclier(new Integer(st.nextToken()), new Integer(st.nextToken()));
                     break;
                 case "remede":
                      c = new Remede(new Integer(st.nextToken()), new Integer(st.nextToken()));
@@ -129,25 +134,26 @@ public class Game {
                     c = new SortilegeGuerisseur(new Integer(st.nextToken()), new Integer(st.nextToken()));
                     break;
                 }
-				p.addCapacite(c);
-			}
-			sc.close();
-			bin.close();
-			in.close();
-		
-		}
-		catch(IOException e){
-			System.out.println(e);
-		}catch(PersoException pe){
-			System.out.println("Perso non conforme");
-		}
-		
-		finally 
-		{
-			sc 	= null;
-			bin = null;
-			in	= null;
-		}
-    	return p;
+                p.addCapacite(c);
+            }
+            sc.close();
+            bin.close();
+            in.close();
+        
+        }
+        catch(IOException e){
+            System.out.println(e);
+        }catch(PersoException pe){
+            System.out.println("Perso non conforme");
+        }
+        
+        finally 
+        {
+            sc     = null;
+            bin = null;
+            in    = null;
+        }
+        return p;
     }
+
 }

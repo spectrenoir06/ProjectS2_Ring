@@ -14,15 +14,6 @@ public class Athlete extends Perso {
         }
     }
 
-    public Athlete(String nom, int exp ,int force, int dexterite, int intelligence, int concentration) throws PersoException {
-        super(nom, exp, force, dexterite, intelligence, concentration);
-        if ((force >= 20) && (dexterite >= 20) && (intelligence >= 20) && (concentration >= 20) ){
-            
-        }else{
-            throw new PersoException("Erreur athlete non conforme\n");
-        }
-    }
-    
     @objid ("95ef73d3-a29c-4da3-95f9-169f2b607499")
     public String toString() {
         return super.getInfo("Athlete");
@@ -32,6 +23,16 @@ public class Athlete extends Perso {
     @Override
     public String serialise() {
         return getSerialise("athlete");
+    }
+
+    @objid ("734b10e0-efa5-46e0-8674-79a99c9e5765")
+    public Athlete(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
+        super(nom, exp, force, dexterite, intelligence, concentration);
+        if ((force >= 20) && (dexterite >= 20) && (intelligence >= 20) && (concentration >= 20) ){
+            
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
     }
 
 }
