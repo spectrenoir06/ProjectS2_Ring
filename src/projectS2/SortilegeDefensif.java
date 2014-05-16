@@ -71,10 +71,11 @@ public class SortilegeDefensif extends Capacite {
         // TODO Auto-generated method stub
         return 0;
     }
-    
+
+    @objid ("f4e38418-99f1-4dd0-91be-ca9e909c136f")
     @Override
-	public String serialise() {
-		return ("SD;" + this.facilite + ";" + this.efficacite);
-	}
+    public String serialise() {
+        return ("SD;" + this.facilite + ";" + this.efficacite);
+    }
 
 }

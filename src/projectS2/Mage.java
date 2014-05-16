@@ -18,10 +18,11 @@ public class Mage extends Perso {
     public String toString() {
         return super.getInfo("mage");
     }
-    
+
+    @objid ("69984f1d-e41d-491f-b53a-fa060701f048")
     @Override
-	public String serialise() {
-		return getSerialise("mage");
-	}
+    public String serialise() {
+        return getSerialise("mage");
+    }
 
 }

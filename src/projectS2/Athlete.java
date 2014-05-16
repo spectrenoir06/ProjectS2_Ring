@@ -19,9 +19,10 @@ public class Athlete extends Perso {
         return super.getInfo("Athlete");
     }
 
+    @objid ("edbbf7f5-0084-498a-af83-12995226b7fb")
     @Override
-	public String serialise() {
-		return getSerialise("athlete");
-	}
-    
+    public String serialise() {
+        return getSerialise("athlete");
+    }
+
 }

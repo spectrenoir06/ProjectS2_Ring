@@ -22,9 +22,10 @@ public class Guerrier extends Perso {
         return super.getInfo("guerrier");
     }
 
-	@Override
-	public String serialise() {
-		return getSerialise("guerrier");
-	}
+    @objid ("777ebe2e-f179-4fee-ad90-1c265f064430")
+    @Override
+    public String serialise() {
+        return getSerialise("guerrier");
+    }
 
 }

@@ -158,13 +158,17 @@ public abstract class Perso {
         }
         return s;
     }
+
+    @objid ("c29cc229-c92d-4050-8b17-e140a2779e16")
     public String getSerialise(String type) {
-    	String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration + "\n");
+        String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration + "\n");
         for (Capacite c : this.capacite){
             s = s  + c.serialise() + "\n";
         }
-    	return s;
+        return s;
     }
-    
+
+    @objid ("666e664a-62a2-4c25-a644-8845ee595b99")
     public abstract String serialise();
+
 }

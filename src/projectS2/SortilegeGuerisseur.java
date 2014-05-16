@@ -71,10 +71,11 @@ public class SortilegeGuerisseur extends Capacite {
         // TODO Auto-generated method stub
         return 0;
     }
-    
+
+    @objid ("2d706a2b-4ac0-476e-9e30-1f2d60e40946")
     @Override
-	public String serialise() {
-		return ("SG;" + this.facilite + ";" + this.efficacite);
-	}
+    public String serialise() {
+        return ("SG;" + this.facilite + ";" + this.efficacite);
+    }
 
 }

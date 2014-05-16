@@ -24,7 +24,6 @@ public class GameGui extends JFrame {
     @objid ("66fde004-e939-4e28-9015-5533f952e685")
     private static final long serialVersionUID = 1L;
 
-    private Game game;
     @objid ("7a864581-35c3-41dd-8fb1-f457e15f20cf")
     private JTextField txtName;
 
@@ -42,6 +41,9 @@ public class GameGui extends JFrame {
 
     @objid ("8dc7e05d-4763-49f9-88ac-62c957b52101")
     private final ButtonGroup buttonGroup = new ButtonGroup();
+
+    @objid ("4771fe82-c5aa-46eb-821f-90b34dd614e7")
+    private Game game;
 
     @objid ("3020179e-8e31-4470-9584-b78561a15e46")
     public GameGui() throws Exception {

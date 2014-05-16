@@ -597,7 +597,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a752f8e2-310e-4f02-9395-6e801b06452c"/>
+                <ID name="" mc="TaggedValue" uid="6d2df7c0-a148-4f89-933c-5961401fcf2b"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -676,7 +676,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="83e2876c-d3f2-47e6-8597-efbe547a778a"/>
+                <ID name="" mc="TaggedValue" uid="e6a5d7bd-259d-4178-a572-827fcea9c832"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -755,7 +755,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="b367b4dd-93e8-45be-80ab-b3daef3c84ac"/>
+                <ID name="" mc="TaggedValue" uid="6bfea913-f520-4958-af59-b04e5c0a6f23"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -834,7 +834,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="79cbb36c-b75c-418c-b8b0-06954b1b0b49"/>
+                <ID name="" mc="TaggedValue" uid="ff095410-e75f-460b-9f17-5dd9b789d6d5"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -913,7 +913,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="7fd13a6a-270e-4e48-a548-80fdedaf8353"/>
+                <ID name="" mc="TaggedValue" uid="d2d7f645-bbab-4f20-86f5-8b5a88071fb7"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1087,7 +1087,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="19562709-3877-48c9-869e-38c5e9a6af1b"/>
+                <ID name="" mc="TaggedValue" uid="ec2b3720-e459-420c-b842-e3651beaf928"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

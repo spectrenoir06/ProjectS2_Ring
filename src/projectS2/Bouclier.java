@@ -71,11 +71,11 @@ public class Bouclier extends Capacite {
         // TODO Auto-generated method stub
         return 0;
     }
-    
-	@Override
-	public String serialise() {
-		return ("bouclier;" + this.maniabilite + ";" + this.protection);
-	}
 
+    @objid ("39b4e3ce-57ff-4e70-b63d-91dfa54597e6")
+    @Override
+    public String serialise() {
+        return ("bouclier;" + this.maniabilite + ";" + this.protection);
+    }
 
 }

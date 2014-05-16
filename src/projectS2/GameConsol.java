@@ -8,6 +8,8 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 public class GameConsol {
     @objid ("6de8e41a-6d57-47e7-a1e5-8c1d22bfe816")
      Scanner scan = new Scanner(System.in);
+
+    @objid ("48deed86-5279-45ff-b895-b7671818b920")
     private Game game = new Game();
 
     @objid ("a8f88020-6c78-4846-9945-7e9c4f6f8c9a")
@@ -170,7 +172,7 @@ public class GameConsol {
                 System.out.println(game.getPerso1());
                 break;
             case 2:
-            	game.setPerso2(createPerso());
+                game.setPerso2(createPerso());
                 System.out.println(game.getPerso2());
                 break;
             case 3:
@@ -178,19 +180,19 @@ public class GameConsol {
                 this.game.getPerso1().addCapacite(c);
                 break;
             case 4:
-            	System.out.println(this.game.getPerso1());
+                System.out.println(this.game.getPerso1());
                 break;
             case 5:
-            	System.out.println(this.game.getPerso2());
+                System.out.println(this.game.getPerso2());
                 break;
             case 6:
-            	game.getPerso1().use(0, game.getPerso2());
+                game.getPerso1().use(0, game.getPerso2());
                 break;
             case 7:
-            	game.getPerso1().use(0, game.getPerso1());
+                game.getPerso1().use(0, game.getPerso1());
                 break;
             case 8:
-            	System.out.println(game.getPerso1().serialise());
+                System.out.println(game.getPerso1().serialise());
                 break;
             default:
                 break;
@@ -200,13 +202,15 @@ public class GameConsol {
             scan.next();
         }
     }
-    public static void main(String[] args){
-        
+
+    @objid ("0c327a18-3e6c-4588-8f01-4d51dd7e35dc")
+    public static void main(String[] args) {
         GameConsol consol = new GameConsol();
         
         while(true){
-        	consol.consol();
-        	consol.game.getPerso1();
+            consol.consol();
+            consol.game.getPerso1();
         }
     }
+
 }
