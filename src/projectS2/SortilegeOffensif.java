@@ -71,5 +71,10 @@ public class SortilegeOffensif extends Capacite {
     public double getAttaquePuissance() {
         return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
     }
+    
+    @Override
+	public String serialise() {
+		return ("SO;" + this.facilite + ";" + this.efficacite);
+	}
 
 }

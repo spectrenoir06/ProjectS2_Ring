@@ -35,5 +35,7 @@ public abstract class Capacite {
 
     @objid ("76d3ad14-7a09-42ab-a571-697c91170cf8")
     public abstract double getAttaquePuissance();
+    
+    public abstract String serialise();
 
 }

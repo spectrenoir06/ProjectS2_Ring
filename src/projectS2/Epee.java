@@ -87,4 +87,9 @@ public class Epee extends Capacite {
         return ( this.getPerso().getForce() * this.parade / 100.0 );
     }
 
+	@Override
+	public String serialise() {
+		return ("eppe;" + this.impact + ";" + this.parade + ";" + this.maniabilite);
+	}
+
 }

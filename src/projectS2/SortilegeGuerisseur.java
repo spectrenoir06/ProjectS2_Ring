@@ -71,5 +71,10 @@ public class SortilegeGuerisseur extends Capacite {
         // TODO Auto-generated method stub
         return 0;
     }
+    
+    @Override
+	public String serialise() {
+		return ("SG;" + this.facilite + ";" + this.efficacite);
+	}
 
 }

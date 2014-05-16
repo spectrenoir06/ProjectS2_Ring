@@ -203,6 +203,7 @@ public class GameConsol {
         
         while(true){
         	consol.consol();
+        	consol.game.getPerso1();
         }
     }
 }

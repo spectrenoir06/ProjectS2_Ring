@@ -72,5 +72,10 @@ public class Remede extends Capacite {
         // TODO Auto-generated method stub
         return 0;
     }
+    
+    @Override
+	public String serialise() {
+		return ("remede;" + this.facilite + ";" + this.efficacite);
+	}
 
 }
