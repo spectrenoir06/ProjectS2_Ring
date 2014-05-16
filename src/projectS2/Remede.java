@@ -47,8 +47,8 @@ public class Remede extends Capacite {
     @Override
     public String toString() {
         String s = "Remede";
-        s = s + "    | facilite    =    " + this.facilite;
-        s = s + "    | efficacite    =    " + this.efficacite + "    |";
+        s = s + "\t| facilite\t=\t" + this.facilite;
+        s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
         return s;
     }
 

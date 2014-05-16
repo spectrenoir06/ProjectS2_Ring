@@ -66,9 +66,9 @@ public class Epee extends Capacite {
     @Override
     public String toString() {
         String s = "Eppe";
-        s = s + "	| impact	=	" + this.impact;
-        s = s + "	| parade	=	" + this.parade;
-        s = s + "	| maniabilite	=	" + this.maniabilite + "	|";
+        s = s + "\t| impact\t=\t" + this.impact;
+        s = s + "\t| parade\t=\t" + this.parade;
+        s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
         return s;
     }
 

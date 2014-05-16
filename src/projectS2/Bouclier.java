@@ -48,8 +48,8 @@ public class Bouclier extends Capacite {
     @Override
     public String toString() {
         String s = "Bouclier";
-        s = s + "    | maniabilite    =    " + this.maniabilite;
-        s = s + "    | protection    =    " + this.protection + "    |";
+        s = s + "\t| maniabilite\t=\t" + this.maniabilite;
+        s = s + "\t| protection\t=\t" + this.protection + "\t|";
         return s;
     }
 
