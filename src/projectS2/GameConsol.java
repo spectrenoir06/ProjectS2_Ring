@@ -155,11 +155,11 @@ public class GameConsol {
         System.out.println("+-----------------------------+");
         System.out.println("| 1 - Cree perso1             |");
         System.out.println("| 2 - Cree perso2             |");
-        System.out.println("| 3 - Cree Capacite           |");
-        //System.out.println("|                             |");
-        //System.out.println("|                             |");
-        //System.out.println("|                             |");
-        //System.out.println("|                             |");
+        System.out.println("| 3 - Add Capacite perso1     |");
+        System.out.println("| 4 - Voir perso1             |");
+        System.out.println("| 5 - Voir perso2             |");
+        System.out.println("| 6 - 1 Use capa1 sur 2       |");
+        System.out.println("| 7 - 1 use capa1 sur lui     |");
         System.out.println("+-----------------------------+");
         System.out.println("cmd : ");
         try{
@@ -174,7 +174,19 @@ public class GameConsol {
                 break;
             case 3:
                 Capacite c = this.createCapacite();
-                System.out.println(c);
+                this.game.getPerso1().addCapacite(c);
+                break;
+            case 4:
+            	System.out.println(this.game.getPerso1());
+                break;
+            case 5:
+            	System.out.println(this.game.getPerso2());
+                break;
+            case 6:
+            	game.getPerso1().use(0, game.getPerso2());
+                break;
+            case 7:
+            	game.getPerso1().use(0, game.getPerso1());
                 break;
             default:
                 break;
@@ -188,7 +200,8 @@ public class GameConsol {
         
         GameConsol consol = new GameConsol();
         
-        consol.consol();
+        while(true){
+        	consol.consol();
+        }
     }
-
 }
