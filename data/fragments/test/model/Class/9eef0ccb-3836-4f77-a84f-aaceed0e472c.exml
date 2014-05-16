@@ -472,7 +472,7 @@
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a244f19d-ad17-40e1-a89b-ea7db15daa5c"/>
+                <ID name="" mc="TaggedValue" uid="8a2d02db-53d2-4912-afe5-f3e3f77eab8b"/>
                 <PID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
