@@ -163,6 +163,10 @@ public class GameConsol {
         System.out.println("| 5 - Voir perso2             |");
         System.out.println("| 6 - 1 Use capa1 sur 2       |");
         System.out.println("| 7 - 1 use capa1 sur lui     |");
+        System.out.println("| 8 - serialise perso1        |");
+        System.out.println("| 9 - combat perso1/perso2    |");
+        //System.out.println("| 7 - 1 use capa1 sur lui     |");
+        //System.out.println("| 7 - 1 use capa1 sur lui     |");
         System.out.println("+-----------------------------+");
         System.out.println("cmd : ");
         try{
@@ -193,6 +197,15 @@ public class GameConsol {
                 break;
             case 8:
                 System.out.println(game.getPerso1().serialise());
+                break;
+            case 9:
+                game.duel();
+                break;
+            case 10:
+                game.save(game.getPerso1(), "test.perso");
+                break;
+            case 11:
+                System.out.println(game.load("test.perso"));
                 break;
             default:
                 break;

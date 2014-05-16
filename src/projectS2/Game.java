@@ -1,5 +1,15 @@
 package projectS2;
 
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3c87cb07-e5b2-4706-ac36-e5a91104d80f")
@@ -29,5 +39,115 @@ public class Game {
     public void setPerso2(Perso perso2) {
         this.perso2 = perso2;
     }
-
+    
+    public void duel(){
+    	perso1.resetVitalite();
+    	perso2.resetVitalite();
+    	System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
+    	System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
+    }
+    
+    public boolean save(Perso perso, String file){
+    	System.out.println("write start");
+		
+    	PrintStream p = null;
+		FileOutputStream out;
+		
+		try {
+			out = new FileOutputStream(file);
+			p = new PrintStream( out );
+			p.print(perso.serialise());
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+			return false;
+		}finally{
+			p.close();
+		}
+		System.out.println("write done in "+ file);
+		return true;
+    }
+    
+    public Perso load(String file){
+    	
+    	InputStream in ;
+		BufferedInputStream bin ;
+		Scanner sc ;
+		Perso p = null;
+		
+		try {
+			in = new FileInputStream(file);
+			bin = new BufferedInputStream(in);
+			sc = new Scanner(bin);
+		
+			String s;
+			
+			//while(sc.hasNextLine()){
+			s = sc.nextLine();
+			StringTokenizer st = new StringTokenizer(s,";");
+			
+			String classe 	= st.nextToken();
+			String name 	= st.nextToken();
+			int exp 		= new Integer(st.nextToken());
+			int force 		= new Integer(st.nextToken());
+			int dexterite	= new Integer(st.nextToken());
+			int inteligence	= new Integer(st.nextToken());
+			int conc		= new Integer(st.nextToken());
+				
+			switch (classe) {
+                case "guerrier":
+                     p = new Guerrier(name,exp,force,dexterite,inteligence,conc);
+                     break;
+                case "mage":
+                     p = new Mage(name, exp,force,dexterite,inteligence,conc);
+                     break;
+                case "athlete":
+                     p = new Athlete(name,exp,force,dexterite,inteligence,conc);
+                     break;
+                }
+			
+			while(sc.hasNextLine()){
+				s = sc.nextLine();
+				st = new StringTokenizer(s,";");
+				Capacite c = null;
+				switch (st.nextToken()) {
+                case "eppe":
+                     c = new Epee(new Integer(st.nextToken()), new Integer(st.nextToken()), new Integer(st.nextToken()));
+                     break;
+                case "bouclier":
+                	c = new Bouclier(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                    break;
+                case "remede":
+                     c = new Remede(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                     break;
+                case "SO":
+                    c = new SortilegeOffensif(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                    break;
+                case "SD":
+                    c = new SortilegeDefensif(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                    break;
+                case "SG":
+                    c = new SortilegeGuerisseur(new Integer(st.nextToken()), new Integer(st.nextToken()));
+                    break;
+                }
+				p.addCapacite(c);
+			}
+			sc.close();
+			bin.close();
+			in.close();
+		
+		}
+		catch(IOException e){
+			System.out.println(e);
+		}catch(PersoException pe){
+			System.out.println("Perso non conforme");
+		}
+		
+		finally 
+		{
+			sc 	= null;
+			bin = null;
+			in	= null;
+		}
+    	return p;
+    }
 }

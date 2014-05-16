@@ -904,7 +904,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="6850e10e-9330-47ec-a026-ec4c3abf1aae"/>
+                <ID name="" mc="TaggedValue" uid="c7ab7e31-3dbf-4361-a7d9-0b2d4c557669"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -944,7 +944,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="265e6051-62bd-4a98-9bf4-0d97d528e306"/>
+                <ID name="" mc="TaggedValue" uid="9643dc7e-e175-4aae-8d87-75f11f5842f6"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -984,7 +984,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="7d70abfe-6f1f-4ed0-b2af-0c65ee3b8ae5"/>
+                <ID name="" mc="TaggedValue" uid="fd1688a3-e386-4c9b-8a59-8ef1269c803f"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

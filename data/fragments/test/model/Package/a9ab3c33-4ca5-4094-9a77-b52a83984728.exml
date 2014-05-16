@@ -9,7 +9,6 @@
     <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
     <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
     <COMPID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
-    <COMPID name="GameSDL" mc="Class" uid="8543658a-9016-4c53-80a4-033681379645"/>
     <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
     <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
     <COMPID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
@@ -49,7 +48,6 @@
         <COMPID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
         <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
         <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
-        <COMPID name="GameSDL" mc="Class" uid="8543658a-9016-4c53-80a4-033681379645"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
