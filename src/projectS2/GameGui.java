@@ -12,37 +12,35 @@ import javax.swing.border.TitledBorder;
 import java.awt.*;
 
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 
+@SuppressWarnings("unused")
 @objid ("5be3a65b-5561-4379-a02c-e665ea556a83")
 public class GameGui extends JFrame {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Game game;
+	//private Game game;
 	private JTextField txtName;
+	private PlusMoins jForce, jDexterite ,jInteligence, jConcentration;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	
-	public GameGui(){
+	public GameGui() throws Exception{
 		super("Ring");
 		this.init();
 		this.setSize(900, 600);
 		this.setVisible(true);
-		
-		this.game = new Game();
-		
-		JMenuBar menuBar = new JMenuBar();
-		setJMenuBar(menuBar);
 	}
 	
-	private void init(){
+	private void init() throws Exception{
 		Container c = this.getContentPane();
 		
 		JPanel jCara = new JPanel();
-		getContentPane().add(jCara, BorderLayout.WEST);
+		c.add(jCara, BorderLayout.WEST);
 		jCara.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JPanel jClasse = new JPanel();
@@ -64,12 +62,22 @@ public class GameGui extends JFrame {
 		jClasse.add(buttonAthlete);
 		
 
+		jForce = new PlusMoins("Force", 0, 10, 5);
+		jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
+		jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
+		jConcentration = new PlusMoins("Concentration", 5, 5, 5);
 		
-		jCara.add(cara("Force"));
-		jCara.add(cara("Dexterite"));
-		jCara.add(cara("Inteligence"));
-		jCara.add(cara("Concentration"));
 		
+		try {
+			jCara.add(jForce);
+			jCara.add(jDexterite);
+			jCara.add(jInteligence);
+			jCara.add(jConcentration);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		JPanel jName = new JPanel();
 		getContentPane().add(jName, BorderLayout.NORTH);
 		
@@ -88,79 +96,73 @@ public class GameGui extends JFrame {
 		Jconsol.add(txtpnTest, BorderLayout.CENTER);
 		
 		JButton btnNewButton = new JButton("Talk");
+
+		
 		Jconsol.add(btnNewButton, BorderLayout.EAST);
-		/*
+		
 		
 		
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 		getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
+		
+		// cap 
+		
 		JPanel jCapa = new JPanel();
 		scrollPane.setViewportView(jCapa);
 		jCapa.setLayout(new GridLayout(10, 1, 0, 0));
 		
+		//cap1
+		
 		JPanel JCapacite1 = new JPanel();
 		JCapacite1.setBorder(new TitledBorder(null, "Capacite 1", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
-		jCapa.add(JCapacite1);
 		JCapacite1.setLayout(new BoxLayout(JCapacite1, BoxLayout.X_AXIS));
 		
 		JSpinner spinner = new JSpinner();
 		JCapacite1.add(spinner);
-		spinner.setModel(new SpinnerListModel(new String[] {"Guerrier", "Mage", "Athlete"}));
+		spinner.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
 		
 		JPanel panel = new JPanel();
 		JCapacite1.add(panel);
 		
-		JPanel jCapa1Cara1 = new JPanel();
+		JPanel jCapa1Cara1 = new PlusMoins("Impact", 20, 50, 20);
+		JPanel jCapa1Cara2 = new PlusMoins("Parade", 20, 50, 20);
+		JPanel jCapa1Cara3 = new PlusMoins("Impact", 20, 50, 20);
 		panel.add(jCapa1Cara1);
-		jCapa1Cara1.setBorder(new TitledBorder(new LineBorder(new Color(184, 207, 229)), "Impact", TitledBorder.CENTER, TitledBorder.TOP, null, null));
-		jCapa1Cara1.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		panel.add(jCapa1Cara2);
+		panel.add(jCapa1Cara3);
 		
-		JButton button_10 = new JButton("-");
-		button_10.addActionListener(new ActionListener() {
+		jCapa.add(JCapacite1);
+		// ----------------cap2--------------------//
+		
+		JPanel JCapacite2 = new JPanel();
+		JCapacite2.setBorder(new TitledBorder(null, "Capacite 2", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
+		JCapacite2.setLayout(new BoxLayout(JCapacite2, BoxLayout.X_AXIS));
+		
+		JSpinner spinner2 = new JSpinner();
+		JCapacite2.add(spinner2);
+		spinner2.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
+		
+		JPanel panel2 = new JPanel();
+		JCapacite2.add(panel2);
+		
+		JPanel jCapa2Cara1 = new PlusMoins("Impact", 20, 50, 20);
+		JPanel jCapa2Cara2 = new PlusMoins("Parade", 20, 50, 20);
+		JPanel jCapa2Cara3 = new PlusMoins("Impact", 20, 50, 20);
+		panel2.add(jCapa2Cara1);
+		panel2.add(jCapa2Cara2);
+		panel2.add(jCapa2Cara3);
+		
+		jCapa.add(JCapacite2);
+		
+		
+		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				System.out.print(arg0.toString());
+				txtName.setText(jForce.getNb()  + ";" + jDexterite.getNb()+ ";" + jInteligence.getNb() + ";" + jConcentration.getNb());
+				
 			}
 		});
-		jCapa1Cara1.add(button_10);
-		
-		JLabel label_5 = new JLabel("0");
-		jCapa1Cara1.add(label_5);
-		
-		JButton button_11 = new JButton("+");
-		jCapa1Cara1.add(button_11);
-		
-		JPanel jCapa1Cara2 = new JPanel();
-		panel.add(jCapa1Cara2);
-		jCapa1Cara2.setBorder(new TitledBorder(new LineBorder(new Color(184, 207, 229)), "Puissance", TitledBorder.CENTER, TitledBorder.TOP, null, null));
-		jCapa1Cara2.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JButton button_8 = new JButton("-");
-		jCapa1Cara2.add(button_8);
-		
-		JLabel label_4 = new JLabel("0");
-		jCapa1Cara2.add(label_4);
-		
-		JButton button_9 = new JButton("+");
-		jCapa1Cara2.add(button_9);
-		
-		JPanel jCapa1Cara3 = new JPanel();
-		panel.add(jCapa1Cara3);
-		jCapa1Cara3.setBorder(new TitledBorder(new LineBorder(new Color(184, 207, 229)), "Parade", TitledBorder.CENTER, TitledBorder.TOP, null, null));
-		jCapa1Cara3.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		
-		JButton button_6 = new JButton("-");
-		jCapa1Cara3.add(button_6);
-		
-		JLabel label_3 = new JLabel("0");
-		jCapa1Cara3.add(label_3);
-		
-		JButton button_7 = new JButton("+");
-		jCapa1Cara3.add(button_7);
-		*/
-		
-		
 	}
 	
 	private JPanel cara(String text){
@@ -187,7 +189,101 @@ public class GameGui extends JFrame {
 	}
 	
 	
-	public static void main(String[] args){
-    	GameGui game = new GameGui();
+	public static void main(String[] args) throws Exception{
+    	new GameGui();
 	}
+	
+	@SuppressWarnings("serial")
+	public class PlusMoins extends JPanel{
+		private int bornMoins, bornPlus, nb;
+		private boolean isOn;
+		JPanel panel;
+		JButton bPlus, bMoins;
+		JLabel labelText;
+		
+		public PlusMoins(String title, int moins, int plus ,int init) throws Exception{
+			super();
+			
+			if(plus<moins){
+				throw new Exception("Born+ < Born-");
+			}else if (init<moins){
+				init = moins;
+			}else if (init>plus){
+				init = plus;
+			}
+			
+			this.bornMoins = moins;
+			this.bornPlus  = plus;
+			this.nb = init;
+			this.isOn = true;
+			
+			setBorder(new TitledBorder(null, title, TitledBorder.CENTER, TitledBorder.TOP, null, null));
+			setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+			
+			bMoins = new JButton("-");
+			bMoins.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					nb--;
+					reBorne();
+				}
+			});
+			bPlus = new JButton("+");
+			bPlus.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					nb++;
+					reBorne();
+				}
+			});
+			labelText = new JLabel(nb +"");
+			
+			reBorne();
+			
+			add(bMoins);
+			add(labelText);
+			add(bPlus);
+		}
+		
+		public void setUse(boolean isOn){
+			this.isOn = isOn;
+			if(isOn){
+				reBorne();
+			}else{
+				bMoins.setEnabled(false);
+				bPlus.setEnabled(false);
+			}
+			
+		}
+		
+		public void reBorne(){
+			bMoins.setEnabled(nb > bornMoins);
+			bPlus.setEnabled(nb < bornPlus);
+			labelText.setText(nb + "");
+		}
+		
+		public void setBorneMoins(int born){
+			if (born>this.bornPlus){
+				System.out.println("Erreur born- > born+");
+			}else if(born>nb){
+				System.out.println("Erreur born- > nb");
+			}else{
+				this.bornMoins = born;
+				reBorne();
+			}
+		}
+		public void setBornePlus(int born){
+			if (born<this.bornMoins){
+				System.out.println("Erreur born+ < born-");
+			}else if(born<nb){
+				System.out.println("Erreur born+ < nb");
+			}else{
+				this.bornPlus = born;
+				reBorne();
+			}
+		}
+		
+		public int getNb(){
+			return this.nb;
+		}
+		
+	}	
 }
