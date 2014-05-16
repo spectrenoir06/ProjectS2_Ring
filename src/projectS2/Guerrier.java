@@ -22,4 +22,9 @@ public class Guerrier extends Perso {
         return super.getInfo("guerrier");
     }
 
+	@Override
+	public String serialise() {
+		return getSerialise("guerrier");
+	}
+
 }

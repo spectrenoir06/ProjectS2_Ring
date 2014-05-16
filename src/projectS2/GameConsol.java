@@ -189,6 +189,9 @@ public class GameConsol {
             case 7:
             	game.getPerso1().use(0, game.getPerso1());
                 break;
+            case 8:
+            	System.out.println(game.getPerso1().serialise());
+                break;
             default:
                 break;
             }

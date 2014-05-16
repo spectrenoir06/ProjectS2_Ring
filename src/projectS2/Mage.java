@@ -18,5 +18,10 @@ public class Mage extends Perso {
     public String toString() {
         return super.getInfo("mage");
     }
+    
+    @Override
+	public String serialise() {
+		return getSerialise("mage");
+	}
 
 }

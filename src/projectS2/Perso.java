@@ -158,5 +158,13 @@ public abstract class Perso {
         }
         return s;
     }
-
+    public String getSerialise(String type) {
+    	String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration + "\n");
+        for (Capacite c : this.capacite){
+            s = s  + c.serialise() + "\n";
+        }
+    	return s;
+    }
+    
+    public abstract String serialise();
 }

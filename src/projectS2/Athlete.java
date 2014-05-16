@@ -19,4 +19,9 @@ public class Athlete extends Perso {
         return super.getInfo("Athlete");
     }
 
+    @Override
+	public String serialise() {
+		return getSerialise("athlete");
+	}
+    
 }
