@@ -296,13 +296,17 @@ while(true){
                 <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[System.out.println("+-----------------------------+");
-System.out.println("| 1 - Cree perso1             |");
-System.out.println("| 2 - Cree perso2             |");
-System.out.println("| 3 - Add Capacite perso1     |");
-System.out.println("| 4 - Voir perso1             |");
-System.out.println("| 5 - Voir perso2             |");
-System.out.println("| 6 - 1 Use capa1 sur 2       |");
-System.out.println("| 7 - 1 use capa1 sur lui     |");
+System.out.println("| 1  - Cree perso1            |");
+System.out.println("| 2  - Cree perso2            |");
+System.out.println("| 3  - Add Capacite perso1    |");
+System.out.println("| 4  - Voir perso1            |");
+System.out.println("| 5  - Voir perso2            |");
+System.out.println("| 6  - 1 Use capa1 sur 2      |");
+System.out.println("| 7  - 1 use capa1 sur lui    |");
+System.out.println("| 8  - serialise perso1       |");
+System.out.println("| 9  - combat perso1/perso2   |");
+System.out.println("| 10 - save perso1 in file    |");
+System.out.println("| 11 - load perso1 from file  |");
 System.out.println("+-----------------------------+");
 System.out.println("cmd : ");
 try{
@@ -333,6 +337,16 @@ try{
         break;
     case 8:
         System.out.println(game.getPerso1().serialise());
+        break;
+    case 9:
+        game.duel();
+        break;
+    case 10:
+        game.save(game.getPerso1(), "perso1.perso");
+        break;
+    case 11:
+        game.setPerso1(game.load("perso1.perso"));
+        game.setPerso2(game.load("perso2.perso"));
         break;
     default:
         break;
@@ -428,7 +442,6 @@ try{
 
 while(true){
     consol.consol();
-    consol.game.getPerso1();
 }
 ]]></ATT>
                   <ATT name="Name"></ATT>

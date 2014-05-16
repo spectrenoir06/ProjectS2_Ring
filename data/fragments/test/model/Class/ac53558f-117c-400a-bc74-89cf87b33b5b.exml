@@ -1509,9 +1509,9 @@ for (Capacite c : this.capacite){
                 <ID name="" mc="Note" uid="18064e97-4dbf-4815-91f2-bd59c8f24ca0"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration + "\n");
+                  <ATT name="Content"><![CDATA[String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration);
 for (Capacite c : this.capacite){
-    s = s  + c.serialise() + "\n";
+    s = s  + "\n" + c.serialise();
 }
 ]]></ATT>
                   <ATT name="Name"></ATT>
@@ -1599,6 +1599,210 @@ for (Capacite c : this.capacite){
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="Perso" mc="Operation" uid="483426c0-0ca4-4178-998c-093310b4f94f"/>
+          <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Perso]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="433e62d5-1fcf-4a98-81b3-f3a0631dd28d"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="nom" mc="Parameter" uid="7644ffea-f202-4b7a-9faf-22e74cf0b6c8"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[nom]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="exp" mc="Parameter" uid="9c988071-45f0-41c1-b420-8383bafb7ff5"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[exp]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="force" mc="Parameter" uid="dc00c9ab-47f2-417c-aaae-00b22deacd77"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[force]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="dexterite" mc="Parameter" uid="24b37d45-cad0-45fd-8e47-e854f2279620"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[dexterite]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="intelligence" mc="Parameter" uid="7f76bbef-07e7-4a91-9f9a-a35b69804c3e"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[intelligence]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="concentration" mc="Parameter" uid="903e6b29-9f93-44cb-aeaa-aa1478e5acb9"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[concentration]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="3dcc661f-375b-4fdf-a952-e00e8715bfdb"/>
+                <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[this.experience = exp;
+if ( (force+dexterite+intelligence+concentration) <= 100 + this.experience)
+{
+    //System.out.println("perso conforme");
+    this.nom = nom;
+    this.force = force;
+    this.dexterite = dexterite;
+    this.intelligence = intelligence;
+    this.concentration = concentration;
+}
+else
+{
+    throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedAttribute">
         <OBJECT>
@@ -1626,7 +1830,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="fc8d63c5-f5a7-4f5b-919b-81bfeacd84b8"/>
+                <ID name="" mc="TaggedValue" uid="c48bb27c-17b7-4717-a158-e1c0b10508e7"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1666,7 +1870,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="412659e8-4dc9-4e38-a069-2c0a1d8818dc"/>
+                <ID name="" mc="TaggedValue" uid="1cfab9c6-c849-4a91-8928-ab9c591d8414"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1706,7 +1910,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="72eafac8-89c5-4a2a-b6ab-1e354c92aec5"/>
+                <ID name="" mc="TaggedValue" uid="784584a4-372e-4380-90ce-dac2cc53b39d"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1746,7 +1950,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d7b1b513-f2f5-4a67-94f4-9772c295974a"/>
+                <ID name="" mc="TaggedValue" uid="035c0b08-1200-4b47-88b3-6c855df1c56a"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1786,7 +1990,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="ef01bb18-c751-4bc0-9484-081483b4a24f"/>
+                <ID name="" mc="TaggedValue" uid="a66ef263-cc6d-482a-9cb1-e257ec036b50"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1826,7 +2030,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="0f9305ae-6664-443c-927e-57594bb1af5d"/>
+                <ID name="" mc="TaggedValue" uid="7d8de740-0970-4628-a998-361bd6377fa0"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1866,7 +2070,7 @@ for (Capacite c : this.capacite){
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="15143096-b332-4a0d-ad0c-c436cbd72132"/>
+                <ID name="" mc="TaggedValue" uid="4ec696f9-bac3-46bd-86f5-726807dbb70e"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

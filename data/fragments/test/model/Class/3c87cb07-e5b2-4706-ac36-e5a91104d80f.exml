@@ -2,11 +2,22 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Game" version="3">
   <DEPS>
     <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+    <EXTID name="BufferedInputStream" mc="Class" uid="356d7138-4ab4-459d-8e1d-1e73ee7469ea"/>
+    <EXTID name="FileInputStream" mc="Class" uid="879f8176-dda4-45bf-a5cb-c9c9d3ac370a"/>
+    <EXTID name="FileNotFoundException" mc="Class" uid="6c522b4b-586c-49e0-8850-d79071eabc9b"/>
+    <EXTID name="FileOutputStream" mc="Class" uid="175cd978-f760-4e89-a381-b1ead1aeb21e"/>
+    <EXTID name="IOException" mc="Class" uid="063e6ec3-a787-4267-a5de-ab894297a34e"/>
+    <EXTID name="InputStream" mc="Class" uid="ba00c405-c879-4043-be4b-11d9ef3882c7"/>
     <EXTID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+    <EXTID name="PrintStream" mc="Class" uid="2dc7a4e2-e2be-4570-aca5-917956cec60a"/>
+    <EXTID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+    <EXTID name="StringTokenizer" mc="Class" uid="548d379a-f6fa-499f-8426-c0da6be6c0ca"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
@@ -252,6 +263,356 @@
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="duel" mc="Operation" uid="4b18d94b-4d14-4dfb-979d-1358e4f6824f"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[duel]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="da1b63f7-8780-43e0-ba3f-b22688fb6a13"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[if (this.perso1 != null && this.perso2 != null){
+    perso1.resetVitalite();
+    perso2.resetVitalite();
+    System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
+    System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());    
+}else{
+    System.out.println("perso1 ou perso2 n'existe pas");
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="save" mc="Operation" uid="3ce95ca5-e3c0-43db-a049-4615dc66d80d"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[save]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="perso" mc="Parameter" uid="cc59c531-f84a-4b3e-afcf-4eb18e94e922"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[perso]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="file" mc="Parameter" uid="78289783-b668-4fa8-8213-8800fea7b78c"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="ce365d46-3ecd-448f-8787-0df2f3960dc3"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="43463591-82a9-4f80-868e-e52effdd83b8"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return true;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="5a4f89f2-004d-411a-8f32-f7687fb54115"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[System.out.println("write start");
+
+PrintStream p = null;
+FileOutputStream out;
+
+try {
+    out = new FileOutputStream(file);
+    p = new PrintStream( out );
+    p.print(perso.serialise());
+} catch (FileNotFoundException e) {
+    e.printStackTrace();
+    return false;
+}finally{
+    p.close();
+}
+System.out.println("write done in "+ file);
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="load" mc="Operation" uid="2fdcda71-2443-41fe-a5bc-ef40f3088af0"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[load]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="file" mc="Parameter" uid="fbeaac31-f4b4-40b6-a243-c368ab6c9b8c"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[file]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="eb211dae-c437-4965-8be5-d51f5dc05bea"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="968c5097-4de2-4a72-9c6d-a29577eb1be3"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return p;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="23f2be4b-f04e-4cb9-a918-d50faf56ed47"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[InputStream in ;
+BufferedInputStream bin ;
+Scanner sc ;
+Perso p = null;
+
+try {
+    in = new FileInputStream(file);
+    bin = new BufferedInputStream(in);
+    sc = new Scanner(bin);
+
+    String s;
+    
+    //while(sc.hasNextLine()){
+    s = sc.nextLine();
+    StringTokenizer st = new StringTokenizer(s,";");
+    
+    String classe     = st.nextToken();
+    String name     = st.nextToken();
+    int exp         = new Integer(st.nextToken());
+    int force         = new Integer(st.nextToken());
+    int dexterite    = new Integer(st.nextToken());
+    int inteligence    = new Integer(st.nextToken());
+    int conc        = new Integer(st.nextToken());
+        
+    switch (classe) {
+        case "guerrier":
+             p = new Guerrier(name,exp,force,dexterite,inteligence,conc);
+             break;
+        case "mage":
+             p = new Mage(name, exp,force,dexterite,inteligence,conc);
+             break;
+        case "athlete":
+             p = new Athlete(name,exp,force,dexterite,inteligence,conc);
+             break;
+        }
+    
+    while(sc.hasNextLine()){
+        s = sc.nextLine();
+        st = new StringTokenizer(s,";");
+        Capacite c = null;
+        switch (st.nextToken()) {
+        case "eppe":
+             c = new Epee(new Integer(st.nextToken()), new Integer(st.nextToken()), new Integer(st.nextToken()));
+             break;
+        case "bouclier":
+            c = new Bouclier(new Integer(st.nextToken()), new Integer(st.nextToken()));
+            break;
+        case "remede":
+             c = new Remede(new Integer(st.nextToken()), new Integer(st.nextToken()));
+             break;
+        case "SO":
+            c = new SortilegeOffensif(new Integer(st.nextToken()), new Integer(st.nextToken()));
+            break;
+        case "SD":
+            c = new SortilegeDefensif(new Integer(st.nextToken()), new Integer(st.nextToken()));
+            break;
+        case "SG":
+            c = new SortilegeGuerisseur(new Integer(st.nextToken()), new Integer(st.nextToken()));
+            break;
+        }
+        p.addCapacite(c);
+    }
+    sc.close();
+    bin.close();
+    in.close();
+
+}
+catch(IOException e){
+    System.out.println(e);
+}catch(PersoException pe){
+    System.out.println("Perso non conforme");
+}
+
+finally 
+{
+    sc     = null;
+    bin = null;
+    in    = null;
+}
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
@@ -318,7 +679,7 @@
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="01e0873b-68c0-43b6-8d6d-5400a0b43d4b"/>
+                <ID name="" mc="TaggedValue" uid="e207a757-1765-4645-a5d7-cb070ea47f22"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -397,7 +758,7 @@
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="c26d529d-4758-4425-a722-16cb4a95474b"/>
+                <ID name="" mc="TaggedValue" uid="d3fd4e86-fa29-4ad9-b548-d2eee855fc04"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -410,6 +771,134 @@
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedImport">
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="26cc745d-24bc-4c17-9765-0d60c5fd01be"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="BufferedInputStream" mc="Class" uid="356d7138-4ab4-459d-8e1d-1e73ee7469ea"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="0c6330cc-16f9-4aae-a643-b104b055cbae"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="FileInputStream" mc="Class" uid="879f8176-dda4-45bf-a5cb-c9c9d3ac370a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="a2497ae3-ded4-4f35-b1b2-783d3f68bc56"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="FileNotFoundException" mc="Class" uid="6c522b4b-586c-49e0-8850-d79071eabc9b"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="9f696960-e895-43de-8ba0-2eddaa00c347"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="FileOutputStream" mc="Class" uid="175cd978-f760-4e89-a381-b1ead1aeb21e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="7e8da3d9-133d-4439-aefb-a25714180ce8"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="IOException" mc="Class" uid="063e6ec3-a787-4267-a5de-ab894297a34e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="7d5d8c03-0534-411f-94e0-239a3b070e02"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="InputStream" mc="Class" uid="ba00c405-c879-4043-be4b-11d9ef3882c7"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="e9687cf9-af8d-4b5b-8418-d1bf77e44004"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="PrintStream" mc="Class" uid="2dc7a4e2-e2be-4570-aca5-917956cec60a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="1aebb689-fb13-4007-9210-ef1347452347"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="640f1067-428c-4f0d-930a-94c04c0f3909"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="StringTokenizer" mc="Class" uid="548d379a-f6fa-499f-8426-c0da6be6c0ca"/>
+            </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>

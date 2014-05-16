@@ -3,6 +3,7 @@
   <DEPS>
     <ID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
     <COMPID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
+    <COMPID name="io" mc="Package" uid="7da24bc8-e22f-4ad2-9d3d-2c4301073cad"/>
     <COMPID name="lang" mc="Package" uid="2d4a9733-3dcc-42c3-ae4a-381a4388f132"/>
     <COMPID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
     <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
@@ -25,6 +26,7 @@
         <COMPID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
         <COMPID name="lang" mc="Package" uid="2d4a9733-3dcc-42c3-ae4a-381a4388f132"/>
         <COMPID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
+        <COMPID name="io" mc="Package" uid="7da24bc8-e22f-4ad2-9d3d-2c4301073cad"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
