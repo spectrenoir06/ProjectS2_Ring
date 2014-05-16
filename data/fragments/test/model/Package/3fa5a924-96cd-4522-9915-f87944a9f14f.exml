@@ -1,38 +1,36 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="java" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="border" version="3">
   <DEPS>
-    <ID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
-    <COMPID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
-    <COMPID name="lang" mc="Package" uid="2d4a9733-3dcc-42c3-ae4a-381a4388f132"/>
-    <COMPID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
+    <ID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+    <COMPID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+    <COMPID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
     <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
     <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
   </DEPS>
   <OBJECT>
-    <ID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
-    <PID name="ProjectS2_Ring" mc="Package" uid="6873d8f3-ea72-406b-b046-20fa530c06f4"/>
+    <ID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+    <PID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
     <ATTRIBUTES>
       <ATT name="IsInstantiable">false</ATT>
       <ATT name="IsAbstract">false</ATT>
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[java]]></ATT>
+      <ATT name="Name"><![CDATA[border]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
-        <COMPID name="util" mc="Package" uid="bb892a56-5e5e-4058-bed4-b2af83401676"/>
-        <COMPID name="lang" mc="Package" uid="2d4a9733-3dcc-42c3-ae4a-381a4388f132"/>
-        <COMPID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
+        <COMPID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+        <COMPID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
       </LINK>
       <COMP relation="Tag">
         <OBJECT>
-          <ID name="" mc="TaggedValue" uid="aa100958-a05a-45a1-8689-bc1371819425"/>
-          <PID name="java" mc="Package" uid="5eae40f1-d874-4d64-a5ef-16e2ed5eda4c"/>
+          <ID name="" mc="TaggedValue" uid="b570c862-0325-48a8-9f9c-1cb5adc063db"/>
+          <PID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
           <ATTRIBUTES>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>

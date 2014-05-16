@@ -2,8 +2,36 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="GameGui" version="3">
   <DEPS>
     <ID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+    <COMPID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+    <EXTID name="ActionEvent" mc="Class" uid="73227c7a-b964-4443-8d73-7293c25e4f7a"/>
+    <EXTID name="ActionListener" mc="Interface" uid="03899c2a-f398-49e3-9cdc-9bc4b936d00e"/>
+    <EXTID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+    <EXTID name="ButtonGroup" mc="Class" uid="0711c584-66ca-4f99-88af-5f90e4a253c0"/>
+    <EXTID name="Container" mc="Class" uid="6179555f-12ff-43af-9653-e94142b8d076"/>
+    <EXTID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+    <EXTID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
     <EXTID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+    <EXTID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+    <EXTID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+    <EXTID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+    <EXTID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
+    <EXTID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+    <EXTID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+    <EXTID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+    <EXTID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
+    <EXTID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3a6f-0000-000000000000"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
   </DEPS>
   <OBJECT>
     <ID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
@@ -20,9 +48,1064 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="GameGui" mc="Operation" uid="3020179e-8e31-4470-9584-b78561a15e46"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[GameGui]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="591382b6-fc84-454d-a211-bd0603d7a447"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="43a456bd-998f-4d29-8cff-b0d37968e6b2"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[super("Ring");
+this.game = new Game();
+this.init();
+this.setSize(900, 600);
+this.setVisible(true);
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="init" mc="Operation" uid="a2ab947f-997a-4be7-a304-26276f99abf4"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[init]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="f3592ddc-0053-4374-ba9c-49a5923ec165"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="6f1f93e7-2b37-4773-95b8-5cae65631bcd"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Container c = this.getContentPane();
+
+JPanel jCara = new JPanel();
+c.add(jCara, BorderLayout.WEST);
+jCara.setLayout(new GridLayout(0, 1, 0, 0));
+
+JPanel jClasse = new JPanel();
+jClasse.setBorder(new TitledBorder(null, "Classe", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+jCara.add(jClasse);
+jClasse.setLayout(new GridLayout(0, 1, 0, 0));
+
+JRadioButton buttonGuerrier = new JRadioButton("Guerrier");
+buttonGroup.add(buttonGuerrier);
+buttonGuerrier.setSelected(true);
+jClasse.add(buttonGuerrier);
+
+JRadioButton buttonMage = new JRadioButton("Mage");
+buttonGroup.add(buttonMage);
+jClasse.add(buttonMage);
+
+JRadioButton buttonAthlete = new JRadioButton("Athlete");
+buttonGroup.add(buttonAthlete);
+jClasse.add(buttonAthlete);
+
+
+jForce = new PlusMoins("Force", 0, 10, 5);
+jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
+jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
+jConcentration = new PlusMoins("Concentration", 5, 5, 5);
+
+
+try {
+    jCara.add(jForce);
+    jCara.add(jDexterite);
+    jCara.add(jInteligence);
+    jCara.add(jConcentration);
+    
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
+JPanel jName = new JPanel();
+getContentPane().add(jName, BorderLayout.NORTH);
+
+txtName = new JTextField();
+txtName.setHorizontalAlignment(SwingConstants.CENTER);
+txtName.setText("Name");
+jName.add(txtName);
+txtName.setColumns(10);
+
+JPanel Jconsol = new JPanel();
+getContentPane().add(Jconsol, BorderLayout.SOUTH);
+Jconsol.setLayout(new BorderLayout(0, 0));
+
+JTextPane txtpnTest = new JTextPane();
+txtpnTest.setText("test");
+Jconsol.add(txtpnTest, BorderLayout.CENTER);
+
+JButton btnNewButton = new JButton("Talk");
+
+
+Jconsol.add(btnNewButton, BorderLayout.EAST);
+
+
+
+JScrollPane scrollPane = new JScrollPane();
+scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+getContentPane().add(scrollPane, BorderLayout.CENTER);
+
+
+// cap 
+
+JPanel jCapa = new JPanel();
+scrollPane.setViewportView(jCapa);
+jCapa.setLayout(new GridLayout(10, 1, 0, 0));
+
+//cap1
+
+JPanel JCapacite1 = new JPanel();
+JCapacite1.setBorder(new TitledBorder(null, "Capacite 1", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
+JCapacite1.setLayout(new BoxLayout(JCapacite1, BoxLayout.X_AXIS));
+
+JSpinner spinner = new JSpinner();
+JCapacite1.add(spinner);
+spinner.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
+
+JPanel panel = new JPanel();
+JCapacite1.add(panel);
+
+JPanel jCapa1Cara1 = new PlusMoins("Impact", 20, 50, 20);
+JPanel jCapa1Cara2 = new PlusMoins("Parade", 20, 50, 20);
+JPanel jCapa1Cara3 = new PlusMoins("Impact", 20, 50, 20);
+panel.add(jCapa1Cara1);
+panel.add(jCapa1Cara2);
+panel.add(jCapa1Cara3);
+
+jCapa.add(JCapacite1);
+// ----------------cap2--------------------//
+
+JPanel JCapacite2 = new JPanel();
+JCapacite2.setBorder(new TitledBorder(null, "Capacite 2", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
+JCapacite2.setLayout(new BoxLayout(JCapacite2, BoxLayout.X_AXIS));
+
+JSpinner spinner2 = new JSpinner();
+JCapacite2.add(spinner2);
+spinner2.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
+
+JPanel panel2 = new JPanel();
+JCapacite2.add(panel2);
+
+JPanel jCapa2Cara1 = new PlusMoins("Impact", 20, 50, 20);
+JPanel jCapa2Cara2 = new PlusMoins("Parade", 20, 50, 20);
+JPanel jCapa2Cara3 = new PlusMoins("Impact", 20, 50, 20);
+panel2.add(jCapa2Cara1);
+panel2.add(jCapa2Cara2);
+panel2.add(jCapa2Cara3);
+
+jCapa.add(JCapacite2);
+
+
+btnNewButton.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent arg0) {
+        txtName.setText(jForce.getNb()  + ";" + jDexterite.getNb()+ ";" + jInteligence.getNb() + ";" + jConcentration.getNb());
+        
+    }
+});
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="cara" mc="Operation" uid="a807fb1f-4954-4914-8faa-ab2437c2d6e5"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[cara]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="text" mc="Parameter" uid="619fbaf2-64de-440a-9e87-34f06b2b3be5"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[text]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="576ca5c4-251f-4912-905a-41b1bc3b8b1a"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="ca07080b-5c6b-46e8-b4ce-0a0c988faf77"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return j;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="5d3ccc98-2e07-47a1-a07d-1db06559f13b"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[JPanel j = new JPanel();
+j.setBorder(new TitledBorder(null, text, TitledBorder.CENTER, TitledBorder.TOP, null, null));
+
+j.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+JButton buttonMoins = new JButton("-");
+buttonMoins.addActionListener(new ActionListener() {
+    public void actionPerformed(ActionEvent e) {
+        
+    }
+});
+j.add(buttonMoins);
+
+JLabel label = new JLabel("0");
+j.add(label);
+
+JButton buttonPlus = new JButton("+");
+j.add(buttonPlus);
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="main" mc="Operation" uid="cd1d3e26-1d8f-48ac-b034-1803150c20a1"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[main]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="2683c97d-4132-4a63-9ffa-71cb04d8178a"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="args" mc="Parameter" uid="7270d036-20ee-4b34-a56e-812ea81c7841"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[args]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="27f2328e-fe27-4791-b7b7-3197137eef4e"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="1c9fa8f6-1fca-432e-b84d-bfd5dcc90c01"/>
+                            <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="5c3b41f2-575b-4b66-b6a9-5a5e4d41c330"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[new GameGui();]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="serialVersionUID" mc="Attribute" uid="66fde004-e939-4e28-9015-5533f952e685"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"><![CDATA[1L]]></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[serialVersionUID]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="77859966-044e-4a75-9695-38d197416478"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="txtName" mc="AssociationEnd" uid="7a864581-35c3-41dd-8fb1-f457e15f20cf"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[txtName]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="dde643d3-cef4-434f-a442-d0d18b974d44"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="txtName" mc="AssociationEnd" uid="7a864581-35c3-41dd-8fb1-f457e15f20cf"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="34e1a523-123c-44c0-84de-aeea0b5a74b2"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="34e1a523-123c-44c0-84de-aeea0b5a74b2"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="a752f8e2-310e-4f02-9395-6e801b06452c"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="jForce" mc="AssociationEnd" uid="63e5d77d-6cdc-409a-a2e6-e13e66eef970"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[jForce]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="13ca67bb-bfca-42cf-a8f0-ef6920eb373f"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="jForce" mc="AssociationEnd" uid="63e5d77d-6cdc-409a-a2e6-e13e66eef970"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="e972eb96-2b6d-4d11-9451-536720bc7917"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="e972eb96-2b6d-4d11-9451-536720bc7917"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="83e2876c-d3f2-47e6-8597-efbe547a778a"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="jDexterite" mc="AssociationEnd" uid="e57c6e6b-13b7-4a70-b322-a9865c3a5e71"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[jDexterite]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="ab5a43b4-83b7-465c-b2a7-d77b6dbcee4e"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="jDexterite" mc="AssociationEnd" uid="e57c6e6b-13b7-4a70-b322-a9865c3a5e71"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="52030aab-938d-4d69-8231-abf7fa8f4f4a"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="52030aab-938d-4d69-8231-abf7fa8f4f4a"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="b367b4dd-93e8-45be-80ab-b3daef3c84ac"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="jInteligence" mc="AssociationEnd" uid="0823c1f3-06fe-424b-9247-886529b23580"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[jInteligence]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="cb747f4c-7193-4afe-ad40-34af6d06f443"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="jInteligence" mc="AssociationEnd" uid="0823c1f3-06fe-424b-9247-886529b23580"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="5c231d3a-c6a3-4f3b-a8a1-01f48f01fdd1"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="5c231d3a-c6a3-4f3b-a8a1-01f48f01fdd1"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="79cbb36c-b75c-418c-b8b0-06954b1b0b49"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="jConcentration" mc="AssociationEnd" uid="24532838-fe20-45d1-9637-d16043b865f3"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[jConcentration]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="cd382a2d-e221-43e3-8aef-a0e59a0426bf"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="jConcentration" mc="AssociationEnd" uid="24532838-fe20-45d1-9637-d16043b865f3"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="2ba98f98-7612-4dbe-90a7-0aa4f2368712"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="2ba98f98-7612-4dbe-90a7-0aa4f2368712"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="7fd13a6a-270e-4e48-a548-80fdedaf8353"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="buttonGroup" mc="AssociationEnd" uid="8dc7e05d-4763-49f9-88ac-62c957b52101"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[buttonGroup]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="ButtonGroup" mc="Class" uid="0711c584-66ca-4f99-88af-5f90e4a253c0"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="f870762c-69f3-4a15-aefb-89dadd4f734d"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="buttonGroup" mc="AssociationEnd" uid="8dc7e05d-4763-49f9-88ac-62c957b52101"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="d19f1780-1fb6-4417-9271-4818e2986248"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="d19f1780-1fb6-4417-9271-4818e2986248"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="5d6a65a6-c3e2-460e-ad71-a548b654b307"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0180-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="55585198-351c-4856-89cd-1dcd9fe8bf8e"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[new ButtonGroup()]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="game" mc="AssociationEnd" uid="4771fe82-c5aa-46eb-821f-90b34dd614e7"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[game]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="e2213747-6955-4f31-ad29-11be31b0d422"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="game" mc="AssociationEnd" uid="4771fe82-c5aa-46eb-821f-90b34dd614e7"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="acbdeb3d-2955-427b-95d2-14a8fb245904"/>
+                      <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="acbdeb3d-2955-427b-95d2-14a8fb245904"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="19562709-3877-48c9-869e-38c5e9a6af1b"/>
+                <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
       <COMP relation="Parent">
         <OBJECT>
-          <ID name="" mc="Generalization" uid="d3c6571c-90f2-4d0b-86f8-09079c9d3f65"/>
+          <ID name="" mc="Generalization" uid="cd56fffa-742e-48c3-9d27-b1c1d05da8ed"/>
           <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
           <ATTRIBUTES>
             <ATT name="Discriminator"></ATT>
@@ -31,14 +1114,177 @@
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="SuperType">
-              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
+      <COMP relation="OwnedPackageImport">
+        <OBJECT>
+          <ID name="" mc="PackageImport" uid="22ae9ffe-bad5-45b1-960f-8a899a47d4eb"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedPackage">
+              <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="PackageImport" uid="9705f3df-975d-4925-9b14-d8079878b779"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedPackage">
+              <ID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedImport">
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="076786d6-1538-4d61-b2c6-ebaf6445c86a"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="4de56a26-4cf9-4c10-8551-a91f82993402"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="Container" mc="Class" uid="6179555f-12ff-43af-9653-e94142b8d076"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="779f6c3d-f984-44dc-912b-2118348c137b"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="c102ecea-b538-4f6b-8894-a4f50c683b94"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="9e78e66a-3faa-4830-8ce3-de3238e6efaf"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="ed141241-ed47-46b7-93e1-f4d012cdd4e4"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="7667eaff-88e3-46ba-9fb1-a446e27094c3"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="ActionListener" mc="Interface" uid="03899c2a-f398-49e3-9cdc-9bc4b936d00e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="49157086-74f0-4e5c-8d08-1ccef70f8380"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="ActionEvent" mc="Class" uid="73227c7a-b964-4443-8d73-7293c25e4f7a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedElement">
+        <COMPID name="PlusMoins" mc="Class" uid="4c93c386-3900-4ad1-9edf-9a0bba4229d1"/>
+      </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
       </LINK>
+      <COMP relation="Descriptor">
+        <OBJECT>
+          <ID name="" mc="Note" uid="6215d529-0962-41af-9efc-24189c9c0f0c"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Content"><![CDATA[@SuppressWarnings("unused")]]></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Model">
+              <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3a6f-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
     </DEPENDENCIES>
   </OBJECT>
 </EXT>

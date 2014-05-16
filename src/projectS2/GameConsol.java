@@ -5,9 +5,10 @@ import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("b5d42879-bdfb-452c-acd5-681f01be34fa")
-public class GameConsol extends Game {
+public class GameConsol {
     @objid ("6de8e41a-6d57-47e7-a1e5-8c1d22bfe816")
      Scanner scan = new Scanner(System.in);
+    private Game game = new Game();
 
     @objid ("a8f88020-6c78-4846-9945-7e9c4f6f8c9a")
     public Perso createPerso() {
@@ -16,13 +17,13 @@ public class GameConsol extends Game {
                 Perso p = null;
                 
                 System.out.println( "Classe : \n"
-                				+	" 1 - Guerrier\n"
-                				+	" 2 - Mage\n"
-                				+	" 3 - Athlete\n"
-                				+	"cmd : ");
+                                +    " 1 - Guerrier\n"
+                                +    " 2 - Mage\n"
+                                +    " 3 - Athlete\n"
+                                +    "cmd : ");
                 int classe = scan.nextInt();
                 if (classe < 1 || classe > 3){
-                	throw new Exception("Classe inconnue");
+                    throw new Exception("Classe inconnue");
                 }
                 
                 System.out.println("Name :");
@@ -82,63 +83,63 @@ public class GameConsol extends Game {
                 int type = scan.nextInt();
                 
                 if (type < 0 || type > 5 ){
-                	throw new Exception("Capacite inconnue");
+                    throw new Exception("Capacite inconnue");
                 }
                               
                 while (true){
-                	try {
-		                switch (type) {
-		                case 0: // Guerrier
-		                    System.out.println("Impact:");
-		                    impact = scan.nextInt();
-		                    System.out.println("Parade:");
-		                    para = scan.nextInt();
-		                    System.out.println("Maniabilite:");
-		                    int maniabilite = scan.nextInt();
-		                    c = new Epee(impact, para, maniabilite);
-		                    break;
-		                case 1: // Bouclier
-		                    System.out.println("Maniabilite:");
-		                    maniabilite = scan.nextInt();
-		                    System.out.println("Protection:");
-		                    protection = scan.nextInt();
-		                    c = new Bouclier(maniabilite, protection);                     
-		                    break;
-		                case 2: // Remede
-		                    System.out.println("Facilite:");
-		                    facilite = scan.nextInt();
-		                    System.out.println("Efficacite:");
-		                    efficacite = scan.nextInt();
-		                    c = new Remede(facilite, efficacite);
-		                    break;
-		                case 3: // SortilegeOffensif
-		                    System.out.println("Facilite:");
-		                    facilite = scan.nextInt();
-		                    System.out.println("Efficacite:");
-		                    efficacite = scan.nextInt();
-		                    c = new SortilegeOffensif(facilite, efficacite);
-		                    break;
-		                case 4: // SortilegeDefensif
-		                    System.out.println("Facilite:");
-		                    facilite = scan.nextInt();
-		                    System.out.println("Efficacite:");
-		                    efficacite = scan.nextInt();
-		                    c = new SortilegeDefensif(facilite, efficacite);
-		                    break;
-		                case 5: // SortilegeGuerisseur
-		                    System.out.println("Facilite:");
-		                    facilite = scan.nextInt();
-		                    System.out.println("Efficacite:");
-		                    efficacite = scan.nextInt();
-		                    c = new SortilegeGuerisseur(facilite, efficacite);
-		                    break;
-		                }
-		                return c;
-                	}
-                	catch(InputMismatchException e){
-                		scan.next();
-                		System.out.println("erreur entre un integer");
-                	}
+                    try {
+                        switch (type) {
+                        case 0: // Guerrier
+                            System.out.println("Impact:");
+                            impact = scan.nextInt();
+                            System.out.println("Parade:");
+                            para = scan.nextInt();
+                            System.out.println("Maniabilite:");
+                            int maniabilite = scan.nextInt();
+                            c = new Epee(impact, para, maniabilite);
+                            break;
+                        case 1: // Bouclier
+                            System.out.println("Maniabilite:");
+                            maniabilite = scan.nextInt();
+                            System.out.println("Protection:");
+                            protection = scan.nextInt();
+                            c = new Bouclier(maniabilite, protection);                     
+                            break;
+                        case 2: // Remede
+                            System.out.println("Facilite:");
+                            facilite = scan.nextInt();
+                            System.out.println("Efficacite:");
+                            efficacite = scan.nextInt();
+                            c = new Remede(facilite, efficacite);
+                            break;
+                        case 3: // SortilegeOffensif
+                            System.out.println("Facilite:");
+                            facilite = scan.nextInt();
+                            System.out.println("Efficacite:");
+                            efficacite = scan.nextInt();
+                            c = new SortilegeOffensif(facilite, efficacite);
+                            break;
+                        case 4: // SortilegeDefensif
+                            System.out.println("Facilite:");
+                            facilite = scan.nextInt();
+                            System.out.println("Efficacite:");
+                            efficacite = scan.nextInt();
+                            c = new SortilegeDefensif(facilite, efficacite);
+                            break;
+                        case 5: // SortilegeGuerisseur
+                            System.out.println("Facilite:");
+                            facilite = scan.nextInt();
+                            System.out.println("Efficacite:");
+                            efficacite = scan.nextInt();
+                            c = new SortilegeGuerisseur(facilite, efficacite);
+                            break;
+                        }
+                        return c;
+                    }
+                    catch(InputMismatchException e){
+                        scan.next();
+                        System.out.println("erreur entre un integer");
+                    }
                 }
             }catch(InputMismatchException e){
                 System.out.println("erreur entre un integer");
@@ -164,12 +165,12 @@ public class GameConsol extends Game {
         try{
             switch (scan.nextInt()) {
             case 1:
-                super.setPerso1(createPerso());
-                System.out.println(this.getPerso1());
+                game.setPerso1(createPerso());
+                System.out.println(game.getPerso1());
                 break;
             case 2:
-                super.setPerso2(createPerso());
-                System.out.println(this.getPerso2());
+            	game.setPerso2(createPerso());
+                System.out.println(game.getPerso2());
                 break;
             case 3:
                 Capacite c = this.createCapacite();
@@ -182,6 +183,12 @@ public class GameConsol extends Game {
             System.out.println("erreur entre un integer");
             scan.next();
         }
+    }
+    public static void main(String[] args){
+        
+        GameConsol consol = new GameConsol();
+        
+        consol.consol();
     }
 
 }

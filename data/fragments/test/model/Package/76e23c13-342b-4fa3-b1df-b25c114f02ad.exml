@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="swing" version="3">
+  <DEPS>
+    <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <COMPID name="ButtonGroup" mc="Class" uid="0711c584-66ca-4f99-88af-5f90e4a253c0"/>
+    <COMPID name="JButton" mc="Class" uid="c6b9738d-1162-4232-b431-d751cea69414"/>
+    <COMPID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+    <COMPID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
+    <COMPID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+    <COMPID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
+    <COMPID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+    <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+    <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <PID name="javax" mc="Package" uid="c4a165eb-d942-46da-9695-b02d921ec92a"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[swing]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+        <COMPID name="JButton" mc="Class" uid="c6b9738d-1162-4232-b431-d751cea69414"/>
+        <COMPID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+        <COMPID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+        <COMPID name="ButtonGroup" mc="Class" uid="0711c584-66ca-4f99-88af-5f90e4a253c0"/>
+        <COMPID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
+        <COMPID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="f54943ec-bc40-44c5-b738-edb7b7d14294"/>
+          <PID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
