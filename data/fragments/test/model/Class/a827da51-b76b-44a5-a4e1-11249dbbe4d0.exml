@@ -856,7 +856,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="439764e7-8445-42c9-aa96-3f777ab036b6"/>
+                <ID name="" mc="TaggedValue" uid="07546106-0e96-4142-8060-7273245eee8b"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -896,7 +896,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="6d00ed87-cce9-4079-ad62-87523b337856"/>
+                <ID name="" mc="TaggedValue" uid="158855fa-9bde-471d-831e-f47a97d6a380"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

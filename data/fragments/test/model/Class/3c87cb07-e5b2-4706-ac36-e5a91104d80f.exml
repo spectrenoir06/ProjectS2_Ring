@@ -679,7 +679,7 @@ finally
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="e207a757-1765-4645-a5d7-cb070ea47f22"/>
+                <ID name="" mc="TaggedValue" uid="dd0c9293-a79b-407b-894e-db08757c1f16"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -758,7 +758,7 @@ finally
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d3fd4e86-fa29-4ad9-b548-d2eee855fc04"/>
+                <ID name="" mc="TaggedValue" uid="d413160c-5dcb-402a-8776-dffdc02b89c3"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

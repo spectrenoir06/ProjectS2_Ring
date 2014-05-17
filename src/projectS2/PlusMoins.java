@@ -2,7 +2,6 @@ package projectS2;
 
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -24,7 +23,6 @@ public class PlusMoins extends JPanel {
     private int nb;
 
     @objid ("4b02878c-1d08-454f-a3cf-2304dc813576")
-    @SuppressWarnings("unused")
     private boolean isOn;
 
     @objid ("50512f2c-3dc7-424e-82d1-e0a6a43e2e4f")

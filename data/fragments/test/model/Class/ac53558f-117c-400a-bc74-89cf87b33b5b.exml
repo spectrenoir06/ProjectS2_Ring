@@ -1830,7 +1830,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="c48bb27c-17b7-4717-a158-e1c0b10508e7"/>
+                <ID name="" mc="TaggedValue" uid="55679899-cf54-4def-8944-47b27144995f"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1870,7 +1870,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="1cfab9c6-c849-4a91-8928-ab9c591d8414"/>
+                <ID name="" mc="TaggedValue" uid="95f95c7a-e42b-4834-83c1-8427de8aeb1c"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1910,7 +1910,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="784584a4-372e-4380-90ce-dac2cc53b39d"/>
+                <ID name="" mc="TaggedValue" uid="7a451e21-3b5f-4379-acd5-6f099d5db936"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1950,7 +1950,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="035c0b08-1200-4b47-88b3-6c855df1c56a"/>
+                <ID name="" mc="TaggedValue" uid="b9b2fa0b-e0fe-422e-b55b-75ab8ea8db11"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1990,7 +1990,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a66ef263-cc6d-482a-9cb1-e257ec036b50"/>
+                <ID name="" mc="TaggedValue" uid="3e5c3779-d822-4ee6-afd2-5f7070e5e4bf"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -2030,7 +2030,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="7d8de740-0970-4628-a998-361bd6377fa0"/>
+                <ID name="" mc="TaggedValue" uid="136ac8b1-039d-4212-b3c1-6038e1b0af85"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -2070,7 +2070,7 @@ else
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="4ec696f9-bac3-46bd-86f5-726807dbb70e"/>
+                <ID name="" mc="TaggedValue" uid="2743bb59-bf75-429e-8ddd-9aef9b5ed04e"/>
                 <PID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
