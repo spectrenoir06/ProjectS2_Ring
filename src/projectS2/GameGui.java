@@ -1,22 +1,16 @@
 package projectS2;
 
 import java.awt.*;
-import java.awt.BorderLayout;
-import java.awt.Container;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.*;
-import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
+
+import projectS2.PlusMoins;
 
 @objid ("5be3a65b-5561-4379-a02c-e665ea556a83")
 @SuppressWarnings("unused")
@@ -51,6 +45,7 @@ public class GameGui extends JFrame {
         this.game = new Game();
         this.init();
         this.setSize(900, 600);
+        this.setMinimumSize(this.getSize());
         this.setVisible(true);
     }
 
@@ -132,48 +127,17 @@ public class GameGui extends JFrame {
         scrollPane.setViewportView(jCapa);
         jCapa.setLayout(new GridLayout(10, 1, 0, 0));
         
-        //cap1
+        jCapacite capacite1 = new jCapacite("Capacite 1");
+        jCapa.add(capacite1);
         
-        JPanel JCapacite1 = new JPanel();
-        JCapacite1.setBorder(new TitledBorder(null, "Capacite 1", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
-        JCapacite1.setLayout(new BoxLayout(JCapacite1, BoxLayout.X_AXIS));
+        jCapacite capacite2 = new jCapacite("Capacite 2");
+        jCapa.add(capacite2);
         
-        JSpinner spinner = new JSpinner();
-        JCapacite1.add(spinner);
-        spinner.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
+        jCapacite capacite3 = new jCapacite("Capacite 3");
+        jCapa.add(capacite3);
         
-        JPanel panel = new JPanel();
-        JCapacite1.add(panel);
-        
-        JPanel jCapa1Cara1 = new PlusMoins("Impact", 20, 50, 20);
-        JPanel jCapa1Cara2 = new PlusMoins("Parade", 20, 50, 20);
-        JPanel jCapa1Cara3 = new PlusMoins("Impact", 20, 50, 20);
-        panel.add(jCapa1Cara1);
-        panel.add(jCapa1Cara2);
-        panel.add(jCapa1Cara3);
-        
-        jCapa.add(JCapacite1);
-        // ----------------cap2--------------------//
-        
-        JPanel JCapacite2 = new JPanel();
-        JCapacite2.setBorder(new TitledBorder(null, "Capacite 2", TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
-        JCapacite2.setLayout(new BoxLayout(JCapacite2, BoxLayout.X_AXIS));
-        
-        JSpinner spinner2 = new JSpinner();
-        JCapacite2.add(spinner2);
-        spinner2.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
-        
-        JPanel panel2 = new JPanel();
-        JCapacite2.add(panel2);
-        
-        JPanel jCapa2Cara1 = new PlusMoins("Impact", 20, 50, 20);
-        JPanel jCapa2Cara2 = new PlusMoins("Parade", 20, 50, 20);
-        JPanel jCapa2Cara3 = new PlusMoins("Impact", 20, 50, 20);
-        panel2.add(jCapa2Cara1);
-        panel2.add(jCapa2Cara2);
-        panel2.add(jCapa2Cara3);
-        
-        jCapa.add(JCapacite2);
+        jCapacite capacite4 = new jCapacite("Capacite 4");
+        jCapa.add(capacite4);
         
         
         btnNewButton.addActionListener(new ActionListener() {
@@ -210,125 +174,6 @@ public class GameGui extends JFrame {
     @objid ("cd1d3e26-1d8f-48ac-b034-1803150c20a1")
     public static void main(String[] args) throws Exception {
         new GameGui();
-    }
-
-    @objid ("4c93c386-3900-4ad1-9edf-9a0bba4229d1")
-    @SuppressWarnings("serial")
-    public class PlusMoins extends JPanel {
-        @objid ("7df8d11b-acb2-4479-b8c3-b23efbbc29ea")
-        private int bornMoins;
-
-        @objid ("23ff050d-dc1f-4bc5-892a-9117152dfed2")
-        private int bornPlus;
-
-        @objid ("cddddbe8-0701-47f9-834f-ac2845de9c34")
-        private int nb;
-
-        @objid ("e98c3e38-8fff-4b5e-81c5-cbfcb02737c7")
-        private boolean isOn;
-
-        @objid ("35e86688-abaf-44f8-bea5-f29a708d4a64")
-         JPanel panel;
-
-        @objid ("06dc705a-af99-4141-98fa-772e5d8d66bf")
-         JButton bPlus;
-
-        @objid ("7b59e122-810b-407b-8c43-dcdc8a84355f")
-         JButton bMoins;
-
-        @objid ("99b660e4-969d-47ce-ba39-ae12a950f988")
-         JLabel labelText;
-
-        @objid ("87af4485-747c-47bf-a349-94c5193ed72b")
-        public PlusMoins(String title, int moins, int plus, int init) throws Exception {
-            super();
-            
-            if(plus<moins){
-                throw new Exception("Born+ < Born-");
-            }else if (init<moins){
-                init = moins;
-            }else if (init>plus){
-                init = plus;
-            }
-            
-            this.bornMoins = moins;
-            this.bornPlus  = plus;
-            this.nb = init;
-            this.isOn = true;
-            
-            setBorder(new TitledBorder(null, title, TitledBorder.CENTER, TitledBorder.TOP, null, null));
-            setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-            
-            bMoins = new JButton("-");
-            bMoins.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent arg0) {
-                    nb--;
-                    reBorne();
-                }
-            });
-            bPlus = new JButton("+");
-            bPlus.addActionListener(new ActionListener() {
-                public void actionPerformed(ActionEvent arg0) {
-                    nb++;
-                    reBorne();
-                }
-            });
-            labelText = new JLabel(nb +"");
-            
-            reBorne();
-            
-            add(bMoins);
-            add(labelText);
-            add(bPlus);
-        }
-
-        @objid ("c6a2910b-3d25-402c-afed-a3cb9fb60bad")
-        public void setUse(boolean isOn) {
-            this.isOn = isOn;
-            if(isOn){
-                reBorne();
-            }else{
-                bMoins.setEnabled(false);
-                bPlus.setEnabled(false);
-            }
-        }
-
-        @objid ("595904de-fa01-4529-9683-fd36fdacf056")
-        public void reBorne() {
-            bMoins.setEnabled(nb > bornMoins);
-            bPlus.setEnabled(nb < bornPlus);
-            labelText.setText(nb + "");
-        }
-
-        @objid ("778fa20a-50d0-47aa-8bd9-a0fdaf43383b")
-        public void setBorneMoins(int born) {
-            if (born>this.bornPlus){
-                System.out.println("Erreur born- > born+");
-            }else if(born>nb){
-                System.out.println("Erreur born- > nb");
-            }else{
-                this.bornMoins = born;
-                reBorne();
-            }
-        }
-
-        @objid ("645da681-61b4-4455-b6fd-61c65fcbb5f2")
-        public void setBornePlus(int born) {
-            if (born<this.bornMoins){
-                System.out.println("Erreur born+ < born-");
-            }else if(born<nb){
-                System.out.println("Erreur born+ < nb");
-            }else{
-                this.bornPlus = born;
-                reBorne();
-            }
-        }
-
-        @objid ("1ff64907-2e75-495b-933b-a362df46cad2")
-        public int getNb() {
-            return this.nb;
-        }
-
     }
 
 }
