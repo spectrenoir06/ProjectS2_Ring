@@ -13,10 +13,12 @@
     <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
     <COMPID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
     <COMPID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
+    <COMPID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
     <COMPID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
     <COMPID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
     <COMPID name="SortilegeGuerisseur" mc="Class" uid="b9a641c0-2695-481f-b92e-debb8df7c13a"/>
     <COMPID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
+    <COMPID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
     <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
   </DEPS>
   <OBJECT>
@@ -48,6 +50,8 @@
         <COMPID name="PersoException" mc="Class" uid="a0f697ff-426a-47cc-a5e5-c900e437c3ab"/>
         <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
         <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+        <COMPID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+        <COMPID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

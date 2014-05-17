@@ -3,13 +3,14 @@ package projectS2;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
-
 import projectS2.PlusMoins;
 
 @objid ("5be3a65b-5561-4379-a02c-e665ea556a83")
@@ -20,18 +21,6 @@ public class GameGui extends JFrame {
 
     @objid ("7a864581-35c3-41dd-8fb1-f457e15f20cf")
     private JTextField txtName;
-
-    @objid ("63e5d77d-6cdc-409a-a2e6-e13e66eef970")
-    private PlusMoins jForce;
-
-    @objid ("e57c6e6b-13b7-4a70-b322-a9865c3a5e71")
-    private PlusMoins jDexterite;
-
-    @objid ("0823c1f3-06fe-424b-9247-886529b23580")
-    private PlusMoins jInteligence;
-
-    @objid ("24532838-fe20-45d1-9637-d16043b865f3")
-    private PlusMoins jConcentration;
 
     @objid ("8dc7e05d-4763-49f9-88ac-62c957b52101")
     private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -76,10 +65,10 @@ public class GameGui extends JFrame {
         jClasse.add(buttonAthlete);
         
         
-        jForce = new PlusMoins("Force", 0, 10, 5);
-        jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
-        jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
-        jConcentration = new PlusMoins("Concentration", 5, 5, 5);
+        PlusMoins jForce = new PlusMoins("Force", 0, 10, 5);
+        PlusMoins jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
+        PlusMoins jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
+        PlusMoins jConcentration = new PlusMoins("Concentration", 5, 5, 5);
         
         
         try {
@@ -138,14 +127,6 @@ public class GameGui extends JFrame {
         
         jCapacite capacite4 = new jCapacite("Capacite 4");
         jCapa.add(capacite4);
-        
-        
-        btnNewButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent arg0) {
-                txtName.setText(jForce.getNb()  + ";" + jDexterite.getNb()+ ";" + jInteligence.getNb() + ";" + jConcentration.getNb());
-                
-            }
-        });
     }
 
     @objid ("a807fb1f-4954-4914-8faa-ab2437c2d6e5")
