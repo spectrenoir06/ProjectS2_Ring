@@ -40,7 +40,8 @@ public class Remede extends Capacite {
     @objid ("6b9901c7-aafb-4c27-9821-df03f9f91230")
     @Override
     public void use(Perso p) {
-        // TODO Auto-generated method stub
+         System.out.println(this.getPerso().getNom() + " utilise un remede");
+         System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
     }
 
     @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
@@ -56,7 +57,7 @@ public class Remede extends Capacite {
     @Override
     public double getReussite() {
         // TODO Auto-generated method stub
-        return 0;
+        return this.getPerso().getDexterite() * this.facilite / 10000;
     }
 
     @objid ("174c8658-0c19-44ef-a537-e317067d92de")
@@ -69,8 +70,8 @@ public class Remede extends Capacite {
     @objid ("c7be97b7-2b61-4d48-bc8d-cb23a4aea2ed")
     @Override
     public double getAttaquePuissance() {
-        // TODO Auto-generated method stub
-        return 0;
+        
+        return this.getPerso().getDexterite() * this.efficacite / 100;
     }
 
     @objid ("06f4ccc7-061b-4090-a5d0-94b6433b5263")

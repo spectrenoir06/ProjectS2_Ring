@@ -190,7 +190,12 @@ public class GameConsol {
                 System.out.println(this.game.getPerso2());
                 break;
             case 6:
-                game.getPerso1().use(0, game.getPerso2());
+                game.getPerso1().use(0, game.getPerso2()); 	// epee sur adv
+                game.getPerso1().use(1,game.getPerso2());				// bouclier
+                game.getPerso1().use(2,game.getPerso2());				// sort offensif
+                game.getPerso1().use(3,game.getPerso2());				// remede
+                game.getPerso1().use(4,game.getPerso2());				// sort def
+                game.getPerso1().use(5,game.getPerso2());				// sort gue
                 break;
             case 7:
                 game.getPerso1().use(0, game.getPerso1());
