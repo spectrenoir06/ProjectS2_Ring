@@ -8,6 +8,7 @@ import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import javax.swing.*;
 import java.awt.Color;
+import javax.swing.border.TitledBorder;
 
 public class Gui {
 
@@ -45,50 +46,30 @@ public class Gui {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
-		frame.getContentPane().add(panel, BorderLayout.CENTER);
+		frame.getContentPane().add(panel, BorderLayout.NORTH);
 		panel.setLayout(new BorderLayout(0, 0));
 		
-		JPanel panel_2 = new JPanel();
-		panel.add(panel_2);
-		panel_2.setLayout(new BorderLayout(0, 0));
+		PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin0.png");
+		panel.add(persoInfo, BorderLayout.WEST);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/test.png"));
-		panel_2.add(lblNewLabel, BorderLayout.NORTH);
+		PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin1.png");
+		panel.add(persoInfo_1, BorderLayout.EAST);
 		
-		JProgressBar progressBar = new JProgressBar();
-		progressBar.setStringPainted(true);
-		progressBar.setValue(75);
-		panel_2.add(progressBar, BorderLayout.CENTER);
+		JScrollPane scrollPane = new JScrollPane();
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
-		JProgressBar progressBar_1 = new JProgressBar();
-		progressBar_1.setStringPainted(true);
-		progressBar_1.setBackground(Color.ORANGE);
-		progressBar_1.setForeground(Color.BLUE);
-		progressBar_1.setValue(50);
-		panel_2.add(progressBar_1, BorderLayout.SOUTH);
-		
-		JPanel panel_3 = new JPanel();
-		panel.add(panel_3, BorderLayout.EAST);
-		panel_3.setLayout(new GridLayout(0, 1, 0, 0));
+		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new TitledBorder(null, "Capacites", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+		scrollPane.setViewportView(panel_1);
+		panel_1.setLayout(new GridLayout(0, 1, 0, 0));
 		
 		jCapacite jCapacite_ = new jCapacite((String) null);
-		panel_3.add(jCapacite_);
+		panel_1.add(jCapacite_);
 		
 		jCapacite jCapacite__1 = new jCapacite((String) null);
-		panel_3.add(jCapacite__1);
+		panel_1.add(jCapacite__1);
 		
 		jCapacite jCapacite__2 = new jCapacite((String) null);
-		panel_3.add(jCapacite__2);
-		
-		jCapacite jCapacite__3 = new jCapacite((String) null);
-		panel_3.add(jCapacite__3);
-		
-		jCapacite jCapacite__4 = new jCapacite((String) null);
-		panel_3.add(jCapacite__4);
-		
-		jCapacite jCapacite__5 = new jCapacite((String) null);
-		panel_3.add(jCapacite__5);
+		panel_1.add(jCapacite__2);
 	}
-
 }
