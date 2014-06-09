@@ -15,7 +15,7 @@ import projectS2.PlusMoins;
 
 @objid ("5be3a65b-5561-4379-a02c-e665ea556a83")
 @SuppressWarnings("unused")
-public class GameGui extends JFrame {
+public class GameGui extends Game {
     @objid ("66fde004-e939-4e28-9015-5533f952e685")
     private static final long serialVersionUID = 1L;
 
@@ -31,7 +31,6 @@ public class GameGui extends JFrame {
     @objid ("3020179e-8e31-4470-9584-b78561a15e46")
     public GameGui() throws Exception {
         super("Ring");
-        this.game = new Game();
         this.init();
         this.setSize(900, 600);
         this.setMinimumSize(this.getSize());

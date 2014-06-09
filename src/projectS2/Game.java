@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3c87cb07-e5b2-4706-ac36-e5a91104d80f")
-public class Game {
+public abstract class Game {
     @objid ("6bb69aa6-f3c6-43d8-a09d-3b5746f3dce7")
     private Perso perso1;
 
@@ -52,7 +52,7 @@ public class Game {
     }
 
     @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
-    public boolean save(Perso perso, String file) {
+    public final boolean save(Perso perso, String file) {
         System.out.println("write start");
         
         PrintStream p = null;
@@ -73,7 +73,7 @@ public class Game {
     }
 
     @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
-    public Perso load(String file) {
+    public final Perso load(String file) {
         InputStream in ;
         BufferedInputStream bin ;
         Scanner sc ;
@@ -84,18 +84,15 @@ public class Game {
             bin = new BufferedInputStream(in);
             sc = new Scanner(bin);
         
-            String s;
-            
-            //while(sc.hasNextLine()){
-            s = sc.nextLine();
+            String s = sc.nextLine();
             StringTokenizer st = new StringTokenizer(s,";");
             
-            String classe     = st.nextToken();
+            String classe   = st.nextToken();
             String name     = st.nextToken();
             int exp         = new Integer(st.nextToken());
-            int force         = new Integer(st.nextToken());
-            int dexterite    = new Integer(st.nextToken());
-            int inteligence    = new Integer(st.nextToken());
+            int force       = new Integer(st.nextToken());
+            int dexterite   = new Integer(st.nextToken());
+            int inteligence = new Integer(st.nextToken());
             int conc        = new Integer(st.nextToken());
                 
             switch (classe) {
@@ -149,11 +146,33 @@ public class Game {
         
         finally 
         {
-            sc     = null;
-            bin = null;
+            sc    = null;
+            bin    = null;
             in    = null;
         }
         return p;
     }
+
+    @objid ("16639ec1-98ac-4116-98f9-7b1565f8acb0")
+    public boolean tour(Perso p1, Perso p2) {
+        // true if use capa false if loose
+                System.out.println("Action de "+p1.getNom());
+                if (this.useCapacity(p1, p2)){
+                     System.out.println("use capa");
+                     return true;
+                }else{
+                    System.out.println("abandon");
+                    return false;
+                }
+    }
+
+    @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
+    public abstract boolean useCapacity(Perso p1, Perso p2);
+
+    @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
+    public abstract Perso createPerso();
+
+    @objid ("c12aaa67-20b5-4355-adc0-2a54939e873a")
+    public abstract Capacite createCapacite();
 
 }

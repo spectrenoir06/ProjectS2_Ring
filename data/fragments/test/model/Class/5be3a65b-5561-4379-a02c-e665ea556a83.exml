@@ -159,10 +159,10 @@ buttonGroup.add(buttonAthlete);
 jClasse.add(buttonAthlete);
 
 
-jForce = new PlusMoins("Force", 0, 10, 5);
-jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
-jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
-jConcentration = new PlusMoins("Concentration", 5, 5, 5);
+PlusMoins jForce = new PlusMoins("Force", 0, 10, 5);
+PlusMoins jDexterite = new PlusMoins("Dexterite", 10, 20, 5);
+PlusMoins jInteligence = new PlusMoins("Inteligence", 0, 100, 5);
+PlusMoins jConcentration = new PlusMoins("Concentration", 5, 5, 5);
 
 
 try {
@@ -221,14 +221,6 @@ jCapa.add(capacite3);
 
 jCapacite capacite4 = new jCapacite("Capacite 4");
 jCapa.add(capacite4);
-
-
-btnNewButton.addActionListener(new ActionListener() {
-    public void actionPerformed(ActionEvent arg0) {
-        txtName.setText(jForce.getNb()  + ";" + jDexterite.getNb()+ ";" + jInteligence.getNb() + ";" + jConcentration.getNb());
-        
-    }
-});
 ]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -562,7 +554,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="ee9c6dd8-97d8-4cb4-9991-e8a98768a2b7"/>
+                <ID name="" mc="TaggedValue" uid="4bc50ebd-599a-4d50-8e22-f479db23ad59"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -736,7 +728,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="e9ee63c7-5a62-465f-a4b3-70e431bf8508"/>
+                <ID name="" mc="TaggedValue" uid="9bd9d449-704f-4885-b647-b7bc205ef2a0"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

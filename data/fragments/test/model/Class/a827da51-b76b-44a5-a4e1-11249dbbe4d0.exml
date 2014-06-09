@@ -402,7 +402,9 @@ this.efficacite    = efficacite;
                 <ID name="" mc="Note" uid="1c285617-1fc6-4f24-a201-5dc0353b8fc9"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
+                  <ATT name="Content"><![CDATA[System.out.println(this.getPerso().getNom() + " utilise un remede");
+System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -561,7 +563,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
                 <ID name="" mc="Note" uid="5a60dd0d-9d2b-4dce-9199-dd3233efbdd2"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Content"><![CDATA[return this.getPerso().getDexterite() * this.facilite / 10000;]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -731,27 +733,13 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
                 <ID name="" mc="Note" uid="66a41104-4616-4b16-9543-2da867dc976c"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Content"><![CDATA[return this.getPerso().getDexterite() * this.efficacite / 100;]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Note" uid="f1e98754-337a-4358-956e-f7ff5f1fa243"/>
-                <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -856,7 +844,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="07546106-0e96-4142-8060-7273245eee8b"/>
+                <ID name="" mc="TaggedValue" uid="5a0892ff-f761-44b2-b2d7-c9cb71eb29d4"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -896,7 +884,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="158855fa-9bde-471d-831e-f47a97d6a380"/>
+                <ID name="" mc="TaggedValue" uid="d57376a8-ec7b-4413-b4d4-d9ba460105c9"/>
                 <PID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

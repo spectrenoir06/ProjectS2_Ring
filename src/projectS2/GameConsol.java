@@ -5,12 +5,9 @@ import java.util.Scanner;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("b5d42879-bdfb-452c-acd5-681f01be34fa")
-public class GameConsol {
+public class GameConsol extends Game {
     @objid ("6de8e41a-6d57-47e7-a1e5-8c1d22bfe816")
      Scanner scan = new Scanner(System.in);
-
-    @objid ("48deed86-5279-45ff-b895-b7671818b920")
-    private Game game = new Game();
 
     @objid ("a8f88020-6c78-4846-9945-7e9c4f6f8c9a")
     public Perso createPerso() {
@@ -172,46 +169,46 @@ public class GameConsol {
         try{
             switch (scan.nextInt()) {
             case 1:
-                game.setPerso1(createPerso());
-                System.out.println(game.getPerso1());
+                this.setPerso1(createPerso());
+                System.out.println(this.getPerso1());
                 break;
             case 2:
-                game.setPerso2(createPerso());
-                System.out.println(game.getPerso2());
+                this.setPerso2(createPerso());
+                System.out.println(this.getPerso2());
                 break;
             case 3:
                 Capacite c = this.createCapacite();
-                this.game.getPerso1().addCapacite(c);
+                this.getPerso1().addCapacite(c);
                 break;
             case 4:
-                System.out.println(this.game.getPerso1());
+                System.out.println(this.getPerso1());
                 break;
             case 5:
-                System.out.println(this.game.getPerso2());
+                System.out.println(this.getPerso2());
                 break;
             case 6:
-                game.getPerso1().use(0, game.getPerso2()); 	// epee sur adv
-                game.getPerso1().use(1,game.getPerso2());				// bouclier
-                game.getPerso1().use(2,game.getPerso2());				// sort offensif
-                game.getPerso1().use(3,game.getPerso2());				// remede
-                game.getPerso1().use(4,game.getPerso2());				// sort def
-                game.getPerso1().use(5,game.getPerso2());				// sort gue
+                this.getPerso1().use(0, this.getPerso2());     // epee sur adv
+                this.getPerso1().use(1,this.getPerso2());                // bouclier
+                this.getPerso1().use(2,this.getPerso2());                // sort offensif
+                this.getPerso1().use(3,this.getPerso2());                // remede
+                this.getPerso1().use(4,this.getPerso2());                // sort def
+                this.getPerso1().use(5,this.getPerso2());                // sort gue
                 break;
             case 7:
-                game.getPerso1().use(0, game.getPerso1());
+                this.getPerso1().use(0, this.getPerso1());
                 break;
             case 8:
-                System.out.println(game.getPerso1().serialise());
+                System.out.println(this.getPerso1().serialise());
                 break;
             case 9:
-                game.duel();
+                this.duel();
                 break;
             case 10:
-                game.save(game.getPerso1(), "perso1.perso");
+                this.save(this.getPerso1(), "perso1.perso");
                 break;
             case 11:
-                game.setPerso1(game.load("perso1.perso"));
-                game.setPerso2(game.load("perso2.perso"));
+                this.setPerso1(this.load("perso1.perso"));
+                this.setPerso2(this.load("perso2.perso"));
                 break;
             default:
                 break;
@@ -229,6 +226,20 @@ public class GameConsol {
         while(true){
             consol.consol();
         }
+    }
+
+    @objid ("44ffcdc4-6911-4ee3-af31-de377b3eab4c")
+    @Override
+    public int chooseAction() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @objid ("81768e51-1fe7-4ded-9f82-eda83a1910fe")
+    @Override
+    public int useCapacity(Perso p1, Perso p2) {
+        // TODO Auto-generated method stub
+        return 0;
     }
 
 }

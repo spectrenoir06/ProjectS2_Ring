@@ -3,7 +3,9 @@
   <DEPS>
     <ID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
     <COMPID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+    <COMPID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
     <COMPID name="Container" mc="Class" uid="6179555f-12ff-43af-9653-e94142b8d076"/>
+    <COMPID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
     <COMPID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
     <COMPID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
     <COMPID name="event" mc="Package" uid="4db475b8-df2b-4667-8eb1-09f9c93ad107"/>
@@ -29,6 +31,8 @@
         <COMPID name="event" mc="Package" uid="4db475b8-df2b-4667-8eb1-09f9c93ad107"/>
         <COMPID name="Container" mc="Class" uid="6179555f-12ff-43af-9653-e94142b8d076"/>
         <COMPID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
+        <COMPID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
+        <COMPID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

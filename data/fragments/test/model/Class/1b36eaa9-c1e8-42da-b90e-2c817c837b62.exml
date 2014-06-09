@@ -9,8 +9,6 @@
     <EXTID name="awt" mc="Package" uid="18b0553b-3d54-459e-89b4-61bf8ae3c86c"/>
     <EXTID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
     <EXTID name="event" mc="Package" uid="4db475b8-df2b-4667-8eb1-09f9c93ad107"/>
-    <EXTID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
-    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
@@ -574,7 +572,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="1c2f3e3d-f414-4c04-9ab6-8e0601d34d3b"/>
+                <ID name="" mc="TaggedValue" uid="6637d825-3727-4052-aaf5-e25c1f7109e6"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -614,7 +612,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a59676ab-5d71-4c3b-8a86-32dab949c63d"/>
+                <ID name="" mc="TaggedValue" uid="277e0ceb-1fe2-4bff-9290-1422d508d41c"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -654,7 +652,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="aa30d3fa-7fe9-4c6d-a6de-cb1184f0c1fb"/>
+                <ID name="" mc="TaggedValue" uid="70bb4b00-ea70-42e0-83d8-e7d86a169542"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -694,7 +692,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="043882d0-559b-4f4c-b54a-fd54868fd2fe"/>
+                <ID name="" mc="TaggedValue" uid="721024f3-94ed-4138-94c9-273e5c9ae4f2"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -703,22 +701,6 @@ labelText.setText(nb + "");
                 <DEPENDENCIES>
                   <LINK relation="Definition">
                     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Note" uid="275190c2-26da-4699-b250-7bc6653760f6"/>
-                <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[@SuppressWarnings("unused")]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -791,7 +773,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="0b3f8527-0ef0-4157-a751-e71d44438377"/>
+                <ID name="" mc="TaggedValue" uid="2bbedadc-db53-4020-a446-3e122969c536"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -870,7 +852,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="87c96c8d-174d-4e5c-9cf4-e8fe3760b193"/>
+                <ID name="" mc="TaggedValue" uid="45761a12-3afe-4c5e-acb4-7087dbdbbad2"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -949,7 +931,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="23cf4f84-b14b-4ee4-83c2-30a1bf557a3a"/>
+                <ID name="" mc="TaggedValue" uid="74dfab01-c6d6-4001-8f88-de583aa74ac9"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1007,20 +989,6 @@ labelText.setText(nb + "");
           <DEPENDENCIES>
             <LINK relation="ImportedPackage">
               <ID name="event" mc="Package" uid="4db475b8-df2b-4667-8eb1-09f9c93ad107"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="PackageImport" uid="33543a2d-4189-4853-ba3f-52478b3cdd83"/>
-          <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedPackage">
-              <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

@@ -170,6 +170,22 @@ this.efficacite = efficacite;
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="db70262a-6643-431b-8bbb-5a0578b5bc18"/>
+                <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[System.out.println(this.getPerso().getNom() + " utilise s.defensif ");
+System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
@@ -547,27 +563,13 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
                 <ID name="" mc="Note" uid="5e589623-3e26-4b2c-b29e-4a96e40f9d42"/>
                 <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Note" uid="13db5a21-7508-41bf-bcee-2a5a3c30e8f7"/>
-                <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -717,27 +719,13 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
                 <ID name="" mc="Note" uid="69172f64-34b1-457d-9c42-b7ca4189dbe1"/>
                 <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Model">
                     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="" mc="Note" uid="763051f4-646e-4dd1-93f3-92ee6308be10"/>
-                <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -842,7 +830,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a2643b18-ac92-4b47-a71f-58f8efcdf11c"/>
+                <ID name="" mc="TaggedValue" uid="29dd8d95-5504-4f39-ab32-8962832bfa69"/>
                 <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -882,7 +870,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="f1967248-fb7e-4678-8ea6-0a0a7b2a054b"/>
+                <ID name="" mc="TaggedValue" uid="57f0549e-ec5a-4c97-9b94-8328e2fa6eda"/>
                 <PID name="SortilegeDefensif" mc="Class" uid="a4c19624-f7ea-45da-85aa-f2804d1f2815"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

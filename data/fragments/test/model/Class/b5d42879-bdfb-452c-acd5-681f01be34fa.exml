@@ -4,12 +4,14 @@
     <ID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
     <EXTID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
     <EXTID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-    <EXTID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
     <EXTID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
     <EXTID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
+    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
+    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
     <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
   </DEPS>
@@ -312,41 +314,46 @@ System.out.println("cmd : ");
 try{
     switch (scan.nextInt()) {
     case 1:
-        game.setPerso1(createPerso());
-        System.out.println(game.getPerso1());
+        this.setPerso1(createPerso());
+        System.out.println(this.getPerso1());
         break;
     case 2:
-        game.setPerso2(createPerso());
-        System.out.println(game.getPerso2());
+        this.setPerso2(createPerso());
+        System.out.println(this.getPerso2());
         break;
     case 3:
         Capacite c = this.createCapacite();
-        this.game.getPerso1().addCapacite(c);
+        this.getPerso1().addCapacite(c);
         break;
     case 4:
-        System.out.println(this.game.getPerso1());
+        System.out.println(this.getPerso1());
         break;
     case 5:
-        System.out.println(this.game.getPerso2());
+        System.out.println(this.getPerso2());
         break;
     case 6:
-        game.getPerso1().use(0, game.getPerso2());
+        this.getPerso1().use(0, this.getPerso2());     // epee sur adv
+        this.getPerso1().use(1,this.getPerso2());                // bouclier
+        this.getPerso1().use(2,this.getPerso2());                // sort offensif
+        this.getPerso1().use(3,this.getPerso2());                // remede
+        this.getPerso1().use(4,this.getPerso2());                // sort def
+        this.getPerso1().use(5,this.getPerso2());                // sort gue
         break;
     case 7:
-        game.getPerso1().use(0, game.getPerso1());
+        this.getPerso1().use(0, this.getPerso1());
         break;
     case 8:
-        System.out.println(game.getPerso1().serialise());
+        System.out.println(this.getPerso1().serialise());
         break;
     case 9:
-        game.duel();
+        this.duel();
         break;
     case 10:
-        game.save(game.getPerso1(), "perso1.perso");
+        this.save(this.getPerso1(), "perso1.perso");
         break;
     case 11:
-        game.setPerso1(game.load("perso1.perso"));
-        game.setPerso2(game.load("perso2.perso"));
+        this.setPerso1(this.load("perso1.perso"));
+        this.setPerso2(this.load("perso2.perso"));
         break;
     default:
         break;
@@ -456,6 +463,224 @@ while(true){
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="chooseAction" mc="Operation" uid="44ffcdc4-6911-4ee3-af31-de377b3eab4c"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[chooseAction]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="038fceaf-37ee-4a3c-af73-6be2c783cf21"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="157d62e1-8086-4f36-ae3c-80253661e4f4"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@Override]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="4d6dbf89-d7f6-461b-aef6-678f6347a85b"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="abdabfae-d1b0-4155-ba02-985a429476eb"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="useCapacity" mc="Operation" uid="81768e51-1fe7-4ded-9f82-eda83a1910fe"/>
+          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[useCapacity]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="1efb9721-0242-4e42-81d0-87d44693ce28"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p2" mc="Parameter" uid="a3c35746-cf3f-493f-8a95-abcf0e3baf26"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="f92e40de-e71c-47b8-9d46-4f39da6cc724"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="378a61b8-c847-4d8f-aee6-d54a62d5f939"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[@Override]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaAnnotation" mc="NoteType" uid="000c0b48-0000-3aa1-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="974a0b59-da4b-4f14-8444-e1d4333df599"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return 0;]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="0dbfd92e-e37d-4b06-9e4c-c29d88ec1499"/>
+                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[// TODO Auto-generated method stub]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
@@ -538,99 +763,19 @@ while(true){
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
-        <OBJECT>
-          <ID name="game" mc="AssociationEnd" uid="48deed86-5279-45ff-b895-b7671818b920"/>
-          <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-          <ATTRIBUTES>
-            <ATT name="Aggregation">KindIsAssociation</ATT>
-            <ATT name="IsChangeable">true</ATT>
-            <ATT name="Changeable">AccesNone</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[game]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Target">
-              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-            </LINK>
-            <COMP relation="Opposite">
-              <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="5cc92036-ebdf-486e-a104-0c3d7f082d89"/>
-                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-                <ATTRIBUTES>
-                  <ATT name="Aggregation">KindIsAssociation</ATT>
-                  <ATT name="IsChangeable">true</ATT>
-                  <ATT name="Changeable">ReadWrite</ATT>
-                  <ATT name="IsDerived">false</ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="Visibility">Public</ATT>
-                  <ATT name="IsClass">false</ATT>
-                  <ATT name="IsAbstract">false</ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <COMP relation="Opposite">
-                    <COMPID name="game" mc="AssociationEnd" uid="48deed86-5279-45ff-b895-b7671818b920"/>
-                  </COMP>
-                  <COMP relation="Association">
-                    <OBJECT>
-                      <ID name="" mc="Association" uid="4af31ac1-8a82-4230-acb1-89652ce61f6c"/>
-                      <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-                      <ATTRIBUTES>
-                        <ATT name="Name"></ATT>
-                        <ATT name="status">1970354901745664</ATT>
-                      </ATTRIBUTES>
-                      <DEPENDENCIES></DEPENDENCIES>
-                    </OBJECT>
-                  </COMP>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="4af31ac1-8a82-4230-acb1-89652ce61f6c"/>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Note" uid="d5fe888d-5c56-4b95-87fe-ae17d28eb84f"/>
-                <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[new Game()]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaInitValue" mc="NoteType" uid="00380080-0000-0994-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
       </COMP>
-      <COMP relation="OwnedImport">
+      <COMP relation="Parent">
         <OBJECT>
-          <ID name="" mc="ElementImport" uid="6fa9f04f-330b-4aa5-a8ee-e182ee0909f1"/>
+          <ID name="" mc="Generalization" uid="a8629cca-d5fe-4ca2-a845-27e05e61a76f"/>
           <PID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
           <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
+            <ATT name="Discriminator"></ATT>
             <ATT name="Name"></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
-            <LINK relation="ImportedElement">
-              <ID name="InputMismatchException" mc="Class" uid="3daa0d38-aec1-48c7-88dc-b83be2cd047b"/>
+            <LINK relation="SuperType">
+              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
