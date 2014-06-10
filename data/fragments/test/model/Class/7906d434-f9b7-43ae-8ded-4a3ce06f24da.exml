@@ -1,0 +1,387 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="PersoInfo" version="3">
+  <DEPS>
+    <ID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+    <EXTID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+    <EXTID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
+    <EXTID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
+    <EXTID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+    <EXTID name="ImageIcon" mc="Class" uid="96d7810e-fe86-4e31-95fa-30ab8b0589cd"/>
+    <EXTID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
+    <EXTID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+    <EXTID name="JProgressBar" mc="Class" uid="3743bcde-e2aa-4030-9e82-68a64d13ed32"/>
+    <EXTID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+    <EXTID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
+    <EXTID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+    <PID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[PersoInfo]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="PersoInfo" mc="Operation" uid="ddb77e6f-2fc2-4b5e-b9cb-ce509201e408"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[PersoInfo]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="name" mc="Parameter" uid="52edfb82-b8a1-41b3-9386-c68117c01223"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[name]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="pv" mc="Parameter" uid="0280c375-5215-4ab5-b172-7c70e1e65fbb"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[pv]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="img" mc="Parameter" uid="f50860cd-2079-410d-af1b-2d0acaeecd45"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[img]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="590fba3a-08df-4fb4-a426-3f609e3eca70"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[setBorder(new TitledBorder(new LineBorder(new Color(184, 207, 229)), name, TitledBorder.CENTER, TitledBorder.TOP, null, null));
+setLayout(new BorderLayout(0, 0));
+
+this.initialpv = pv;
+
+JLabel lblNewLabel_1 = new JLabel("");
+lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+lblNewLabel_1.setIcon(new ImageIcon(img));
+add(lblNewLabel_1, BorderLayout.NORTH);
+
+JLabel lblHp = new JLabel(initialpv + " Hp");
+lblHp.setHorizontalAlignment(SwingConstants.CENTER);
+add(lblHp, BorderLayout.CENTER);
+
+JProgressBar progressBar = new JProgressBar();
+progressBar.setValue(100);
+progressBar.setStringPainted(true);
+progressBar.setForeground(new Color(255, 0, 0));
+add(progressBar, BorderLayout.SOUTH);
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedAttribute">
+        <OBJECT>
+          <ID name="initialpv" mc="Attribute" uid="059537b5-b5d6-4e48-8ddc-a5eb1cfeb838"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="TypeConstraint"></ATT>
+            <ATT name="Value"></ATT>
+            <ATT name="TargetIsClass">false</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[initialpv]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Type">
+              <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="dcc934b7-2cce-4126-a11f-d4bfb29bedc1"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="599401d9-cf1e-4f21-a52d-99cf1713825b"/>
+                <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Create the panel.]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="" mc="Generalization" uid="3448d719-8c0d-475c-8aac-6ce60a3d9181"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedImport">
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="e22cc3e3-35da-4915-b961-343626216707"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="e04cc161-2a2c-4abe-85bc-c2a9a03eb071"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="212700dc-ebc5-41bf-bba8-e0ec08811e9e"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="ImageIcon" mc="Class" uid="96d7810e-fe86-4e31-95fa-30ab8b0589cd"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="96850ad7-580c-4b19-a899-cc08671ae44d"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="FlowLayout" mc="Class" uid="93b8784d-3c73-4a62-928e-e3b762c5d27a"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="04a17aff-19ab-43e0-8b28-cba808bbb73b"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="1788a836-7ad2-4066-94e2-ee79fab465a3"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JProgressBar" mc="Class" uid="3743bcde-e2aa-4030-9e82-68a64d13ed32"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="378f3b5b-8161-4cd9-93e6-ebea36116cdc"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="f75f37f0-6fa6-4d1a-bdf6-b143bb0556c1"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="ae0d014a-f350-40b4-8481-5a784b548bb9"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="76f66665-5620-49a0-b691-c2f9443606af"/>
+          <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

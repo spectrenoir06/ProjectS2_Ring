@@ -35,4 +35,43 @@ public class Athlete extends Perso {
         }
     }
 
+	@Override
+	void setForce(int value) throws PersoException {
+		if ((value >= 20) && (getDexterite() >= 20) && (getIntelligence() >= 20) && (getConcentration() >= 20) ){
+            this.force = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
+		
+	}
+
+	@Override
+	void setDexterite(int value) throws PersoException {
+		if ((getForce() >= 20) && (value >= 20) && (getIntelligence() >= 20) && (getConcentration() >= 20) ){
+            this.dexterite = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
+		
+	}
+
+	@Override
+	void setIntelligence(int value) throws PersoException {
+		
+		if ((getForce() >= 20) && (getDexterite() >= 20) && (value >= 20) && (getConcentration() >= 20) ){
+            this.intelligence = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
+	}
+
+	@Override
+	void setConcentration(int value) throws PersoException {
+		if ((getForce() >= 20) && (getDexterite() >= 20) && (getIntelligence() >= 20) && (value >= 20) ){
+            this.concentration = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
+	}
+    
 }

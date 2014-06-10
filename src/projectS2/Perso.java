@@ -9,22 +9,22 @@ public abstract class Perso {
     private String nom;
 
     @objid ("e9bc87e8-3964-4c51-af31-8a54b234405f")
-    private int force;
+	protected int force;
 
     @objid ("c46e697e-981d-47bb-bef7-a5b823dcb125")
-    private int dexterite;
+    protected int dexterite;
 
     @objid ("7217c81d-f752-4434-9753-a41cc1de04d5")
-    private int intelligence;
+    protected int intelligence;
 
     @objid ("2afadb1e-a597-48e0-be3a-06530a7c7bea")
-    private int concentration;
+    protected int concentration;
 
     @objid ("9d751fe2-8c51-4dfe-8851-8d31f299d1df")
-    private int vitalite;
+    protected int vitalite;
 
     @objid ("329392df-1f31-4fb1-b763-abc628eccebd")
-    private int experience;
+    protected int experience;
 
     @objid ("5172a4ed-002a-4132-8afd-0e675031d82d")
     private ArrayList<Capacite> capacite = new ArrayList<Capacite> ();
@@ -53,9 +53,7 @@ public abstract class Perso {
     }
 
     @objid ("8bbd5952-ad83-499d-84cb-6db04e42006b")
-    void setForce(int value) {
-        this.force = value;
-    }
+    abstract void setForce(int value) throws PersoException;
 
     @objid ("fa9f686a-a77a-4685-971b-a0bbc506866d")
     String getNom() {
@@ -73,9 +71,7 @@ public abstract class Perso {
     }
 
     @objid ("23d42c35-848c-42fe-84ea-f7d8f9f86fa2")
-    void setDexterite(int value) {
-        this.dexterite = value;
-    }
+    abstract void setDexterite(int value)throws PersoException;
 
     @objid ("73c8dede-8a0e-413d-b4ca-90708d3ec4e2")
     int getIntelligence() {
@@ -83,9 +79,7 @@ public abstract class Perso {
     }
 
     @objid ("a0c4619f-2cf2-47bd-8579-93d33b40dd1f")
-    void setIntelligence(int value) {
-        this.intelligence = value;
-    }
+    abstract void setIntelligence(int value)throws PersoException;
 
     @objid ("7df0e712-4c9c-44dd-9f93-0be49ae52631")
     int getConcentration() {
@@ -93,9 +87,7 @@ public abstract class Perso {
     }
 
     @objid ("d29b0e74-6ef2-4e91-a7f1-cfc21e9f71ec")
-    void setConcentration(int value) {
-        this.concentration = value;
-    }
+    abstract void setConcentration(int value)throws PersoException;
 
     @objid ("2a7053f9-b4dd-434b-be43-8045dbe35f18")
     int getExperience() {
@@ -103,9 +95,9 @@ public abstract class Perso {
     }
 
     @objid ("39225c44-d9f5-4e1d-b83d-acc645405f1f")
-    void setExperience(int value) {
-        this.experience = value;
-    }
+    void setExperience(int value){
+    	experience=value;
+    };
 
     @objid ("d11148a2-6303-42ca-880a-9a129193a0ca")
     int getVitalite() {
@@ -113,8 +105,8 @@ public abstract class Perso {
     }
 
     @objid ("c93f2607-f887-4548-b69d-19e43927a41d")
-    void setVitalite(int value) {
-        this.vitalite = value;
+    void setVitalite(int value){
+    	this.vitalite = value;
     }
 
     @objid ("216756fb-4d26-490c-b7fe-c73511aed9f0")

@@ -41,4 +41,48 @@ public class Guerrier extends Perso {
         }
     }
 
+	@Override
+	void setForce(int value) throws PersoException {
+        if ((value >= (dexterite + 10))
+                && ((dexterite + 10) >= (intelligence + 10))
+                && ((intelligence + 10) >= concentration)) {
+        	this.force = value;
+        } else {
+            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
+        }
+	}
+
+	@Override
+	void setDexterite(int value) throws PersoException {
+		if ((intelligence >= (value + 10))
+                && ((value + 10) >= (intelligence + 10))
+                && ((intelligence + 10) >= concentration)) {
+        	this.dexterite = value;
+        } else {
+            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
+        }
+	}
+
+	@Override
+	void setIntelligence(int value) throws PersoException {
+		if ((force >= (dexterite + 10))
+                && ((dexterite + 10) >= (value + 10))
+                && ((value + 10) >= concentration)) {
+        	this.intelligence = value;
+        } else {
+            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
+        }
+	}
+
+	@Override
+	void setConcentration(int value) throws PersoException {
+		if ((force >= (dexterite + 10))
+                && ((dexterite + 10) >= (intelligence + 10))
+                && ((value + 10) >= value)) {
+        	this.concentration = value;
+        } else {
+            throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
+        }
+	}
+
 }

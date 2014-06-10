@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="SwingConstants" version="3">
+  <DEPS>
+    <ID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
+    <FOREIGNID name="JavaExtern" mc="TagType" uid="258012b4-0000-0423-0000-000000000000"/>
+    <FOREIGNID name="JavaInterface" mc="Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
+    <PID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">true</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[SwingConstants]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaInterface" mc="Stereotype" uid="01ec23a8-0000-0267-0000-000000000000"/>
+      </LINK>
+      <COMP relation="Tag">
+        <OBJECT>
+          <ID name="" mc="TaggedValue" uid="f556421c-a510-476f-9f73-64f9e0881deb"/>
+          <PID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
+          <ATTRIBUTES>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Definition">
+              <FOREIGNID name="JavaExtern" mc="TagType" uid="258012b4-0000-0423-0000-000000000000"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

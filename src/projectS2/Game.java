@@ -45,9 +45,21 @@ public abstract class Game {
             perso1.resetVitalite();
             perso2.resetVitalite();
             System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
-            System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());    
+            System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
+            
+            if (perso1.getExperience() > perso2.getExperience()){
+            	System.out.println(perso1.getNom() + " Commence");
+            }else if(perso1.getExperience() < perso2.getExperience()){
+            	System.out.println(perso2.getNom() + " Commence");
+            }else{
+            	if (Math.random()>0.5){
+            		System.out.println(perso1.getNom() + " Commence");
+            	}else{
+            		System.out.println(perso2.getNom() + " Commence");
+            	}
+            }
         }else{
-            System.out.println("perso1 ou perso2 n'existe pas");
+        	System.out.println("perso1 ou perso2 n'existe pas");
         }
     }
 

@@ -35,4 +35,40 @@ public class Mage extends Perso {
         }
     }
 
+	@Override
+	void setForce(int value) throws PersoException {
+		if ((intelligence >= (Math.max(value,dexterite) + 15)) && (concentration >= Math.max(value,dexterite) + 15)){
+			force = value;
+        }else{
+            throw new PersoException("Erreur mage non conforme\n");
+        }
+	}
+
+	@Override
+	void setDexterite(int value) throws PersoException {
+		if ((intelligence >= (Math.max(force,value) + 15)) && (concentration >= Math.max(force,value) + 15)){
+            this.dexterite= value;
+        }else{
+            throw new PersoException("Erreur mage non conforme\n");
+        }
+	}
+
+	@Override
+	void setIntelligence(int value) throws PersoException {
+		if ((value >= (Math.max(force,dexterite) + 15)) && (concentration >= Math.max(force,dexterite) + 15)){
+            this.intelligence = value;
+        }else{
+            throw new PersoException("Erreur mage non conforme\n");
+        }
+	}
+
+	@Override
+	void setConcentration(int value) throws PersoException {
+		if ((intelligence >= (Math.max(force,dexterite) + 15)) && (value >= Math.max(force,dexterite) + 15)){
+            this.concentration = value;
+        }else{
+            throw new PersoException("Erreur mage non conforme\n");
+        }
+	}
+
 }

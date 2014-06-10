@@ -1,0 +1,458 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Gui" version="3">
+  <DEPS>
+    <ID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+    <EXTID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+    <EXTID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
+    <EXTID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
+    <EXTID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+    <EXTID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+    <EXTID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+    <EXTID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+    <EXTID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+    <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+    <PID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
+    <ATTRIBUTES>
+      <ATT name="IsActive">false</ATT>
+      <ATT name="IsMain">false</ATT>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Gui]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedOperation">
+        <OBJECT>
+          <ID name="main" mc="Operation" uid="a4dd8aa7-257a-469b-8466-fa9d411ae312"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">true</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[main]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="args" mc="Parameter" uid="47aa779c-6833-4d41-8ca2-d3f3858a788f"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[args]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="91cf5ae2-4082-4913-9a56-e84fa974071c"/>
+                      <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="ff92ae77-dbe6-4291-bc26-44199b037839"/>
+                            <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="00f94bea-277a-4b3b-b3af-21bf81bbc5d9"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Launch the application.]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="acbb1721-a0e3-4726-b4f3-54e9b6ec1c47"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[EventQueue.invokeLater(new Runnable() {
+    public void run() {
+        try {
+            Gui window = new Gui();
+            window.frame.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+});
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="Gui" mc="Operation" uid="7653d8e4-416b-4ccb-961a-10e08faf9d39"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[Gui]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Extension">
+              <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
+            </LINK>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="70f88ac0-f94e-455e-b876-3f1d38ce048b"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Create the application.]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="8853b096-2209-49c7-b2ac-67f18c0b88be"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[initialize();]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="initialize" mc="Operation" uid="549b4ef7-f18b-4aa8-9002-655f8fb75b1c"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[initialize]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="fcafe63b-f521-45ec-88b1-20643bb410e9"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Initialize the contents of the frame.]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="0c2f4335-70cf-4041-b405-9f88c3ca81ea"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[frame = new JFrame();
+frame.setBounds(100, 100, 900, 600);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+JPanel panel = new JPanel();
+frame.getContentPane().add(panel, BorderLayout.NORTH);
+panel.setLayout(new BorderLayout(0, 0));
+
+PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin0.png");
+panel.add(persoInfo, BorderLayout.WEST);
+
+PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin1.png");
+panel.add(persoInfo_1, BorderLayout.EAST);
+
+JScrollPane scrollPane = new JScrollPane();
+frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
+
+JPanel panel_1 = new JPanel();
+panel_1.setBorder(new TitledBorder(null, "Capacites", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+scrollPane.setViewportView(panel_1);
+panel_1.setLayout(new GridLayout(0, 1, 0, 0));
+
+jCapacite jCapacite_ = new jCapacite((String) null);
+panel_1.add(jCapacite_);
+
+jCapacite jCapacite__1 = new jCapacite((String) null);
+panel_1.add(jCapacite__1);
+
+jCapacite jCapacite__2 = new jCapacite((String) null);
+panel_1.add(jCapacite__2);
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedEnd">
+        <OBJECT>
+          <ID name="frame" mc="AssociationEnd" uid="4522ba48-7470-4acf-98ee-2d55047195f2"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Aggregation">KindIsAssociation</ATT>
+            <ATT name="IsChangeable">true</ATT>
+            <ATT name="Changeable">AccesNone</ATT>
+            <ATT name="IsDerived">false</ATT>
+            <ATT name="IsOrdered">false</ATT>
+            <ATT name="IsUnique">false</ATT>
+            <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[frame]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="Target">
+              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+            </LINK>
+            <COMP relation="Opposite">
+              <OBJECT>
+                <ID name="" mc="AssociationEnd" uid="d3786a68-04a6-45f1-9212-11ff92fb6901"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Aggregation">KindIsAssociation</ATT>
+                  <ATT name="IsChangeable">true</ATT>
+                  <ATT name="Changeable">ReadWrite</ATT>
+                  <ATT name="IsDerived">false</ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="Visibility">Public</ATT>
+                  <ATT name="IsClass">false</ATT>
+                  <ATT name="IsAbstract">false</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <COMP relation="Opposite">
+                    <COMPID name="frame" mc="AssociationEnd" uid="4522ba48-7470-4acf-98ee-2d55047195f2"/>
+                  </COMP>
+                  <COMP relation="Association">
+                    <OBJECT>
+                      <ID name="" mc="Association" uid="0862b152-19e9-4fe0-8cf8-6ff4ebd87660"/>
+                      <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES></DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Association">
+              <COMPID name="" mc="Association" uid="0862b152-19e9-4fe0-8cf8-6ff4ebd87660"/>
+            </COMP>
+            <COMP relation="Tag">
+              <OBJECT>
+                <ID name="" mc="TaggedValue" uid="d23911f1-11b5-47a7-b689-083d8d089901"/>
+                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Definition">
+                    <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedPackageImport">
+        <OBJECT>
+          <ID name="" mc="PackageImport" uid="4975cbbe-bdc1-4a8d-85ce-114afcc6d834"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedPackage">
+              <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <COMP relation="OwnedImport">
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="2870f31c-7820-401a-a743-60b58a00bc6d"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="039ec4de-6bbc-4c1e-82e3-4207f720d26e"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="629566b6-28d3-4c19-aea7-93ec08d32f5b"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="c327b390-bb55-4ef3-99c3-52983e597e59"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="b90fc917-8450-4a88-a563-cd2dd5f372f1"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="Color" mc="Class" uid="aa401aac-11a6-4f75-97e3-b21c4babd32d"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="aa029b15-7054-406b-aac4-339657e82d62"/>
+          <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+      <LINK relation="Extension">
+        <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
+      </LINK>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

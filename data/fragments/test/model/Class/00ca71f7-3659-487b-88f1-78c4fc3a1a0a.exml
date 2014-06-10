@@ -830,7 +830,7 @@ s = s + "\t| protection\t=\t" + this.protection + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="830e03b3-a569-45df-8c29-d08421f4e370"/>
+                <ID name="" mc="TaggedValue" uid="ea62a237-d74f-4491-9a09-bec31b85214c"/>
                 <PID name="Bouclier" mc="Class" uid="00ca71f7-3659-487b-88f1-78c4fc3a1a0a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -870,7 +870,7 @@ s = s + "\t| protection\t=\t" + this.protection + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="5275fa59-7483-4fba-8b46-6f3e5b1d6e0d"/>
+                <ID name="" mc="TaggedValue" uid="e5b0669b-b1c3-4779-9fdb-1fbb78ab7747"/>
                 <PID name="Bouclier" mc="Class" uid="00ca71f7-3659-487b-88f1-78c4fc3a1a0a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

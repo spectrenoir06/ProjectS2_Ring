@@ -228,18 +228,11 @@ public class GameConsol extends Game {
         }
     }
 
-    @objid ("44ffcdc4-6911-4ee3-af31-de377b3eab4c")
-    @Override
-    public int chooseAction() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
+	@Override
+	public boolean useCapacity(Perso p1, Perso p2) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 
-    @objid ("81768e51-1fe7-4ded-9f82-eda83a1910fe")
-    @Override
-    public int useCapacity(Perso p1, Perso p2) {
-        // TODO Auto-generated method stub
-        return 0;
-    }
 
 }
