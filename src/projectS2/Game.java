@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3c87cb07-e5b2-4706-ac36-e5a91104d80f")
@@ -85,7 +86,7 @@ public abstract class Game {
     }
 
     @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
-    public final Perso load(String file) {
+    public final Perso load(String file) throws NumberFormatException, CapaciteException {
         InputStream in ;
         BufferedInputStream bin ;
         Scanner sc ;

@@ -11,10 +11,14 @@ public class Remede extends Capacite {
     private int efficacite;
 
     @objid ("5f2187a1-a2ce-4d50-84fd-b4355348e1a1")
-    public Remede(int facilite, int efficacite) {
+    public Remede(int facilite, int efficacite) throws CapaciteException {
         super();
-        this.facilite     = facilite;
-        this.efficacite    = efficacite;
+        if (( facilite>=20) && (efficacite>=20)&& ((facilite+efficacite)==100)) { 
+            this.facilite = facilite;
+            this.efficacite = efficacite;
+        }else {
+        	throw new CapaciteException("Remede non conforme.");
+        }
     }
 
     @objid ("bdb7bad0-c16f-470d-9019-3b5175d57cdb")

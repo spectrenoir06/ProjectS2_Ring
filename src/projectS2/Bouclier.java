@@ -11,10 +11,14 @@ public class Bouclier extends Capacite {
     private int protection;
 
     @objid ("57a1386a-d2d6-470b-bd32-f9a0faf6807a")
-    public Bouclier(int maniabilite, int protection) {
-        super();
-        this.maniabilite     = maniabilite;
-        this.protection        = protection;
+    public Bouclier(int maniabilite, int protection) throws CapaciteException {
+        super(); 
+        if (( maniabilite>=20) && (protection>=20)&& ((maniabilite+protection)==100)) { 
+            this.protection = protection;
+            this.maniabilite = maniabilite;
+        }else {
+        	throw new CapaciteException("Bouclier non conforme.");
+        }
     }
 
     @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")

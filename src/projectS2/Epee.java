@@ -14,11 +14,15 @@ public class Epee extends Capacite {
     private int maniabilite;
 
     @objid ("710720c3-8c3c-4036-84f9-d24e23b8ddce")
-    public Epee(int imp, int para, int mani) {
-        super();
-        this.impact = imp;
-        this.parade = para;
-        this.maniabilite = mani;
+    public Epee(int imp, int para, int mani) throws CapaciteException {
+        super(); 
+        if (( imp>=20) && (para>=20) && (mani>=20)&& ((imp+para+mani)==100)) { 
+        	this.impact = imp;
+            this.parade = para;
+            this.maniabilite = mani;
+        }else {
+        	throw new CapaciteException("Epee non conforme.");
+        }
     }
 
     @objid ("af31861a-60c2-4f25-89e6-206e15370dd9")

@@ -2,6 +2,7 @@ package projectS2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("b5d42879-bdfb-452c-acd5-681f01be34fa")
@@ -207,8 +208,15 @@ public class GameConsol extends Game {
                 this.save(this.getPerso1(), "perso1.perso");
                 break;
             case 11:
-                this.setPerso1(this.load("perso1.perso"));
-                this.setPerso2(this.load("perso2.perso"));
+                try {
+					this.setPerso1(this.load("perso1.perso"));
+	                this.setPerso2(this.load("perso2.perso"));
+				} catch (NumberFormatException e) {
+					e.printStackTrace();
+				} catch (CapaciteException e) {
+					e.printStackTrace();
+				}
+
                 break;
             default:
                 break;

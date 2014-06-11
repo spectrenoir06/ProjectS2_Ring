@@ -11,10 +11,14 @@ public class SortilegeGuerisseur extends Capacite {
     private int efficacite;
 
     @objid ("27a1ddeb-dfc5-4b6b-872d-194587056bcc")
-    public SortilegeGuerisseur(int facilite, int efficacite) {
+    public SortilegeGuerisseur(int facilite, int efficacite) throws CapaciteException {
         super();
-        this.facilite = facilite;
-        this.efficacite = efficacite;
+        if (( facilite>=20) && (efficacite>=20)&& ((facilite+efficacite)==100)) { 
+            this.facilite = facilite;
+            this.efficacite = efficacite;
+        }else {
+        	throw new CapaciteException("Sortilege Guerisseur non conforme.");
+        }
     }
 
     @objid ("930cb00d-d9a9-48f0-b562-380e5da4129d")
@@ -56,7 +60,7 @@ public class SortilegeGuerisseur extends Capacite {
     @objid ("2f78e301-005e-4b37-8d27-368e2eb73d01")
     @Override
     public double getReussite() {
-        return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );
+        return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
     }
 
     @objid ("5539fff8-21de-4bba-b8a8-c7371403be8a")

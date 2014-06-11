@@ -44,10 +44,10 @@ public class Gui {
         frame.getContentPane().add(panel, BorderLayout.NORTH);
         panel.setLayout(new BorderLayout(0, 0));
         
-        PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin0.png");
+        PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/guerrierR.png");
         panel.add(persoInfo, BorderLayout.WEST);
         
-        PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin1.png");
+        PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/mageL.png");
         panel.add(persoInfo_1, BorderLayout.EAST);
         
         JScrollPane scrollPane = new JScrollPane();

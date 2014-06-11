@@ -11,10 +11,14 @@ public class SortilegeDefensif extends Capacite {
     private int efficacite;
 
     @objid ("a8aabd56-30af-40b9-8221-7ab0df08c6f4")
-    public SortilegeDefensif(int facilite, int efficacite) {
+    public SortilegeDefensif(int facilite, int efficacite) throws CapaciteException {
         super();
-        this.facilite = facilite;
-        this.efficacite = efficacite;
+        if (( facilite>=20) && (efficacite>=20)&& ((facilite+efficacite)==100)) { 
+            this.facilite = facilite;
+            this.efficacite = efficacite;
+        }else {
+        	throw new CapaciteException("Sortilege Defensif non conforme.");
+        }
     }
 
     @objid ("1edda29e-1b1d-4943-b5b7-9e662e69d058")
