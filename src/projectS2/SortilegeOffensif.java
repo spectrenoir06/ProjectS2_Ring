@@ -60,7 +60,7 @@ public class SortilegeOffensif extends Capacite {
     @objid ("2d98bcd8-62ed-48f1-b8bb-f1b60a5e6b4b")
     @Override
     public double getReussite() {
-        return ( (this.getPerso().getConcentration() * this.facilite) * 10000.0 );
+        return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
     }
 
     @objid ("4f4fce42-d7f1-4e33-afa6-2c5cd545670c")
