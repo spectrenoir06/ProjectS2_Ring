@@ -13,7 +13,6 @@
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
-    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
     <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
@@ -101,20 +100,6 @@
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="00f94bea-277a-4b3b-b3af-21bf81bbc5d9"/>
-                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[Launch the application.]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="" mc="Note" uid="acbb1721-a0e3-4726-b4f3-54e9b6ec1c47"/>
                 <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
                 <ATTRIBUTES>
@@ -160,20 +145,6 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="70f88ac0-f94e-455e-b876-3f1d38ce048b"/>
-                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[Create the application.]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="" mc="Note" uid="8853b096-2209-49c7-b2ac-67f18c0b88be"/>
                 <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
                 <ATTRIBUTES>
@@ -206,20 +177,6 @@
           <DEPENDENCIES>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="fcafe63b-f521-45ec-88b1-20643bb410e9"/>
-                <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[Initialize the contents of the frame.]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="" mc="Note" uid="0c2f4335-70cf-4041-b405-9f88c3ca81ea"/>
                 <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
                 <ATTRIBUTES>
@@ -231,10 +188,10 @@ JPanel panel = new JPanel();
 frame.getContentPane().add(panel, BorderLayout.NORTH);
 panel.setLayout(new BorderLayout(0, 0));
 
-PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin0.png");
+PersoInfo persoInfo = new PersoInfo("Bill",100,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/guerrierR.png");
 panel.add(persoInfo, BorderLayout.WEST);
 
-PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/skin1.png");
+PersoInfo persoInfo_1 = new PersoInfo("Bob",200,"/home/spectrenoir/eclipse/workspace/ProjectS2_Ring/src/mageL.png");
 panel.add(persoInfo_1, BorderLayout.EAST);
 
 JScrollPane scrollPane = new JScrollPane();
@@ -332,7 +289,7 @@ panel_1.add(jCapacite__2);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d23911f1-11b5-47a7-b689-083d8d089901"/>
+                <ID name="" mc="TaggedValue" uid="6bf239ac-7859-4d3e-8e49-06bd333cbee8"/>
                 <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

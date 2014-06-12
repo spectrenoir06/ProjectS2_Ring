@@ -3,6 +3,7 @@
   <DEPS>
     <ID name="lang" mc="Package" uid="2d4a9733-3dcc-42c3-ae4a-381a4388f132"/>
     <COMPID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+    <COMPID name="NumberFormatException" mc="Class" uid="d9b7cd2d-66d6-497d-acad-c54aa46af51c"/>
     <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
     <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>
   </DEPS>
@@ -21,6 +22,7 @@
     <DEPENDENCIES>
       <COMP relation="OwnedElement">
         <COMPID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
+        <COMPID name="NumberFormatException" mc="Class" uid="d9b7cd2d-66d6-497d-acad-c54aa46af51c"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

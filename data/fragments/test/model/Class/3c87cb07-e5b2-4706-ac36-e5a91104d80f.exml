@@ -4,18 +4,19 @@
     <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
     <EXTID name="BufferedInputStream" mc="Class" uid="356d7138-4ab4-459d-8e1d-1e73ee7469ea"/>
     <EXTID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
+    <EXTID name="CapaciteException" mc="Class" uid="c835e468-f6f1-4506-a4ea-d44e1c522ee1"/>
     <EXTID name="FileInputStream" mc="Class" uid="879f8176-dda4-45bf-a5cb-c9c9d3ac370a"/>
     <EXTID name="FileNotFoundException" mc="Class" uid="6c522b4b-586c-49e0-8850-d79071eabc9b"/>
     <EXTID name="FileOutputStream" mc="Class" uid="175cd978-f760-4e89-a381-b1ead1aeb21e"/>
     <EXTID name="IOException" mc="Class" uid="063e6ec3-a787-4267-a5de-ab894297a34e"/>
     <EXTID name="InputStream" mc="Class" uid="ba00c405-c879-4043-be4b-11d9ef3882c7"/>
+    <EXTID name="NumberFormatException" mc="Class" uid="d9b7cd2d-66d6-497d-acad-c54aa46af51c"/>
     <EXTID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
     <EXTID name="PrintStream" mc="Class" uid="2dc7a4e2-e2be-4570-aca5-917956cec60a"/>
     <EXTID name="Scanner" mc="Class" uid="8e70a887-142c-4131-9b42-4898c49fccb5"/>
     <EXTID name="StringTokenizer" mc="Class" uid="548d379a-f6fa-499f-8426-c0da6be6c0ca"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-    <FOREIGNID name="JavaComment" mc="NoteType" uid="69ab88b5-741c-11e1-89e3-002564c97630"/>
     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
     <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
     <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
@@ -289,7 +290,31 @@
     perso1.resetVitalite();
     perso2.resetVitalite();
     System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
-    System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());    
+    System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
+    
+    if (perso1.getExperience() > perso2.getExperience()){
+        System.out.println(perso1.getNom() + " Commence");
+    }else if(perso1.getExperience() < perso2.getExperience()){
+        System.out.println(perso2.getNom() + " Commence");
+        Perso tmp = perso1;
+        perso1 = perso2;
+        perso2 = tmp;
+    }else{
+        if (Math.random()>0.5){
+            System.out.println(perso1.getNom() + " Commence");
+        }else{
+            System.out.println(perso2.getNom() + " Commence");
+            Perso tmp = perso1;
+            perso1 = perso2;
+            perso2 = tmp;
+        }
+    }
+    while(true){
+        tour(getPerso1(), getPerso2());
+        Perso tmp = perso1;
+        perso1 = perso2;
+        perso2 = tmp;
+    }
 }else{
     System.out.println("perso1 ou perso2 n'existe pas");
 }
@@ -311,7 +336,7 @@
           <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
+            <ATT name="Final">true</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
@@ -446,7 +471,7 @@ System.out.println("write done in "+ file);
           <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
+            <ATT name="Final">true</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
@@ -455,6 +480,34 @@ System.out.println("write done in "+ file);
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="b23739c6-34dc-4815-9c58-2a07d0815ebd"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="NumberFormatException" mc="Class" uid="d9b7cd2d-66d6-497d-acad-c54aa46af51c"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="a0ce76b7-7bcd-422e-806d-a5bccc830322"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="CapaciteException" mc="Class" uid="c835e468-f6f1-4506-a4ea-d44e1c522ee1"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
             <COMP relation="IO">
               <OBJECT>
                 <ID name="file" mc="Parameter" uid="fbeaac31-f4b4-40b6-a243-c368ab6c9b8c"/>
@@ -534,18 +587,15 @@ try {
     bin = new BufferedInputStream(in);
     sc = new Scanner(bin);
 
-    String s;
-    
-    //while(sc.hasNextLine()){
-    s = sc.nextLine();
+    String s = sc.nextLine();
     StringTokenizer st = new StringTokenizer(s,";");
     
-    String classe     = st.nextToken();
+    String classe   = st.nextToken();
     String name     = st.nextToken();
     int exp         = new Integer(st.nextToken());
-    int force         = new Integer(st.nextToken());
-    int dexterite    = new Integer(st.nextToken());
-    int inteligence    = new Integer(st.nextToken());
+    int force       = new Integer(st.nextToken());
+    int dexterite   = new Integer(st.nextToken());
+    int inteligence = new Integer(st.nextToken());
     int conc        = new Integer(st.nextToken());
         
     switch (classe) {
@@ -599,8 +649,8 @@ catch(IOException e){
 
 finally 
 {
-    sc     = null;
-    bin = null;
+    sc    = null;
+    bin   = null;
     in    = null;
 }
 ]]></ATT>
@@ -698,39 +748,29 @@ finally
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                    <FOREIGNID name="boolean" mc="DataType" uid="00000004-0000-0005-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
             </COMP>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="05586499-6f1b-4897-a900-79af0c1c5f6d"/>
-                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return -1;]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
                 <ID name="" mc="Note" uid="f38bf262-8bb6-4469-8034-aac0926cbd20"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[System.out.println("Action de "+p1.getNom());
-int act = this.chooseAction();
-if (act==1){
-    useCapacity(p1, p2);
-    return 1;
-}else if(act == 2){
-    System.out.println(p1.getNom() + " a abandone");
-    return 0;
+                  <ATT name="Content"><![CDATA[int cap1 = chooseCapacity(p1);
+System.out.println("cap1 = "+ cap1);
+int cap2;
+if (cap1 != -1 ){
+    cap2 = chooseCapacity(p1);
+    if (cap2 == -1){
+        return false;
+    }
+}else{
+    return false;
 }
+p1.use(cap1, p2);
+p1.use(cap2, p2);
 ]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -741,44 +781,17 @@ if (act==1){
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="chooseAction" mc="Operation" uid="85f83fae-47d1-4e79-80e8-994c0658faae"/>
-          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-          <ATTRIBUTES>
-            <ATT name="Concurrency">false</ATT>
-            <ATT name="Final">false</ATT>
-            <ATT name="Passing">MethodOut</ATT>
-            <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
-            <ATT name="IsAbstract">true</ATT>
-            <ATT name="Name"><![CDATA[chooseAction]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <COMP relation="Return">
               <OBJECT>
-                <ID name="" mc="Parameter" uid="429dfaa3-c992-407c-b5fc-90cb06106e93"/>
+                <ID name="" mc="Note" uid="53c748fc-bf07-4636-a7a4-ae97dfa0bf19"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Content"><![CDATA[return true;]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -786,7 +799,7 @@ if (act==1){
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="useCapacity" mc="Operation" uid="761b1134-4b16-4714-a4a4-92a4e97a3415"/>
+          <ID name="chooseCapacity" mc="Operation" uid="761b1134-4b16-4714-a4a4-92a4e97a3415"/>
           <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
@@ -795,7 +808,7 @@ if (act==1){
             <ATT name="Visibility">Public</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">true</ATT>
-            <ATT name="Name"><![CDATA[useCapacity]]></ATT>
+            <ATT name="Name"><![CDATA[chooseCapacity]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -815,29 +828,6 @@ if (act==1){
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
                   <ATT name="Name"><![CDATA[p1]]></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Type">
-                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-              <OBJECT>
-                <ID name="p2" mc="Parameter" uid="3e94bc12-c297-4512-832e-4fae91ebcc22"/>
-                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-                <ATTRIBUTES>
-                  <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-                  <ATT name="TypeConstraint"></ATT>
-                  <ATT name="DefaultValue"></ATT>
-                  <ATT name="IsOrdered">false</ATT>
-                  <ATT name="IsUnique">false</ATT>
-                  <ATT name="IsException">false</ATT>
-                  <ATT name="IsStream">false</ATT>
-                  <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[p2]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
@@ -868,22 +858,6 @@ if (act==1){
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <FOREIGNID name="integer" mc="DataType" uid="00000004-0000-0009-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-            <COMP relation="Descriptor">
-              <OBJECT>
-                <ID name="" mc="Note" uid="a3ab2610-28d0-4d6a-82df-948611c6b2a2"/>
-                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
-                <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[// 1 if capacity 2 if stop]]></ATT>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Model">
-                    <FOREIGNID name="JavaComment" mc="NoteType" uid="69ab88b5-741c-11e1-89e3-002564c97630"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -1038,7 +1012,7 @@ if (act==1){
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="1eb9e739-b7ea-4703-9a08-35ae0a8bfda1"/>
+                <ID name="" mc="TaggedValue" uid="754c2d8d-f77e-4017-b158-44b30bc66878"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1117,7 +1091,7 @@ if (act==1){
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="f332f59f-9873-419f-bc49-80f6adfdac39"/>
+                <ID name="" mc="TaggedValue" uid="491f5cd2-c5ef-48f1-b866-473bdb8ae9fb"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

@@ -17,15 +17,14 @@ public class Bouclier extends Capacite {
             this.protection = protection;
             this.maniabilite = maniabilite;
         }else {
-        	throw new CapaciteException("Bouclier non conforme.");
+            throw new CapaciteException("Bouclier non conforme.");
         }
     }
 
     @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
     @Override
     public void use(Perso p) {
-        System.out.println(this.getPerso().getNom() + " pare");
-        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getParadePuissance() + " ]" );
+        super.use(p);
     }
 
     @objid ("c3145c17-3708-4879-8965-4e0934f2e1b3")
@@ -63,23 +62,22 @@ public class Bouclier extends Capacite {
         return ( (this.getPerso().getDexterite() * this.maniabilite) / 10000.0);
     }
 
-    @objid ("2c6a75da-4f7e-42ab-ba03-df3814a7e5be")
-    @Override
-    public double getParadePuissance() {
-        return (this.getPerso().getForce() * this.protection / 100.0);
-    }
-
-    @objid ("cefb9962-a69c-4704-ab09-aed47c41a9f8")
-    @Override
-    public double getAttaquePuissance() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
     @objid ("39b4e3ce-57ff-4e70-b63d-91dfa54597e6")
     @Override
     public String serialise() {
         return ("bouclier;" + this.maniabilite + ";" + this.protection);
+    }
+
+    @objid ("2d73eca0-513d-465b-8b2a-592b25764847")
+    @Override
+    public double getPuissance() {
+        return (this.getPerso().getForce() * this.protection / 100.0);
+    }
+
+    @objid ("b907f733-ab18-4bd5-95d0-1204c1560801")
+    @Override
+    public String getCapaciteInfo() {
+        return ("Bouclier    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }

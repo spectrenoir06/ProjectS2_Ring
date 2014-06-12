@@ -228,7 +228,7 @@ this.add(caraPanel);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="86fd1dba-e961-43b3-ae25-9034c1f0dc96"/>
+                <ID name="" mc="TaggedValue" uid="dae99b66-08b8-464d-add5-fa89653947f5"/>
                 <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -307,7 +307,7 @@ this.add(caraPanel);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="01df0320-15a0-4695-8143-9e40f2293ffb"/>
+                <ID name="" mc="TaggedValue" uid="2a4ca90e-eb05-4b96-9e3d-5f1ef6548e5e"/>
                 <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -386,7 +386,7 @@ this.add(caraPanel);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="597104ba-05f0-4778-a92e-bce519ed116e"/>
+                <ID name="" mc="TaggedValue" uid="2f263cf4-feb5-4b55-8089-dba567a2df2b"/>
                 <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -465,7 +465,7 @@ this.add(caraPanel);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="edbefb4f-1a0f-41b0-b09c-a068ce2e5409"/>
+                <ID name="" mc="TaggedValue" uid="b0672501-32fc-48e8-b454-1ae946ab0c18"/>
                 <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -544,7 +544,7 @@ this.add(caraPanel);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="79c056d9-6b3a-40c9-b12d-ec575930a476"/>
+                <ID name="" mc="TaggedValue" uid="ca3069fd-6614-4ca9-bc69-88a65c3918f5"/>
                 <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

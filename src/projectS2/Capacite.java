@@ -12,7 +12,9 @@ public abstract class Capacite {
     }
 
     @objid ("e853b988-9789-4b12-8a38-b37fecaa7dd5")
-    public abstract void use(Perso p);
+    public void use(Perso p) {
+        System.out.println(this.getPerso().getNom() + " utilise " + getCapaciteInfo());
+    }
 
     @objid ("9511e4d2-a1d9-45c2-91ff-f4f0840f42f8")
     public Perso getPerso() {
@@ -30,13 +32,13 @@ public abstract class Capacite {
     @objid ("34ed52e3-dbc3-4b18-bfaf-23be1d7973ea")
     public abstract double getReussite();
 
-    @objid ("f1373d01-5f06-4c67-8f6b-9c6c4fac1a74")
-    public abstract double getParadePuissance();
-
-    @objid ("76d3ad14-7a09-42ab-a571-697c91170cf8")
-    public abstract double getAttaquePuissance();
-
     @objid ("55ba066b-1dc3-4dab-bfaf-fded553131e9")
     public abstract String serialise();
+
+    @objid ("320bb0b9-0ee2-4780-815b-bb449dec1d08")
+    public abstract double getPuissance();
+
+    @objid ("c719d115-d7dd-4e7c-ad46-3b7e24636d82")
+    public abstract String getCapaciteInfo();
 
 }

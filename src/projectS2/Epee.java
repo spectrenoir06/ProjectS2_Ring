@@ -17,23 +17,17 @@ public class Epee extends Capacite {
     public Epee(int imp, int para, int mani) throws CapaciteException {
         super(); 
         if (( imp>=20) && (para>=20) && (mani>=20)&& ((imp+para+mani)==100)) { 
-        	this.impact = imp;
+            this.impact = imp;
             this.parade = para;
             this.maniabilite = mani;
         }else {
-        	throw new CapaciteException("Epee non conforme.");
+            throw new CapaciteException("Epee non conforme.");
         }
     }
 
     @objid ("af31861a-60c2-4f25-89e6-206e15370dd9")
     public void use(Perso p) {
-        if (p==super.getPerso()){
-            System.out.println(this.getPerso().getNom() + " pare");
-            System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getParadePuissance() + " ]" );
-        }else{
-            System.out.println(this.getPerso().getNom() + " attaque " + p.getNom());
-            System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
-        }
+        super.use(p);
     }
 
     @objid ("c5408822-811d-4d41-9776-5a4eead7af11")
@@ -81,20 +75,21 @@ public class Epee extends Capacite {
         return ( this.getPerso().getDexterite() * this.maniabilite / 10000.0);
     }
 
-    @objid ("774f48e9-9c86-48ec-b2e4-f2aa9c50aa29")
-    public double getAttaquePuissance() {
-        return ( this.getPerso().getForce() * this.impact / 100.0 );
-    }
-
-    @objid ("676c318d-3ff7-4c6d-81de-65e591a801f0")
-    public double getParadePuissance() {
-        return ( this.getPerso().getForce() * this.parade / 100.0 );
-    }
-
     @objid ("7f64b56f-2c28-49f6-9cfc-538506750fbe")
     @Override
     public String serialise() {
         return ("eppe;" + this.impact + ";" + this.parade + ";" + this.maniabilite);
+    }
+
+    @objid ("4185125d-7741-4687-8249-b07e826ba361")
+    public String getCapaciteInfo() {
+        return ("Epee    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
+    }
+
+    @objid ("48f8d036-49ca-4556-8027-f4d985ea5fed")
+    @Override
+    public double getPuissance() {
+        return ( this.getPerso().getForce() * this.impact / 100.0 );
     }
 
 }

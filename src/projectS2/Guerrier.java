@@ -25,7 +25,7 @@ public class Guerrier extends Perso {
     @objid ("777ebe2e-f179-4fee-ad90-1c265f064430")
     @Override
     public String serialise() {
-        return getSerialise("guerrier");
+        return ("guerrier" + super.serialise());
     }
 
     @objid ("4416b9a3-f9ae-4601-9000-02e72ae675bb")
@@ -41,48 +41,52 @@ public class Guerrier extends Perso {
         }
     }
 
-	@Override
-	void setForce(int value) throws PersoException {
+    @objid ("0ae4ed82-f7ad-4966-9dcf-a0e291c9a884")
+    @Override
+    void setForce(int value) throws PersoException {
         if ((value >= (dexterite + 10))
                 && ((dexterite + 10) >= (intelligence + 10))
                 && ((intelligence + 10) >= concentration)) {
-        	this.force = value;
+            this.force = value;
         } else {
             throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
         }
-	}
+    }
 
-	@Override
-	void setDexterite(int value) throws PersoException {
-		if ((intelligence >= (value + 10))
+    @objid ("a36251a7-f978-422b-9b68-829dce9c1227")
+    @Override
+    void setDexterite(int value) throws PersoException {
+        if ((intelligence >= (value + 10))
                 && ((value + 10) >= (intelligence + 10))
                 && ((intelligence + 10) >= concentration)) {
-        	this.dexterite = value;
+            this.dexterite = value;
         } else {
             throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
         }
-	}
+    }
 
-	@Override
-	void setIntelligence(int value) throws PersoException {
-		if ((force >= (dexterite + 10))
+    @objid ("4c299e3b-1567-4d52-b18e-f0b6da608f66")
+    @Override
+    void setIntelligence(int value) throws PersoException {
+        if ((force >= (dexterite + 10))
                 && ((dexterite + 10) >= (value + 10))
                 && ((value + 10) >= concentration)) {
-        	this.intelligence = value;
+            this.intelligence = value;
         } else {
             throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
         }
-	}
+    }
 
-	@Override
-	void setConcentration(int value) throws PersoException {
-		if ((force >= (dexterite + 10))
+    @objid ("311de2df-a4e5-4388-9769-504a27cee1d6")
+    @Override
+    void setConcentration(int value) throws PersoException {
+        if ((force >= (dexterite + 10))
                 && ((dexterite + 10) >= (intelligence + 10))
                 && ((value + 10) >= value)) {
-        	this.concentration = value;
+            this.concentration = value;
         } else {
             throw new PersoException("Erreur guerrier non conforme\nforce >= dexterite+10 >= inteligence+10 >= concentration");
         }
-	}
+    }
 
 }

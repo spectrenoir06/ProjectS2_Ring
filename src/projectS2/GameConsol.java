@@ -2,7 +2,6 @@ package projectS2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("b5d42879-bdfb-452c-acd5-681f01be34fa")
@@ -188,7 +187,7 @@ public class GameConsol extends Game {
                 System.out.println(this.getPerso2());
                 break;
             case 6:
-                this.getPerso1().use(0, this.getPerso2());     // epee sur adv
+                this.getPerso1().use(0, this.getPerso2());                  // epee sur adv
                 this.getPerso1().use(1,this.getPerso2());                // bouclier
                 this.getPerso1().use(2,this.getPerso2());                // sort offensif
                 this.getPerso1().use(3,this.getPerso2());                // remede
@@ -209,14 +208,17 @@ public class GameConsol extends Game {
                 break;
             case 11:
                 try {
-					this.setPerso1(this.load("perso1.perso"));
-	                this.setPerso2(this.load("perso2.perso"));
-				} catch (NumberFormatException e) {
-					e.printStackTrace();
-				} catch (CapaciteException e) {
-					e.printStackTrace();
-				}
-
+                    this.setPerso1(this.load("perso1.perso"));
+                    this.setPerso2(this.load("perso2.perso"));
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                } catch (CapaciteException e) {
+                    e.printStackTrace();
+                }
+        
+                break;
+            case 12:
+                tour(getPerso1(), getPerso2());
                 break;
             default:
                 break;
@@ -236,11 +238,21 @@ public class GameConsol extends Game {
         }
     }
 
-	@Override
-	public boolean useCapacity(Perso p1, Perso p2) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
+    @objid ("c994c844-e0ae-4b63-b7a6-0e3a48d3be6c")
+    @Override
+    public int chooseCapacity(Perso p1) {
+        System.out.println(p1.getInfoCapacite());
+        System.out.println("nombre de capacite = " + p1.getCapaciteNb());
+        while (true){
+            System.out.println("choisir un capacite:");
+            int nb = scan.nextInt();
+            if (nb == -1){
+                return -1;
+            }else if((nb>=0) && (nb < p1.getCapaciteNb())){
+                //System.out.println(p1.getCapacite(nb));
+                return nb;
+            }
+        }
+    }
 
 }

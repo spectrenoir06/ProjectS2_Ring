@@ -17,7 +17,7 @@ public class Remede extends Capacite {
             this.facilite = facilite;
             this.efficacite = efficacite;
         }else {
-        	throw new CapaciteException("Remede non conforme.");
+            throw new CapaciteException("Remede non conforme.");
         }
     }
 
@@ -44,8 +44,7 @@ public class Remede extends Capacite {
     @objid ("6b9901c7-aafb-4c27-9821-df03f9f91230")
     @Override
     public void use(Perso p) {
-        System.out.println(this.getPerso().getNom() + " utilise un remede");
-        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+        super.use(p);
     }
 
     @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
@@ -60,27 +59,25 @@ public class Remede extends Capacite {
     @objid ("6ac79c40-7d26-43e5-8633-081270566b6a")
     @Override
     public double getReussite() {
-        // TODO Auto-generated method stub
         return this.getPerso().getDexterite() * this.facilite / 10000;
-    }
-
-    @objid ("174c8658-0c19-44ef-a537-e317067d92de")
-    @Override
-    public double getParadePuissance() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @objid ("c7be97b7-2b61-4d48-bc8d-cb23a4aea2ed")
-    @Override
-    public double getAttaquePuissance() {
-        return this.getPerso().getDexterite() * this.efficacite / 100;
     }
 
     @objid ("06f4ccc7-061b-4090-a5d0-94b6433b5263")
     @Override
     public String serialise() {
         return ("remede;" + this.facilite + ";" + this.efficacite);
+    }
+
+    @objid ("f1794c57-2fd6-4b6f-a6a2-3e99c1a99dd5")
+    @Override
+    public double getPuissance() {
+        return this.getPerso().getDexterite() * this.efficacite / 100;
+    }
+
+    @objid ("f9c5f898-2a8a-4953-abc5-85e75a292d0d")
+    @Override
+    public String getCapaciteInfo() {
+        return ("Remede    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }

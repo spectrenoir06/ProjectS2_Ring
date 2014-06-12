@@ -82,7 +82,6 @@
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Content"><![CDATA[super("Ring");
-this.game = new Game();
 this.init();
 this.setSize(900, 600);
 this.setMinimumSize(this.getSize());
@@ -554,7 +553,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="4bc50ebd-599a-4d50-8e22-f479db23ad59"/>
+                <ID name="" mc="TaggedValue" uid="6945be24-52a6-4b4c-a53a-e0ea2658ba3b"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -728,7 +727,7 @@ j.add(buttonPlus);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="9bd9d449-704f-4885-b647-b7bc205ef2a0"/>
+                <ID name="" mc="TaggedValue" uid="a803f0ee-29c8-4dd8-93f4-aeeb5785f955"/>
                 <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -746,7 +745,7 @@ j.add(buttonPlus);
       </COMP>
       <COMP relation="Parent">
         <OBJECT>
-          <ID name="" mc="Generalization" uid="cd56fffa-742e-48c3-9d27-b1c1d05da8ed"/>
+          <ID name="" mc="Generalization" uid="6349960f-7df4-4ace-b16c-8a80457ae11d"/>
           <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
           <ATTRIBUTES>
             <ATT name="Discriminator"></ATT>
@@ -755,7 +754,7 @@ j.add(buttonPlus);
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="SuperType">
-              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
@@ -858,6 +857,20 @@ j.add(buttonPlus);
           <DEPENDENCIES>
             <LINK relation="ImportedElement">
               <ID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="afeb70e2-5a05-4da9-9b08-0ff3903f3122"/>
+          <PID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

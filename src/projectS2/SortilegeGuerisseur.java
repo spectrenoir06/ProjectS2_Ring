@@ -17,15 +17,14 @@ public class SortilegeGuerisseur extends Capacite {
             this.facilite = facilite;
             this.efficacite = efficacite;
         }else {
-        	throw new CapaciteException("Sortilege Guerisseur non conforme.");
+            throw new CapaciteException("Sortilege Guerisseur non conforme.");
         }
     }
 
     @objid ("930cb00d-d9a9-48f0-b562-380e5da4129d")
     @Override
     public void use(Perso p) {
-        System.out.println(this.getPerso().getNom() + " utilise s.guerrisseur ");
-        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+        super.use(p);
     }
 
     @objid ("7e698428-7dbc-465e-b9b0-779d33c13a26")
@@ -63,23 +62,22 @@ public class SortilegeGuerisseur extends Capacite {
         return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
     }
 
-    @objid ("5539fff8-21de-4bba-b8a8-c7371403be8a")
-    @Override
-    public double getParadePuissance() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @objid ("71d57ff6-6710-4974-b955-2bdefa3c04d4")
-    @Override
-    public double getAttaquePuissance() {
-        return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
-    }
-
     @objid ("2d706a2b-4ac0-476e-9e30-1f2d60e40946")
     @Override
     public String serialise() {
         return ("SG;" + this.facilite + ";" + this.efficacite);
+    }
+
+    @objid ("3d2d474d-fe3f-4967-abce-eb7c0a957914")
+    @Override
+    public double getPuissance() {
+        return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
+    }
+
+    @objid ("05ce7271-e3b9-451a-9b9f-9ccc9499a84b")
+    @Override
+    public String getCapaciteInfo() {
+        return ("S.guerr.    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }

@@ -9,7 +9,6 @@ import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.Scanner;
 import java.util.StringTokenizer;
-
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("3c87cb07-e5b2-4706-ac36-e5a91104d80f")
@@ -49,18 +48,30 @@ public abstract class Game {
             System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
             
             if (perso1.getExperience() > perso2.getExperience()){
-            	System.out.println(perso1.getNom() + " Commence");
+                System.out.println(perso1.getNom() + " Commence");
             }else if(perso1.getExperience() < perso2.getExperience()){
-            	System.out.println(perso2.getNom() + " Commence");
+                System.out.println(perso2.getNom() + " Commence");
+                Perso tmp = perso1;
+                perso1 = perso2;
+                perso2 = tmp;
             }else{
-            	if (Math.random()>0.5){
-            		System.out.println(perso1.getNom() + " Commence");
-            	}else{
-            		System.out.println(perso2.getNom() + " Commence");
-            	}
+                if (Math.random()>0.5){
+                    System.out.println(perso1.getNom() + " Commence");
+                }else{
+                    System.out.println(perso2.getNom() + " Commence");
+                    Perso tmp = perso1;
+                    perso1 = perso2;
+                    perso2 = tmp;
+                }
+            }
+            while(true){
+                tour(getPerso1(), getPerso2());
+                Perso tmp = perso1;
+                perso1 = perso2;
+                perso2 = tmp;
             }
         }else{
-        	System.out.println("perso1 ou perso2 n'existe pas");
+            System.out.println("perso1 ou perso2 n'existe pas");
         }
     }
 
@@ -86,7 +97,7 @@ public abstract class Game {
     }
 
     @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
-    public final Perso load(String file) throws NumberFormatException, CapaciteException {
+    public final Perso load(String file) throws CapaciteException, NumberFormatException {
         InputStream in ;
         BufferedInputStream bin ;
         Scanner sc ;
@@ -160,7 +171,7 @@ public abstract class Game {
         finally 
         {
             sc    = null;
-            bin    = null;
+            bin   = null;
             in    = null;
         }
         return p;
@@ -168,19 +179,24 @@ public abstract class Game {
 
     @objid ("16639ec1-98ac-4116-98f9-7b1565f8acb0")
     public boolean tour(Perso p1, Perso p2) {
-        // true if use capa false if loose
-                System.out.println("Action de "+p1.getNom());
-                if (this.useCapacity(p1, p2)){
-                     System.out.println("use capa");
-                     return true;
-                }else{
-                    System.out.println("abandon");
-                    return false;
-                }
+        int cap1 = chooseCapacity(p1);
+        System.out.println("cap1 = "+ cap1);
+        int cap2;
+        if (cap1 != -1 ){
+            cap2 = chooseCapacity(p1);
+            if (cap2 == -1){
+                return false;
+            }
+        }else{
+            return false;
+        }
+        p1.use(cap1, p2);
+        p1.use(cap2, p2);
+        return true;
     }
 
     @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
-    public abstract boolean useCapacity(Perso p1, Perso p2);
+    public abstract int chooseCapacity(Perso p1);
 
     @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
     public abstract Perso createPerso();

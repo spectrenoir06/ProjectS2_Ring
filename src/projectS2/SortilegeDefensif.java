@@ -17,15 +17,14 @@ public class SortilegeDefensif extends Capacite {
             this.facilite = facilite;
             this.efficacite = efficacite;
         }else {
-        	throw new CapaciteException("Sortilege Defensif non conforme.");
+            throw new CapaciteException("Sortilege Defensif non conforme.");
         }
     }
 
     @objid ("1edda29e-1b1d-4943-b5b7-9e662e69d058")
     @Override
     public void use(Perso p) {
-        System.out.println(this.getPerso().getNom() + " utilise s.defensif ");
-        System.out.println("[ reussite = " + this.getReussite() + " ; efficacite : " + this.getAttaquePuissance() + " ]" );
+        super.use(p);
     }
 
     @objid ("d8f9fa38-3f82-41a1-bd6f-7aa5422a48e5")
@@ -63,23 +62,22 @@ public class SortilegeDefensif extends Capacite {
         return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
     }
 
-    @objid ("8fbc910c-a7d3-49aa-87d5-a89ed5599321")
-    @Override
-    public double getParadePuissance() {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @objid ("9fb2529d-05cb-4413-999b-f05efe8af5e7")
-    @Override
-    public double getAttaquePuissance() {
-        return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
-    }
-
     @objid ("f4e38418-99f1-4dd0-91be-ca9e909c136f")
     @Override
     public String serialise() {
         return ("SD;" + this.facilite + ";" + this.efficacite);
+    }
+
+    @objid ("fdf5eb9a-ec33-4a15-b35e-f8afdc927ba6")
+    @Override
+    public double getPuissance() {
+        return ( (this.getPerso().getIntelligence() * this.efficacite) / 100.0);
+    }
+
+    @objid ("0b7d2dd3-e881-4c58-af65-e0a46b8dc84c")
+    @Override
+    public String getCapaciteInfo() {
+        return ("S.defensif    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }

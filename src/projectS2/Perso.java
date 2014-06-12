@@ -9,7 +9,7 @@ public abstract class Perso {
     private String nom;
 
     @objid ("e9bc87e8-3964-4c51-af31-8a54b234405f")
-	protected int force;
+    protected int force;
 
     @objid ("c46e697e-981d-47bb-bef7-a5b823dcb125")
     protected int dexterite;
@@ -71,7 +71,7 @@ public abstract class Perso {
     }
 
     @objid ("23d42c35-848c-42fe-84ea-f7d8f9f86fa2")
-    abstract void setDexterite(int value)throws PersoException;
+    abstract void setDexterite(int value) throws PersoException;
 
     @objid ("73c8dede-8a0e-413d-b4ca-90708d3ec4e2")
     int getIntelligence() {
@@ -79,7 +79,7 @@ public abstract class Perso {
     }
 
     @objid ("a0c4619f-2cf2-47bd-8579-93d33b40dd1f")
-    abstract void setIntelligence(int value)throws PersoException;
+    abstract void setIntelligence(int value) throws PersoException;
 
     @objid ("7df0e712-4c9c-44dd-9f93-0be49ae52631")
     int getConcentration() {
@@ -87,7 +87,7 @@ public abstract class Perso {
     }
 
     @objid ("d29b0e74-6ef2-4e91-a7f1-cfc21e9f71ec")
-    abstract void setConcentration(int value)throws PersoException;
+    abstract void setConcentration(int value) throws PersoException;
 
     @objid ("2a7053f9-b4dd-434b-be43-8045dbe35f18")
     int getExperience() {
@@ -95,9 +95,9 @@ public abstract class Perso {
     }
 
     @objid ("39225c44-d9f5-4e1d-b83d-acc645405f1f")
-    void setExperience(int value){
-    	experience=value;
-    };
+    void setExperience(int value) {
+        experience=value;
+    }
 
     @objid ("d11148a2-6303-42ca-880a-9a129193a0ca")
     int getVitalite() {
@@ -105,8 +105,8 @@ public abstract class Perso {
     }
 
     @objid ("c93f2607-f887-4548-b69d-19e43927a41d")
-    void setVitalite(int value){
-    	this.vitalite = value;
+    void setVitalite(int value) {
+        this.vitalite = value;
     }
 
     @objid ("216756fb-4d26-490c-b7fe-c73511aed9f0")
@@ -152,16 +152,13 @@ public abstract class Perso {
     }
 
     @objid ("c29cc229-c92d-4050-8b17-e140a2779e16")
-    public String getSerialise(String type) {
-        String s = (type + ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration);
+    public String serialise() {
+        String s = ( ";" + this.nom + ";" + this.experience + ";" + this.force + ";" + this.dexterite + ";" + this.intelligence + ";" + this.concentration);
         for (Capacite c : this.capacite){
             s = s  + "\n" + c.serialise();
         }
         return s;
     }
-
-    @objid ("666e664a-62a2-4c25-a644-8845ee595b99")
-    public abstract String serialise();
 
     @objid ("88c20f55-3b02-4c64-9589-8e21783cb538")
     public void resetVitalite() {
@@ -184,6 +181,16 @@ public abstract class Perso {
         {
             throw new PersoException("Erreur perso non conforme\nforce + dextérité + intelligence + concentration <= 101");
         }
+    }
+
+    @objid ("24c6ff72-0358-4ea3-9eb9-269b57798bf9")
+    public int getCapaciteNb() {
+        return this.capacite.size();
+    }
+
+    @objid ("0e34f9b7-6a45-4f90-8197-0c66e8019d6d")
+    public Capacite getCapacite(int i) {
+        return this.capacite.get(i);
     }
 
 }
