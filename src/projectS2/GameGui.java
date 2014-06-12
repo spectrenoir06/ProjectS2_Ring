@@ -19,6 +19,11 @@ public class GameGui extends Game {
     @objid ("66fde004-e939-4e28-9015-5533f952e685")
     private static final long serialVersionUID = 1L;
 
+    @objid ("cd1d3e26-1d8f-48ac-b034-1803150c20a1")
+    public static void main(String[] args) throws Exception {
+        new GameGui();
+    }
+
     @objid ("7a864581-35c3-41dd-8fb1-f457e15f20cf")
     private JTextField txtName;
 
@@ -35,6 +40,29 @@ public class GameGui extends Game {
         this.setSize(900, 600);
         this.setMinimumSize(this.getSize());
         this.setVisible(true);
+    }
+
+    @objid ("a807fb1f-4954-4914-8faa-ab2437c2d6e5")
+    private JPanel cara(String text) {
+        JPanel j = new JPanel();
+        j.setBorder(new TitledBorder(null, text, TitledBorder.CENTER, TitledBorder.TOP, null, null));
+        
+        j.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+        
+        JButton buttonMoins = new JButton("-");
+        buttonMoins.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
+            }
+        });
+        j.add(buttonMoins);
+        
+        JLabel label = new JLabel("0");
+        j.add(label);
+        
+        JButton buttonPlus = new JButton("+");
+        j.add(buttonPlus);
+        return j;
     }
 
     @objid ("a2ab947f-997a-4be7-a304-26276f99abf4")
@@ -126,34 +154,6 @@ public class GameGui extends Game {
         
         jCapacite capacite4 = new jCapacite("Capacite 4");
         jCapa.add(capacite4);
-    }
-
-    @objid ("a807fb1f-4954-4914-8faa-ab2437c2d6e5")
-    private JPanel cara(String text) {
-        JPanel j = new JPanel();
-        j.setBorder(new TitledBorder(null, text, TitledBorder.CENTER, TitledBorder.TOP, null, null));
-        
-        j.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-        
-        JButton buttonMoins = new JButton("-");
-        buttonMoins.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                
-            }
-        });
-        j.add(buttonMoins);
-        
-        JLabel label = new JLabel("0");
-        j.add(label);
-        
-        JButton buttonPlus = new JButton("+");
-        j.add(buttonPlus);
-        return j;
-    }
-
-    @objid ("cd1d3e26-1d8f-48ac-b034-1803150c20a1")
-    public static void main(String[] args) throws Exception {
-        new GameGui();
     }
 
 }

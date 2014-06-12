@@ -77,15 +77,9 @@ public class PlusMoins extends JPanel {
         add(bPlus);
     }
 
-    @objid ("b9987a91-cf29-4387-a3f2-8efa8204753e")
-    public void setUse(boolean isOn) {
-        this.isOn = isOn;
-        if(isOn){
-            reBorne();
-        }else{
-            bMoins.setEnabled(false);
-            bPlus.setEnabled(false);
-        }
+    @objid ("39c6a88e-4f1d-40ad-bc0d-3638c8a6b75d")
+    public int getNb() {
+        return this.nb;
     }
 
     @objid ("d1d9408d-238a-4413-ad5b-925e9eedd1f2")
@@ -119,9 +113,15 @@ public class PlusMoins extends JPanel {
         }
     }
 
-    @objid ("39c6a88e-4f1d-40ad-bc0d-3638c8a6b75d")
-    public int getNb() {
-        return this.nb;
+    @objid ("b9987a91-cf29-4387-a3f2-8efa8204753e")
+    public void setUse(boolean isOn) {
+        this.isOn = isOn;
+        if(isOn){
+            reBorne();
+        }else{
+            bMoins.setEnabled(false);
+            bPlus.setEnabled(false);
+        }
     }
 
 }

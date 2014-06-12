@@ -19,25 +19,14 @@ public abstract class Game {
     @objid ("4336642f-3f98-416d-b1eb-dd71724cd0b9")
     private Perso perso2;
 
-    @objid ("b66a9408-4028-4110-a68e-f822f0e32bd0")
-    public Perso getPerso1() {
-        return perso1;
-    }
+    @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
+    public abstract int chooseCapacity(Perso p1);
 
-    @objid ("c6ee85ac-f034-4ae7-9e70-8fbea0d2c25c")
-    public void setPerso1(Perso perso1) {
-        this.perso1 = perso1;
-    }
+    @objid ("c12aaa67-20b5-4355-adc0-2a54939e873a")
+    public abstract Capacite createCapacite();
 
-    @objid ("57d1e580-dcc5-4f1b-94b4-36782cafbe8d")
-    public Perso getPerso2() {
-        return perso2;
-    }
-
-    @objid ("a42a2edd-1499-43f3-a0f4-de026a1ddf00")
-    public void setPerso2(Perso perso2) {
-        this.perso2 = perso2;
-    }
+    @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
+    public abstract Perso createPerso();
 
     @objid ("4b18d94b-4d14-4dfb-979d-1358e4f6824f")
     public void duel() {
@@ -75,25 +64,14 @@ public abstract class Game {
         }
     }
 
-    @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
-    public final boolean save(Perso perso, String file) {
-        System.out.println("write start");
-        
-        PrintStream p = null;
-        FileOutputStream out;
-        
-        try {
-            out = new FileOutputStream(file);
-            p = new PrintStream( out );
-            p.print(perso.serialise());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }finally{
-            p.close();
-        }
-        System.out.println("write done in "+ file);
-        return true;
+    @objid ("b66a9408-4028-4110-a68e-f822f0e32bd0")
+    public Perso getPerso1() {
+        return perso1;
+    }
+
+    @objid ("57d1e580-dcc5-4f1b-94b4-36782cafbe8d")
+    public Perso getPerso2() {
+        return perso2;
     }
 
     @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
@@ -177,6 +155,37 @@ public abstract class Game {
         return p;
     }
 
+    @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
+    public final boolean save(Perso perso, String file) {
+        System.out.println("write start");
+        
+        PrintStream p = null;
+        FileOutputStream out;
+        
+        try {
+            out = new FileOutputStream(file);
+            p = new PrintStream( out );
+            p.print(perso.serialise());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }finally{
+            p.close();
+        }
+        System.out.println("write done in "+ file);
+        return true;
+    }
+
+    @objid ("c6ee85ac-f034-4ae7-9e70-8fbea0d2c25c")
+    public void setPerso1(Perso perso1) {
+        this.perso1 = perso1;
+    }
+
+    @objid ("a42a2edd-1499-43f3-a0f4-de026a1ddf00")
+    public void setPerso2(Perso perso2) {
+        this.perso2 = perso2;
+    }
+
     @objid ("16639ec1-98ac-4116-98f9-7b1565f8acb0")
     public boolean tour(Perso p1, Perso p2) {
         int cap1 = chooseCapacity(p1);
@@ -194,14 +203,5 @@ public abstract class Game {
         p1.use(cap2, p2);
         return true;
     }
-
-    @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
-    public abstract int chooseCapacity(Perso p1);
-
-    @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
-    public abstract Perso createPerso();
-
-    @objid ("c12aaa67-20b5-4355-adc0-2a54939e873a")
-    public abstract Capacite createCapacite();
 
 }

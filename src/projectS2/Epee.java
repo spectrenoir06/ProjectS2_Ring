@@ -25,9 +25,9 @@ public class Epee extends Capacite {
         }
     }
 
-    @objid ("af31861a-60c2-4f25-89e6-206e15370dd9")
-    public void use(Perso p) {
-        super.use(p);
+    @objid ("4185125d-7741-4687-8249-b07e826ba361")
+    public String getCapaciteInfo() {
+        return ("Epee    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
     @objid ("c5408822-811d-4d41-9776-5a4eead7af11")
@@ -35,9 +35,9 @@ public class Epee extends Capacite {
         return impact;
     }
 
-    @objid ("f6b5ec53-fadd-44d0-8e33-82135b6b394d")
-    public void setImpact(int impact) {
-        this.impact = impact;
+    @objid ("5ffa7598-b0c9-43d2-a7b5-f5a24e399714")
+    public int getManiabilite() {
+        return maniabilite;
     }
 
     @objid ("6badddee-6197-4534-a376-21b41bd211b1")
@@ -45,29 +45,10 @@ public class Epee extends Capacite {
         return parade;
     }
 
-    @objid ("a0cfbb67-1f85-4db1-a48e-8fcd815836f7")
-    public void setParade(int parade) {
-        this.parade = parade;
-    }
-
-    @objid ("5ffa7598-b0c9-43d2-a7b5-f5a24e399714")
-    public int getManiabilite() {
-        return maniabilite;
-    }
-
-    @objid ("f293d797-1628-497c-a3c8-b0bd111ed859")
-    public void setManiabilite(int maniabilite) {
-        this.maniabilite = maniabilite;
-    }
-
-    @objid ("b881c18c-c582-40cd-bba2-ff2bdfb8f1ff")
+    @objid ("48f8d036-49ca-4556-8027-f4d985ea5fed")
     @Override
-    public String toString() {
-        String s = "Eppe";
-        s = s + "\t| impact\t=\t" + this.impact;
-        s = s + "\t| parade\t=\t" + this.parade;
-        s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
-        return s;
+    public double getPuissance() {
+        return ( this.getPerso().getForce() * this.impact / 100.0 );
     }
 
     @objid ("d0c4d3f9-db6e-41df-aa3d-a7a2b255c672")
@@ -81,15 +62,34 @@ public class Epee extends Capacite {
         return ("eppe;" + this.impact + ";" + this.parade + ";" + this.maniabilite);
     }
 
-    @objid ("4185125d-7741-4687-8249-b07e826ba361")
-    public String getCapaciteInfo() {
-        return ("Epee    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
+    @objid ("f6b5ec53-fadd-44d0-8e33-82135b6b394d")
+    public void setImpact(int impact) {
+        this.impact = impact;
     }
 
-    @objid ("48f8d036-49ca-4556-8027-f4d985ea5fed")
+    @objid ("f293d797-1628-497c-a3c8-b0bd111ed859")
+    public void setManiabilite(int maniabilite) {
+        this.maniabilite = maniabilite;
+    }
+
+    @objid ("a0cfbb67-1f85-4db1-a48e-8fcd815836f7")
+    public void setParade(int parade) {
+        this.parade = parade;
+    }
+
+    @objid ("b881c18c-c582-40cd-bba2-ff2bdfb8f1ff")
     @Override
-    public double getPuissance() {
-        return ( this.getPerso().getForce() * this.impact / 100.0 );
+    public String toString() {
+        String s = "Eppe";
+        s = s + "\t| impact\t=\t" + this.impact;
+        s = s + "\t| parade\t=\t" + this.parade;
+        s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
+        return s;
+    }
+
+    @objid ("af31861a-60c2-4f25-89e6-206e15370dd9")
+    public void use(Perso p) {
+        super.use(p);
     }
 
 }
