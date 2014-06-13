@@ -12,6 +12,9 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("9835af97-355a-478f-867a-24a7d801ef5a")
 public class Gui {
+    @objid ("4522ba48-7470-4acf-98ee-2d55047195f2")
+    private JFrame frame;
+
     @objid ("a4dd8aa7-257a-469b-8466-fa9d411ae312")
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
@@ -25,9 +28,6 @@ public class Gui {
             }
         });
     }
-
-    @objid ("4522ba48-7470-4acf-98ee-2d55047195f2")
-    private JFrame frame;
 
     @objid ("7653d8e4-416b-4ccb-961a-10e08faf9d39")
     public Gui() {

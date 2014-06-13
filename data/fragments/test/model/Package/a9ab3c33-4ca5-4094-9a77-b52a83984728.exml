@@ -9,7 +9,7 @@
     <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
     <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
     <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
-    <COMPID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
+    <COMPID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
     <COMPID name="Guerrier" mc="Class" uid="2ce96164-7a3d-4f46-a392-c34b3df934d2"/>
     <COMPID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
     <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
@@ -41,7 +41,6 @@
         <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
         <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
         <COMPID name="SortilegeGuerisseur" mc="Class" uid="b9a641c0-2695-481f-b92e-debb8df7c13a"/>
-        <COMPID name="GameGui" mc="Class" uid="5be3a65b-5561-4379-a02c-e665ea556a83"/>
         <COMPID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
         <COMPID name="Remede" mc="Class" uid="a827da51-b76b-44a5-a4e1-11249dbbe4d0"/>
         <COMPID name="Mage" mc="Class" uid="f5244599-2cfc-4b08-ac78-23c366dc4a5a"/>
@@ -58,6 +57,7 @@
         <COMPID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
         <COMPID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
         <COMPID name="CapaciteException" mc="Class" uid="c835e468-f6f1-4506-a4ea-d44e1c522ee1"/>
+        <COMPID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

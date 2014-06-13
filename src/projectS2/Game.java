@@ -19,14 +19,25 @@ public abstract class Game {
     @objid ("4336642f-3f98-416d-b1eb-dd71724cd0b9")
     private Perso perso2;
 
-    @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
-    public abstract int chooseCapacity(Perso p1);
+    @objid ("b66a9408-4028-4110-a68e-f822f0e32bd0")
+    public Perso getPerso1() {
+        return perso1;
+    }
 
-    @objid ("c12aaa67-20b5-4355-adc0-2a54939e873a")
-    public abstract Capacite createCapacite();
+    @objid ("c6ee85ac-f034-4ae7-9e70-8fbea0d2c25c")
+    public void setPerso1(Perso perso1) {
+        this.perso1 = perso1;
+    }
 
-    @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
-    public abstract Perso createPerso();
+    @objid ("57d1e580-dcc5-4f1b-94b4-36782cafbe8d")
+    public Perso getPerso2() {
+        return perso2;
+    }
+
+    @objid ("a42a2edd-1499-43f3-a0f4-de026a1ddf00")
+    public void setPerso2(Perso perso2) {
+        this.perso2 = perso2;
+    }
 
     @objid ("4b18d94b-4d14-4dfb-979d-1358e4f6824f")
     public void duel() {
@@ -54,16 +65,16 @@ public abstract class Game {
                     perso1 = perso2;
                     perso2 = tmp;
                 }
-            }					// combat
+            }                    // combat
             while(true){
                 if (tour(getPerso1(), getPerso2())){ // si tour fini
-                	Perso tmp = perso1;				 // echange des joueurs
+                    Perso tmp = perso1;                 // echange des joueurs
                     perso1 = perso2;
                     perso2 = tmp;
-                }else{ 								// si abandon ou plus de vie
-                	System.out.println(getPerso1().getNom() + " a perdu");
-                	System.out.println(getPerso2().getNom() + " a gagner");
-                	return;
+                }else{                                 // si abandon ou plus de vie
+                    System.out.println(getPerso1().getNom() + " a perdu");
+                    System.out.println(getPerso2().getNom() + " a gagner");
+                    return;
                 }
             }
         }else{
@@ -71,14 +82,25 @@ public abstract class Game {
         }
     }
 
-    @objid ("b66a9408-4028-4110-a68e-f822f0e32bd0")
-    public Perso getPerso1() {
-        return perso1;
-    }
-
-    @objid ("57d1e580-dcc5-4f1b-94b4-36782cafbe8d")
-    public Perso getPerso2() {
-        return perso2;
+    @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
+    public final boolean save(Perso perso, String file) {
+        System.out.println("write start");
+        
+        PrintStream p = null;
+        FileOutputStream out;
+        
+        try {
+            out = new FileOutputStream(file);
+            p = new PrintStream( out );
+            p.print(perso.serialise());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }finally{
+            p.close();
+        }
+        System.out.println("write done in "+ file);
+        return true;
     }
 
     @objid ("2fdcda71-2443-41fe-a5bc-ef40f3088af0")
@@ -162,79 +184,59 @@ public abstract class Game {
         return p;
     }
 
-    @objid ("3ce95ca5-e3c0-43db-a049-4615dc66d80d")
-    public final boolean save(Perso perso, String file) {
-        System.out.println("write start");
-        
-        PrintStream p = null;
-        FileOutputStream out;
-        
-        try {
-            out = new FileOutputStream(file);
-            p = new PrintStream( out );
-            p.print(perso.serialise());
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-            return false;
-        }finally{
-            p.close();
-        }
-        System.out.println("write done in "+ file);
-        return true;
-    }
-
-    @objid ("c6ee85ac-f034-4ae7-9e70-8fbea0d2c25c")
-    public void setPerso1(Perso perso1) {
-        this.perso1 = perso1;
-    }
-
-    @objid ("a42a2edd-1499-43f3-a0f4-de026a1ddf00")
-    public void setPerso2(Perso perso2) {
-        this.perso2 = perso2;
-    }
-
     @objid ("16639ec1-98ac-4116-98f9-7b1565f8acb0")
-    public boolean tour(Perso p1, Perso p2) {				// return false si abandon
-    	if (p1.getVitalite()<=0){
-    		System.out.println(p1.getNom() + " est mort");
-    		return false;
-    	}
-    	System.out.println("\nTour de "+ p1.getNom());
-        p1.setParade(0);
-    	int cap1 = chooseCapacity(p1);
-        int cap2;
-        Perso cible1,cible2;
-        if (cap1 != -1 ){
-        	if (p1.getCapacite(cap1) instanceof Epee){
-        		cible1 = chooseCible(p1,p2);
-        	}else{
-        		cible1 = p2;
-        	}
-            
-            cap2 = chooseCapacity(p1);						// choisir cible si epee
-            if (cap2 == -1){								// si abandon
-                return false;
-            }
-            if (p1.getCapacite(cap2) instanceof Epee){ 		// choisir cible si epee
-        		cible2 = chooseCible(p1,p2);
-        	}else{
-        		cible2 = p2;								
-        	}
-        }else{
-            return false;									// si abandon
-        }
-        p1.use(cap1, cible1);								// utilise capacite1
-        p1.use(cap2, cible2);								// utilise capacite2
-        if (p2.getParade() < 0 ){							// si parade < 0 ( degat superieur a la parade )
-        	p2.setVitalite(p2.getVitalite() + p2.getParade());
-        	System.out.println(p1.getNom() + " fait " + p2.getParade() + " sur " + p2.getNom() + " il lui reste " + p2.getVitalite() + " HP" ); 
-        	
-        }else{
-        	System.out.println(p2.getNom() + " ne prend pas de degat");
-        }
+    public boolean tour(Perso p1, Perso p2) {
+        // return false si abandon
+                if (p1.getVitalite()<=0){
+                    System.out.println(p1.getNom() + " est mort");
+                    return false;
+                }
+                System.out.println("\nTour de "+ p1.getNom());
+                p1.setParade(0);
+                int cap1 = chooseCapacity(p1);
+                int cap2;
+                Perso cible1,cible2;
+                if (cap1 != -1 ){
+                    if (p1.getCapacite(cap1) instanceof Epee){
+                        cible1 = chooseCible(p1,p2);
+                    }else{
+                        cible1 = p2;
+                    }
+                    
+                    cap2 = chooseCapacity(p1);                        // choisir cible si epee
+                    if (cap2 == -1){                                // si abandon
+                        return false;
+                    }
+                    if (p1.getCapacite(cap2) instanceof Epee){         // choisir cible si epee
+                        cible2 = chooseCible(p1,p2);
+                    }else{
+                        cible2 = p2;                                
+                    }
+                }else{
+                    return false;                                    // si abandon
+                }
+                p1.use(cap1, cible1);                                // utilise capacite1
+                p1.use(cap2, cible2);                                // utilise capacite2
+                if (p2.getParade() < 0 ){                            // si parade < 0 ( degat superieur a la parade )
+                    p2.setVitalite(p2.getVitalite() + p2.getParade());
+                    System.out.println(p1.getNom() + " fait " + p2.getParade() + " sur " + p2.getNom() + " il lui reste " + p2.getVitalite() + " HP" ); 
+                    
+                }else{
+                    System.out.println(p2.getNom() + " ne prend pas de degat");
+                }
         return true;
     }
-    
-    public abstract Perso chooseCible(Perso p1,Perso p2);
+
+    @objid ("761b1134-4b16-4714-a4a4-92a4e97a3415")
+    public abstract int chooseCapacity(Perso p1);
+
+    @objid ("f99e38b5-4b0c-498a-b35a-81ff093d92a8")
+    public abstract Perso createPerso();
+
+    @objid ("c12aaa67-20b5-4355-adc0-2a54939e873a")
+    public abstract Capacite createCapacite();
+
+    @objid ("7b1ac608-01ee-4203-b6d2-7fdd0a774353")
+    public abstract Perso chooseCible(Perso p1, Perso p2);
 
 }

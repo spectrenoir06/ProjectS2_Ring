@@ -13,27 +13,27 @@ import javax.swing.border.TitledBorder;
 import com.modeliosoft.modelio.javadesigner.annotations.objid;
 import projectS2.PlusMoins;
 
-@objid ("5be3a65b-5561-4379-a02c-e665ea556a83")
+@objid ("255002b0-52b8-471d-acf1-7cc67c684a9b")
 @SuppressWarnings("unused")
 public class GameGui extends Game {
-    @objid ("66fde004-e939-4e28-9015-5533f952e685")
+    @objid ("a88c6f74-57f8-42cd-868b-663c403b47a6")
     private static final long serialVersionUID = 1L;
 
-    @objid ("cd1d3e26-1d8f-48ac-b034-1803150c20a1")
+    @objid ("4d492907-72b2-477d-8533-df67f6058d6e")
+    private JTextField txtName;
+
+    @objid ("9c0000ba-3d38-4441-8876-ebd0301770fe")
+    private final ButtonGroup buttonGroup = new ButtonGroup();
+
+    @objid ("17c06085-31c8-4971-8415-c802827afbab")
+    private Game game;
+
+    @objid ("ed2b02a4-0e69-4cba-b0a2-eebe8bc2a054")
     public static void main(String[] args) throws Exception {
         new GameGui();
     }
 
-    @objid ("7a864581-35c3-41dd-8fb1-f457e15f20cf")
-    private JTextField txtName;
-
-    @objid ("8dc7e05d-4763-49f9-88ac-62c957b52101")
-    private final ButtonGroup buttonGroup = new ButtonGroup();
-
-    @objid ("4771fe82-c5aa-46eb-821f-90b34dd614e7")
-    private Game game;
-
-    @objid ("3020179e-8e31-4470-9584-b78561a15e46")
+    @objid ("8187238c-5cd4-4e42-a63e-055790fb6660")
     public GameGui() throws Exception {
         super("Ring");
         this.init();
@@ -42,7 +42,7 @@ public class GameGui extends Game {
         this.setVisible(true);
     }
 
-    @objid ("a807fb1f-4954-4914-8faa-ab2437c2d6e5")
+    @objid ("0431cd55-d3dd-4e80-b859-2ebfa1886b3a")
     private JPanel cara(String text) {
         JPanel j = new JPanel();
         j.setBorder(new TitledBorder(null, text, TitledBorder.CENTER, TitledBorder.TOP, null, null));
@@ -65,7 +65,7 @@ public class GameGui extends Game {
         return j;
     }
 
-    @objid ("a2ab947f-997a-4be7-a304-26276f99abf4")
+    @objid ("0c616b7a-8ad0-4532-ae75-f4cccdcede99")
     private void init() throws Exception {
         Container c = this.getContentPane();
         

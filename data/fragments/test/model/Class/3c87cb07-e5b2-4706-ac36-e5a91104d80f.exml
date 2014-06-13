@@ -289,6 +289,8 @@
                   <ATT name="Content"><![CDATA[if (this.perso1 != null && this.perso2 != null){
     perso1.resetVitalite();
     perso2.resetVitalite();
+    perso1.setParade(0);
+    perso2.setParade(0);
     System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
     System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
     
@@ -308,12 +310,17 @@
             perso1 = perso2;
             perso2 = tmp;
         }
-    }
+    }                    // combat
     while(true){
-        tour(getPerso1(), getPerso2());
-        Perso tmp = perso1;
-        perso1 = perso2;
-        perso2 = tmp;
+        if (tour(getPerso1(), getPerso2())){ // si tour fini
+            Perso tmp = perso1;                 // echange des joueurs
+            perso1 = perso2;
+            perso2 = tmp;
+        }else{                                 // si abandon ou plus de vie
+            System.out.println(getPerso1().getNom() + " a perdu");
+            System.out.println(getPerso2().getNom() + " a gagner");
+            return;
+        }
     }
 }else{
     System.out.println("perso1 ou perso2 n'existe pas");
@@ -758,20 +765,44 @@ finally
                 <ID name="" mc="Note" uid="f38bf262-8bb6-4469-8034-aac0926cbd20"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[int cap1 = chooseCapacity(p1);
-System.out.println("cap1 = "+ cap1);
-int cap2;
-if (cap1 != -1 ){
-    cap2 = chooseCapacity(p1);
-    if (cap2 == -1){
-        return false;
-    }
-}else{
-    return false;
-}
-p1.use(cap1, p2);
-p1.use(cap2, p2);
-]]></ATT>
+                  <ATT name="Content"><![CDATA[// return false si abandon
+        if (p1.getVitalite()<=0){
+            System.out.println(p1.getNom() + " est mort");
+            return false;
+        }
+        System.out.println("\nTour de "+ p1.getNom());
+        p1.setParade(0);
+        int cap1 = chooseCapacity(p1);
+        int cap2;
+        Perso cible1,cible2;
+        if (cap1 != -1 ){
+            if (p1.getCapacite(cap1) instanceof Epee){
+                cible1 = chooseCible(p1,p2);
+            }else{
+                cible1 = p2;
+            }
+            
+            cap2 = chooseCapacity(p1);                        // choisir cible si epee
+            if (cap2 == -1){                                // si abandon
+                return false;
+            }
+            if (p1.getCapacite(cap2) instanceof Epee){         // choisir cible si epee
+                cible2 = chooseCible(p1,p2);
+            }else{
+                cible2 = p2;                                
+            }
+        }else{
+            return false;                                    // si abandon
+        }
+        p1.use(cap1, cible1);                                // utilise capacite1
+        p1.use(cap2, cible2);                                // utilise capacite2
+        if (p2.getParade() < 0 ){                            // si parade < 0 ( degat superieur a la parade )
+            p2.setVitalite(p2.getVitalite() + p2.getParade());
+            System.out.println(p1.getNom() + " fait " + p2.getParade() + " sur " + p2.getNom() + " il lui reste " + p2.getVitalite() + " HP" ); 
+            
+        }else{
+            System.out.println(p2.getNom() + " ne prend pas de degat");
+        }]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -946,6 +977,95 @@ p1.use(cap2, p2);
             </COMP>
           </DEPENDENCIES>
         </OBJECT>
+        <OBJECT>
+          <ID name="chooseCible" mc="Operation" uid="7b1ac608-01ee-4203-b6d2-7fdd0a774353"/>
+          <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">true</ATT>
+            <ATT name="Name"><![CDATA[chooseCible]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="IO">
+              <OBJECT>
+                <ID name="p1" mc="Parameter" uid="5aa2acd2-4909-4349-bd5c-ac933364f115"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p1]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="p2" mc="Parameter" uid="f60a258d-0e21-4f7c-81f8-a198e4eb29b0"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"><![CDATA[p2]]></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="8c695e54-06c2-44b4-912e-3525da5cf6dc"/>
+                <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <ID name="Perso" mc="Class" uid="ac53558f-117c-400a-bc74-89cf87b33b5b"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
       </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
@@ -1012,7 +1132,7 @@ p1.use(cap2, p2);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="754c2d8d-f77e-4017-b158-44b30bc66878"/>
+                <ID name="" mc="TaggedValue" uid="daf4c5d5-c311-4edc-be07-4d97d6613201"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1091,7 +1211,7 @@ p1.use(cap2, p2);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="491f5cd2-c5ef-48f1-b866-473bdb8ae9fb"/>
+                <ID name="" mc="TaggedValue" uid="08b00457-b1d6-4b99-b2c3-89eb75d5365b"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

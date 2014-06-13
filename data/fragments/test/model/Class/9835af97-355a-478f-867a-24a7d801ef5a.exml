@@ -289,7 +289,7 @@ panel_1.add(jCapacite__2);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="6bf239ac-7859-4d3e-8e49-06bd333cbee8"/>
+                <ID name="" mc="TaggedValue" uid="1fd66f51-bd7e-4b9b-a6dd-0051946663c8"/>
                 <PID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

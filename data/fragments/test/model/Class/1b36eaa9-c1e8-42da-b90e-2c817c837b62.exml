@@ -572,7 +572,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d52c5078-0d5e-447a-92c0-6731973bdea8"/>
+                <ID name="" mc="TaggedValue" uid="6ecdf788-8b54-4a4d-9895-8d066f1b8743"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -612,7 +612,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="db8f0650-b357-4f33-93aa-aa3ebd39b376"/>
+                <ID name="" mc="TaggedValue" uid="cc0a2845-1957-4d80-8033-030a57adfc70"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -652,7 +652,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="d30c3a0c-1f3d-4372-807b-1d113233fb73"/>
+                <ID name="" mc="TaggedValue" uid="35edff5a-120a-4d08-83fe-2920e218de24"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -692,7 +692,7 @@ labelText.setText(nb + "");
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="e35cc42a-1648-4627-8ac2-4981bb4097f9"/>
+                <ID name="" mc="TaggedValue" uid="7666ef2b-cafc-4417-bd50-48d042fb292f"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -773,7 +773,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="611e8334-af6b-40f9-9cd3-e8a877bc15e1"/>
+                <ID name="" mc="TaggedValue" uid="d4c91587-8658-4c6f-963e-9c129932f8a7"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -852,7 +852,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="6528d15d-63e0-4637-bea1-603676e79467"/>
+                <ID name="" mc="TaggedValue" uid="c8511eac-cc28-4250-b1cb-1dfbff280a73"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -931,7 +931,7 @@ labelText.setText(nb + "");
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="1ec19758-40d5-4dc0-9b56-8341c6c883c8"/>
+                <ID name="" mc="TaggedValue" uid="df002ecd-2144-4d39-94fc-83120a39ed5f"/>
                 <PID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

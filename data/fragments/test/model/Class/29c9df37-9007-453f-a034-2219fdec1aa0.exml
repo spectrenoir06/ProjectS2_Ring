@@ -204,7 +204,34 @@ if (( imp>=20) && (para>=20) && (mani>=20)&& ((imp+para+mani)==100)) {
                 <ID name="" mc="Note" uid="e878d80f-7f38-4f22-9026-66d6b91e8dad"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[super.use(p);]]></ATT>
+                  <ATT name="Content"><![CDATA[if (p==getPerso()){    // parade
+    
+    System.out.println(this.getPerso().getNom() + " utilise " + getCapaciteInfoParade());
+    if (this.getReussite() >= Math.random()){
+        
+        getPerso().setParade(getPerso().getParade() + getPuissanceParade());
+        System.out.println("parade reussite parade = "+ getPerso().getParade());
+    
+    }else{
+        
+        System.out.println("Capacite rate !");
+    
+    }
+}else{ // attack
+    
+    System.out.println(this.getPerso().getNom() + " utilise " + getCapaciteInfo());
+    
+    if (this.getReussite() >= Math.random()){
+        
+        System.out.println("attaque reussite" );
+        p.setParade(p.getParade() - getPuissance() );
+    
+    }else{
+        System.out.println("Capacite rate !");
+    }
+
+}
+]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -692,7 +719,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
                 <ID name="" mc="Note" uid="3fea957e-9fac-424b-afdc-cc120aa706c6"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return ( this.getPerso().getDexterite() * this.maniabilite / 10000.0);]]></ATT>
+                  <ATT name="Content"><![CDATA[return ( this.getPerso().getDexterite() * this.maniabilite / 1000.0);]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -820,7 +847,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
                 <ID name="" mc="Note" uid="a35c2b35-a533-42ec-9a0e-80793d92c62a"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return ("Epee    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );]]></ATT>
+                  <ATT name="Content"><![CDATA[return ("Epee att\t:    reussite = " + this.getReussite() + " ; puissance att : " + this.getPuissance() + " ; puissance para : " + this.getPuissanceParade() );]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -891,7 +918,121 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
                 <ID name="" mc="Note" uid="5038915f-8268-4625-8a71-0c4647d6d205"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return ( this.getPerso().getForce() * this.impact / 100.0 );]]></ATT>
+                  <ATT name="Content"><![CDATA[return ( this.getPerso().getForce() * this.impact / 50.0 );]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getCapaciteInfoParade" mc="Operation" uid="5ec9101c-ed93-452c-a0ff-981c8c4534ac"/>
+          <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getCapaciteInfoParade]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="9eaff411-1837-4566-a0ad-6531000247d6"/>
+                <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="48be2a16-bb7c-4bce-87e2-d41436b51bca"/>
+                <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return ("Epee para\t:    reussite = " + this.getReussite() + "    ; puissance : " + this.getPuissanceParade() );]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaReturned" mc="NoteType" uid="003800a8-0000-0190-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="getPuissanceParade" mc="Operation" uid="fbc95c6e-0b9c-4735-9fea-9ae853253198"/>
+          <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[getPuissanceParade]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Return">
+              <OBJECT>
+                <ID name="" mc="Parameter" uid="5649384c-8cfd-424f-aa6f-ddeaffd67860"/>
+                <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+                <ATTRIBUTES>
+                  <ATT name="ParameterPassing">In</ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="TypeConstraint"></ATT>
+                  <ATT name="DefaultValue"></ATT>
+                  <ATT name="IsOrdered">false</ATT>
+                  <ATT name="IsUnique">false</ATT>
+                  <ATT name="IsException">false</ATT>
+                  <ATT name="IsStream">false</ATT>
+                  <ATT name="Effect">ReadEffect</ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Type">
+                    <FOREIGNID name="double" mc="DataType" uid="00000004-0000-0010-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="4206bec1-38be-4a60-8952-e4b8493662f9"/>
+                <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[return ((this.getPerso().getForce() * this.parade) / 50.0 );]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -931,7 +1072,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="ceaacb13-29fb-4f3d-bb01-486b3a9a4685"/>
+                <ID name="" mc="TaggedValue" uid="a372b848-b23c-4a44-ad2f-4d05e6d09ccd"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -971,7 +1112,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="517e2c8e-2def-471a-8d43-ec85ffd84fbc"/>
+                <ID name="" mc="TaggedValue" uid="bd37b1fd-ce92-4f21-bfea-8b7b6a19dabf"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1011,7 +1152,7 @@ s = s + "\t| maniabilite\t=\t" + this.maniabilite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="cfa89dee-54d8-47c1-8e04-004dc6c8924a"/>
+                <ID name="" mc="TaggedValue" uid="50d820c9-772c-457b-a400-3f57b11122c9"/>
                 <PID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

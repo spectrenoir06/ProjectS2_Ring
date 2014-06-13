@@ -14,14 +14,9 @@ public class Athlete extends Perso {
         }
     }
 
-    @objid ("734b10e0-efa5-46e0-8674-79a99c9e5765")
-    public Athlete(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
-        super(nom, exp, force, dexterite, intelligence, concentration);
-        if ((force >= 20) && (dexterite >= 20) && (intelligence >= 20) && (concentration >= 20) ){
-            
-        }else{
-            throw new PersoException("Erreur athlete non conforme\n");
-        }
+    @objid ("95ef73d3-a29c-4da3-95f9-169f2b607499")
+    public String toString() {
+        return super.getInfo("Athlete");
     }
 
     @objid ("edbbf7f5-0084-498a-af83-12995226b7fb")
@@ -30,21 +25,11 @@ public class Athlete extends Perso {
         return ("athlete" + super.serialise());
     }
 
-    @objid ("68ff0204-f876-4c25-a221-fc6cb0ebd845")
-    @Override
-    void setConcentration(int value) throws PersoException {
-        if ((getForce() >= 20) && (getDexterite() >= 20) && (getIntelligence() >= 20) && (value >= 20) ){
-            this.concentration = value;
-        }else{
-            throw new PersoException("Erreur athlete non conforme\n");
-        }
-    }
-
-    @objid ("ea0d7ebd-4474-4a13-90b8-ec8e9eb04cab")
-    @Override
-    void setDexterite(int value) throws PersoException {
-        if ((getForce() >= 20) && (value >= 20) && (getIntelligence() >= 20) && (getConcentration() >= 20) ){
-            this.dexterite = value;
+    @objid ("734b10e0-efa5-46e0-8674-79a99c9e5765")
+    public Athlete(String nom, int exp, int force, int dexterite, int intelligence, int concentration) throws PersoException {
+        super(nom, exp, force, dexterite, intelligence, concentration);
+        if ((force >= 20) && (dexterite >= 20) && (intelligence >= 20) && (concentration >= 20) ){
+            
         }else{
             throw new PersoException("Erreur athlete non conforme\n");
         }
@@ -60,6 +45,16 @@ public class Athlete extends Perso {
         }
     }
 
+    @objid ("ea0d7ebd-4474-4a13-90b8-ec8e9eb04cab")
+    @Override
+    void setDexterite(int value) throws PersoException {
+        if ((getForce() >= 20) && (value >= 20) && (getIntelligence() >= 20) && (getConcentration() >= 20) ){
+            this.dexterite = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
+    }
+
     @objid ("3d695a90-554a-4d69-bc12-f534a419ab62")
     @Override
     void setIntelligence(int value) throws PersoException {
@@ -70,9 +65,14 @@ public class Athlete extends Perso {
         }
     }
 
-    @objid ("95ef73d3-a29c-4da3-95f9-169f2b607499")
-    public String toString() {
-        return super.getInfo("Athlete");
+    @objid ("68ff0204-f876-4c25-a221-fc6cb0ebd845")
+    @Override
+    void setConcentration(int value) throws PersoException {
+        if ((getForce() >= 20) && (getDexterite() >= 20) && (getIntelligence() >= 20) && (value >= 20) ){
+            this.concentration = value;
+        }else{
+            throw new PersoException("Erreur athlete non conforme\n");
+        }
     }
 
 }

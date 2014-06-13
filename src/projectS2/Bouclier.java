@@ -21,10 +21,10 @@ public class Bouclier extends Capacite {
         }
     }
 
-    @objid ("b907f733-ab18-4bd5-95d0-1204c1560801")
+    @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
     @Override
-    public String getCapaciteInfo() {
-        return ("Bouclier    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
+    public void use(Perso p) {
+        super.use(p);
     }
 
     @objid ("c3145c17-3708-4879-8965-4e0934f2e1b3")
@@ -32,32 +32,14 @@ public class Bouclier extends Capacite {
         return maniabilite;
     }
 
-    @objid ("c726886d-8f7f-44da-a9d1-6e8a00cf709f")
-    public int getProtection() {
-        return protection;
-    }
-
-    @objid ("2d73eca0-513d-465b-8b2a-592b25764847")
-    @Override
-    public double getPuissance() {
-        return (this.getPerso().getForce() * this.protection / 100.0);
-    }
-
-    @objid ("a0a62c16-f43d-41a5-bf21-d0721eac1b50")
-    @Override
-    public double getReussite() {
-        return ( (this.getPerso().getDexterite() * this.maniabilite) / 1000.0);
-    }
-
-    @objid ("39b4e3ce-57ff-4e70-b63d-91dfa54597e6")
-    @Override
-    public String serialise() {
-        return ("bouclier;" + this.maniabilite + ";" + this.protection);
-    }
-
     @objid ("d3828d7d-1879-408a-a8b2-721cae1049ef")
     public void setManiabilite(int maniabilite) {
         this.maniabilite = maniabilite;
+    }
+
+    @objid ("c726886d-8f7f-44da-a9d1-6e8a00cf709f")
+    public int getProtection() {
+        return protection;
     }
 
     @objid ("767702db-8667-47ea-bb4a-b1aca6318f8a")
@@ -74,10 +56,28 @@ public class Bouclier extends Capacite {
         return s;
     }
 
-    @objid ("56df0985-cd99-4cf1-b986-d21405b84f02")
+    @objid ("a0a62c16-f43d-41a5-bf21-d0721eac1b50")
     @Override
-    public void use(Perso p) {
-        super.use(p);
+    public double getReussite() {
+        return ( (this.getPerso().getDexterite() * this.maniabilite) / 1000.0);
+    }
+
+    @objid ("39b4e3ce-57ff-4e70-b63d-91dfa54597e6")
+    @Override
+    public String serialise() {
+        return ("bouclier;" + this.maniabilite + ";" + this.protection);
+    }
+
+    @objid ("2d73eca0-513d-465b-8b2a-592b25764847")
+    @Override
+    public double getPuissance() {
+        return (this.getPerso().getForce() * this.protection / 100.0);
+    }
+
+    @objid ("b907f733-ab18-4bd5-95d0-1204c1560801")
+    @Override
+    public String getCapaciteInfo() {
+        return ("Bouclier    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }

@@ -21,10 +21,14 @@ public class Remede extends Capacite {
         }
     }
 
-    @objid ("f9c5f898-2a8a-4953-abc5-85e75a292d0d")
-    @Override
-    public String getCapaciteInfo() {
-        return ("Remede    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
+    @objid ("bdb7bad0-c16f-470d-9019-3b5175d57cdb")
+    public int getFacilite() {
+        return facilite;
+    }
+
+    @objid ("c1b266b1-ba70-4990-b481-8ae79cdd49a4")
+    public void setFacilite(int facilite) {
+        this.facilite = facilite;
     }
 
     @objid ("c95c8642-948f-4c03-bfaf-b966cbea3963")
@@ -32,15 +36,24 @@ public class Remede extends Capacite {
         return efficacite;
     }
 
-    @objid ("bdb7bad0-c16f-470d-9019-3b5175d57cdb")
-    public int getFacilite() {
-        return facilite;
+    @objid ("9f60bfb4-59ea-482d-9c3e-59340a941e41")
+    public void setEfficacite(int efficacite) {
+        this.efficacite = efficacite;
     }
 
-    @objid ("f1794c57-2fd6-4b6f-a6a2-3e99c1a99dd5")
+    @objid ("6b9901c7-aafb-4c27-9821-df03f9f91230")
     @Override
-    public double getPuissance() {
-        return this.getPerso().getDexterite() * this.efficacite / 100;
+    public void use(Perso p) {
+        super.use(p);
+    }
+
+    @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
+    @Override
+    public String toString() {
+        String s = "Remede";
+        s = s + "\t| facilite\t=\t" + this.facilite;
+        s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
+        return s;
     }
 
     @objid ("6ac79c40-7d26-43e5-8633-081270566b6a")
@@ -55,29 +68,16 @@ public class Remede extends Capacite {
         return ("remede;" + this.facilite + ";" + this.efficacite);
     }
 
-    @objid ("9f60bfb4-59ea-482d-9c3e-59340a941e41")
-    public void setEfficacite(int efficacite) {
-        this.efficacite = efficacite;
-    }
-
-    @objid ("c1b266b1-ba70-4990-b481-8ae79cdd49a4")
-    public void setFacilite(int facilite) {
-        this.facilite = facilite;
-    }
-
-    @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
+    @objid ("f1794c57-2fd6-4b6f-a6a2-3e99c1a99dd5")
     @Override
-    public String toString() {
-        String s = "Remede";
-        s = s + "\t| facilite\t=\t" + this.facilite;
-        s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
-        return s;
+    public double getPuissance() {
+        return this.getPerso().getDexterite() * this.efficacite / 100;
     }
 
-    @objid ("6b9901c7-aafb-4c27-9821-df03f9f91230")
+    @objid ("f9c5f898-2a8a-4953-abc5-85e75a292d0d")
     @Override
-    public void use(Perso p) {
-        super.use(p);
+    public String getCapaciteInfo() {
+        return ("Remede    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
     }
 
 }
