@@ -46,7 +46,7 @@ public class Bouclier extends Capacite {
     @objid ("a0a62c16-f43d-41a5-bf21-d0721eac1b50")
     @Override
     public double getReussite() {
-        return ( (this.getPerso().getDexterite() * this.maniabilite) / 10000.0);
+        return ( (this.getPerso().getDexterite() * this.maniabilite) / 1000.0);
     }
 
     @objid ("39b4e3ce-57ff-4e70-b63d-91dfa54597e6")

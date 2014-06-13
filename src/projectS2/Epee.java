@@ -27,7 +27,11 @@ public class Epee extends Capacite {
 
     @objid ("4185125d-7741-4687-8249-b07e826ba361")
     public String getCapaciteInfo() {
-        return ("Epee    :    reussite = " + this.getReussite() + "    ; efficacite : " + this.getPuissance() );
+        return ("Epee att\t:    reussite = " + this.getReussite() + " ; puissance att : " + this.getPuissance() + " ; puissance para : " + this.getPuissanceParade() );
+    }
+    
+    public String getCapaciteInfoParade() {
+        return ("Epee para\t:    reussite = " + this.getReussite() + "    ; puissance : " + this.getPuissanceParade() );
     }
 
     @objid ("c5408822-811d-4d41-9776-5a4eead7af11")
@@ -48,12 +52,17 @@ public class Epee extends Capacite {
     @objid ("48f8d036-49ca-4556-8027-f4d985ea5fed")
     @Override
     public double getPuissance() {
-        return ( this.getPerso().getForce() * this.impact / 100.0 );
+        return ( this.getPerso().getForce() * this.impact / 50.0 );
     }
+    
+    public double getPuissanceParade() {
+        return ((this.getPerso().getForce() * this.parade) / 50.0 );
+    }
+
 
     @objid ("d0c4d3f9-db6e-41df-aa3d-a7a2b255c672")
     public double getReussite() {
-        return ( this.getPerso().getDexterite() * this.maniabilite / 10000.0);
+        return ( this.getPerso().getDexterite() * this.maniabilite / 1000.0);
     }
 
     @objid ("7f64b56f-2c28-49f6-9cfc-538506750fbe")
@@ -89,7 +98,34 @@ public class Epee extends Capacite {
 
     @objid ("af31861a-60c2-4f25-89e6-206e15370dd9")
     public void use(Perso p) {
-        super.use(p);
+        if (p==getPerso()){	// parade
+        	
+        	System.out.println(this.getPerso().getNom() + " utilise " + getCapaciteInfoParade());
+        	if (this.getReussite() >= Math.random()){
+        		
+        		getPerso().setParade(getPerso().getParade() + getPuissanceParade());
+        		System.out.println("parade reussite parade = "+ getPerso().getParade());
+        	
+        	}else{
+        		
+        		System.out.println("Capacite rate !");
+        	
+        	}
+        }else{ // attack
+        	
+        	System.out.println(this.getPerso().getNom() + " utilise " + getCapaciteInfo());
+        	
+        	if (this.getReussite() >= Math.random()){
+        		
+        		System.out.println("attaque reussite" );
+        		p.setParade(p.getParade() - getPuissance() );
+        	
+        	}else{
+        		System.out.println("Capacite rate !");
+        	}
+        
+        }
+        
     }
 
 }

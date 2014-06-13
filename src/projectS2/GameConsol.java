@@ -21,8 +21,8 @@ public class GameConsol extends Game {
     @objid ("c994c844-e0ae-4b63-b7a6-0e3a48d3be6c")
     @Override
     public int chooseCapacity(Perso p1) {
-        System.out.println(p1.getInfoCapacite());
-        System.out.println("nombre de capacite = " + p1.getCapaciteNb());
+        System.out.println(p1.getInfoCapaciteSimple());
+        //System.out.println("nombre de capacite = " + p1.getCapaciteNb());
         while (true){
             System.out.println("choisir un capacite:");
             int nb = scan.nextInt();
@@ -254,5 +254,20 @@ public class GameConsol extends Game {
             }
         }
     }
+
+	@Override
+	public Perso chooseCible(Perso p1, Perso p2) {
+		while(true){
+			System.out.println("Choisir cible: 1=moi, 2=adversaire");
+			switch (scan.nextInt()) {
+			case 1:
+				return p1;
+			case 2:
+				return p2;
+			default:
+				break;
+			}
+		}
+	}
 
 }

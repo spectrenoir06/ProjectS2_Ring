@@ -21,7 +21,7 @@ public abstract class Perso {
     protected int concentration;
 
     @objid ("9d751fe2-8c51-4dfe-8851-8d31f299d1df")
-    protected int vitalite;
+    protected double vitalite;
 
     @objid ("329392df-1f31-4fb1-b763-abc628eccebd")
     protected int experience;
@@ -29,6 +29,18 @@ public abstract class Perso {
     @objid ("5172a4ed-002a-4132-8afd-0e675031d82d")
     private ArrayList<Capacite> capacite = new ArrayList<Capacite> ();
 
+    private int maxVitalite;
+    
+    private double parade;
+    
+    public double getParade(){
+    	return this.parade;
+    }
+    
+    public void setParade(double p){
+    	this.parade=p;
+    }
+    
     @objid ("21dc0070-6226-4621-b73e-79bfd1170da0")
     public Perso(String nom, int force, int dexterite, int intelligence, int concentration) throws PersoException {
         this.experience = 1;
@@ -126,6 +138,16 @@ public abstract class Perso {
         }
         return s;
     }
+    
+    public String getInfoCapaciteSimple() {
+        String s = "Capacite de " + this.nom + ":\n\n";
+        int i = 0;
+        for (Capacite c : this.capacite){
+            s = s + i + " : " + c.getCapaciteInfo() + "\n";
+            i++;
+        }
+        return s;
+    }
 
     @objid ("73c8dede-8a0e-413d-b4ca-90708d3ec4e2")
     int getIntelligence() {
@@ -138,18 +160,18 @@ public abstract class Perso {
     }
 
     @objid ("d11148a2-6303-42ca-880a-9a129193a0ca")
-    int getVitalite() {
+    public double getVitalite() {
         return this.vitalite;
     }
-
-    @objid ("051d6133-974d-4856-80b4-b6adef097425")
-    public void initVitalite() {
-        this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
+    
+    int getMaxVitalite() {
+        return this.maxVitalite;
     }
 
     @objid ("88c20f55-3b02-4c64-9589-8e21783cb538")
     public void resetVitalite() {
-        this.vitalite = 200 - (this.force + this.dexterite + this.intelligence + this.concentration) + this.experience * 3;
+        this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
+        this.maxVitalite = (int) vitalite;
     }
 
     @objid ("c29cc229-c92d-4050-8b17-e140a2779e16")
@@ -184,8 +206,8 @@ public abstract class Perso {
     }
 
     @objid ("c93f2607-f887-4548-b69d-19e43927a41d")
-    void setVitalite(int value) {
-        this.vitalite = value;
+    void setVitalite(double d) {
+        this.vitalite = d;
     }
 
     @objid ("9c2eb4b2-57ff-4e1e-941a-fa5f6c738f22")

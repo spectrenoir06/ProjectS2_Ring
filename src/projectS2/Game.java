@@ -33,6 +33,8 @@ public abstract class Game {
         if (this.perso1 != null && this.perso2 != null){
             perso1.resetVitalite();
             perso2.resetVitalite();
+            perso1.setParade(0);
+            perso2.setParade(0);
             System.out.println("Duel:\t" + perso1.getNom() + "\tVS\t" + perso2.getNom());
             System.out.println("\t" + perso1.getVitalite() + "\t\t" + perso2.getVitalite());
             
@@ -52,12 +54,17 @@ public abstract class Game {
                     perso1 = perso2;
                     perso2 = tmp;
                 }
-            }
+            }					// combat
             while(true){
-                tour(getPerso1(), getPerso2());
-                Perso tmp = perso1;
-                perso1 = perso2;
-                perso2 = tmp;
+                if (tour(getPerso1(), getPerso2())){ // si tour fini
+                	Perso tmp = perso1;				 // echange des joueurs
+                    perso1 = perso2;
+                    perso2 = tmp;
+                }else{ 								// si abandon ou plus de vie
+                	System.out.println(getPerso1().getNom() + " a perdu");
+                	System.out.println(getPerso2().getNom() + " a gagner");
+                	return;
+                }
             }
         }else{
             System.out.println("perso1 ou perso2 n'existe pas");
@@ -187,21 +194,47 @@ public abstract class Game {
     }
 
     @objid ("16639ec1-98ac-4116-98f9-7b1565f8acb0")
-    public boolean tour(Perso p1, Perso p2) {
-        int cap1 = chooseCapacity(p1);
-        System.out.println("cap1 = "+ cap1);
+    public boolean tour(Perso p1, Perso p2) {				// return false si abandon
+    	if (p1.getVitalite()<=0){
+    		System.out.println(p1.getNom() + " est mort");
+    		return false;
+    	}
+    	System.out.println("\nTour de "+ p1.getNom());
+        p1.setParade(0);
+    	int cap1 = chooseCapacity(p1);
         int cap2;
+        Perso cible1,cible2;
         if (cap1 != -1 ){
-            cap2 = chooseCapacity(p1);
-            if (cap2 == -1){
+        	if (p1.getCapacite(cap1) instanceof Epee){
+        		cible1 = chooseCible(p1,p2);
+        	}else{
+        		cible1 = p2;
+        	}
+            
+            cap2 = chooseCapacity(p1);						// choisir cible si epee
+            if (cap2 == -1){								// si abandon
                 return false;
             }
+            if (p1.getCapacite(cap2) instanceof Epee){ 		// choisir cible si epee
+        		cible2 = chooseCible(p1,p2);
+        	}else{
+        		cible2 = p2;								
+        	}
         }else{
-            return false;
+            return false;									// si abandon
         }
-        p1.use(cap1, p2);
-        p1.use(cap2, p2);
+        p1.use(cap1, cible1);								// utilise capacite1
+        p1.use(cap2, cible2);								// utilise capacite2
+        if (p2.getParade() < 0 ){							// si parade < 0 ( degat superieur a la parade )
+        	p2.setVitalite(p2.getVitalite() + p2.getParade());
+        	System.out.println(p1.getNom() + " fait " + p2.getParade() + " sur " + p2.getNom() + " il lui reste " + p2.getVitalite() + " HP" ); 
+        	
+        }else{
+        	System.out.println(p2.getNom() + " ne prend pas de degat");
+        }
         return true;
     }
+    
+    public abstract Perso chooseCible(Perso p1,Perso p2);
 
 }
