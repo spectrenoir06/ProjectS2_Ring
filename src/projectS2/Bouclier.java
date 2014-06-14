@@ -25,6 +25,12 @@ public class Bouclier extends Capacite {
     @Override
     public void use(Perso p) {
         super.use(p);
+        if (this.getReussite() >= Math.random()){
+            getPerso().setParade(getPerso().getParade() + getPuissance());
+            System.out.println("parade reussite parade = "+ getPerso().getParade());
+        }else{
+            System.out.println("Capacite rate !");
+        }
     }
 
     @objid ("c3145c17-3708-4879-8965-4e0934f2e1b3")

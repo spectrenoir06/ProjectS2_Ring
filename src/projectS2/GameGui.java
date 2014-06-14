@@ -15,7 +15,7 @@ import projectS2.PlusMoins;
 
 @objid ("255002b0-52b8-471d-acf1-7cc67c684a9b")
 @SuppressWarnings("unused")
-public class GameGui extends Game {
+public class GameGui extends JFrame {
     @objid ("a88c6f74-57f8-42cd-868b-663c403b47a6")
     private static final long serialVersionUID = 1L;
 

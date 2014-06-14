@@ -45,6 +45,16 @@ public class Remede extends Capacite {
     @Override
     public void use(Perso p) {
         super.use(p);
+        if (this.getReussite() >= Math.random()){
+        	if ((getPerso().getVitalite() + getPuissance()) < getPerso().getMaxVitalite()){
+        		getPerso().setVitalite(getPerso().getVitalite() + getPuissance());
+        	}else{
+        		getPerso().setVitalite(getPerso().getMaxVitalite());
+        	}
+            System.out.println("soin reussi vitalite de " + this.getPerso().getNom() + " = " + this.getPerso().getVitalite());
+        }else{
+            System.out.println("Capacite rate !");
+        }
     }
 
     @objid ("3d8eeb68-8e48-4e19-b2bc-1c09ca8d3771")
