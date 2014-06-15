@@ -33,7 +33,6 @@ public class SortilegeOffensif extends Capacite {
         }else{
             System.out.println("Capacite rate !");
         }
-    
     }
 
     @objid ("f95d7c3e-2791-401e-bb25-1f627b307000")

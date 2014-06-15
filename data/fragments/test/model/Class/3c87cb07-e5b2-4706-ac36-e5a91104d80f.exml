@@ -802,7 +802,8 @@ finally
             
         }else{
             System.out.println(p2.getNom() + " ne prend pas de degat");
-        }]]></ATT>
+        }
+]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -1132,7 +1133,7 @@ finally
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="daf4c5d5-c311-4edc-be07-4d97d6613201"/>
+                <ID name="" mc="TaggedValue" uid="3c59e970-38f9-4903-b010-56cc4faa9fcf"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -1211,7 +1212,7 @@ finally
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="08b00457-b1d6-4b99-b2c3-89eb75d5365b"/>
+                <ID name="" mc="TaggedValue" uid="d6736bea-9f13-45d7-aba4-8579e130c611"/>
                 <PID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

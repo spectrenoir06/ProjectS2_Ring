@@ -9,6 +9,8 @@
     <COMPID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
     <COMPID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
     <COMPID name="JProgressBar" mc="Class" uid="3743bcde-e2aa-4030-9e82-68a64d13ed32"/>
+    <COMPID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
+    <COMPID name="JScrollPane" mc="Class" uid="237fa301-eb00-41c7-af7e-bba8ddd773dd"/>
     <COMPID name="JSpinner" mc="Class" uid="627ec4a8-caa6-4180-abdf-04e0cda8c8e1"/>
     <COMPID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
     <COMPID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
@@ -41,6 +43,8 @@
         <COMPID name="SwingConstants" mc="Interface" uid="2e559144-23fc-48d5-8b03-26df8b93bab6"/>
         <COMPID name="JProgressBar" mc="Class" uid="3743bcde-e2aa-4030-9e82-68a64d13ed32"/>
         <COMPID name="ImageIcon" mc="Class" uid="96d7810e-fe86-4e31-95fa-30ab8b0589cd"/>
+        <COMPID name="JScrollPane" mc="Class" uid="237fa301-eb00-41c7-af7e-bba8ddd773dd"/>
+        <COMPID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

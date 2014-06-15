@@ -194,7 +194,16 @@ if (( facilite>=20) && (efficacite>=20)&& ((facilite+efficacite)==100)) {
                 <ID name="" mc="Note" uid="f45df682-4e14-4142-a5a5-6a294fc9ec8e"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[super.use(p);]]></ATT>
+                  <ATT name="Content"><![CDATA[super.use(p);    
+if (this.getReussite() >= Math.random()){
+    
+    System.out.println("attaque reussite" );
+    p.setParade(p.getParade() - getPuissance() );
+
+}else{
+    System.out.println("Capacite rate !");
+}
+]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -581,7 +590,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
                 <ID name="" mc="Note" uid="bbbe4552-c77b-40fd-a96c-fb4a65cf8be3"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );]]></ATT>
+                  <ATT name="Content"><![CDATA[return ( (this.getPerso().getConcentration() * this.facilite) / 1000.0 );]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
@@ -834,7 +843,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="f2d1e146-9b9d-47a8-babf-972e8a9fa267"/>
+                <ID name="" mc="TaggedValue" uid="d70bd97a-00b7-4806-9473-3ad37d7b5e42"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -874,7 +883,7 @@ s = s + "\t| efficacite\t=\t" + this.efficacite + "\t|";
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="a2013f65-ee13-4f3f-8ee6-94b6021a4507"/>
+                <ID name="" mc="TaggedValue" uid="e6da6919-512d-47fb-89aa-1ad5ed49c5ad"/>
                 <PID name="SortilegeOffensif" mc="Class" uid="41eafe41-1d9a-4f32-94c0-6bd897c7f407"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

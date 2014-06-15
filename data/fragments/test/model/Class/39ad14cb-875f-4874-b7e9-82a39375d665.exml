@@ -1,23 +1,30 @@
 <?xml version="1.0" ?>
-<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="jCapacite" version="3">
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="CreePersoGui" version="3">
   <DEPS>
-    <ID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+    <ID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+    <EXTID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+    <EXTID name="EmptyBorder" mc="Class" uid="e0a59820-8f04-44c8-80e1-f9380be8abcd"/>
+    <EXTID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
+    <EXTID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
     <EXTID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+    <EXTID name="ImageIcon" mc="Class" uid="96d7810e-fe86-4e31-95fa-30ab8b0589cd"/>
+    <EXTID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
+    <EXTID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
     <EXTID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
-    <EXTID name="JSpinner" mc="Class" uid="627ec4a8-caa6-4180-abdf-04e0cda8c8e1"/>
-    <EXTID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
-    <EXTID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
-    <EXTID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
+    <EXTID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
+    <EXTID name="JScrollPane" mc="Class" uid="237fa301-eb00-41c7-af7e-bba8ddd773dd"/>
+    <EXTID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
+    <EXTID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
     <FOREIGNID name="JavaClass" mc="Stereotype" uid="01ec23a8-0000-0258-0000-000000000000"/>
     <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
-    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
     <FOREIGNID name="JavaNoInitValue" mc="TagType" uid="00d007fc-0003-bf52-0000-000000000000"/>
+    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
     <FOREIGNID name="create" mc="Stereotype" uid="00700680-0000-0204-0000-000000000000"/>
-    <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+    <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
   </DEPS>
   <OBJECT>
-    <ID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+    <ID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
     <PID name="projectS2" mc="Package" uid="a9ab3c33-4ca5-4094-9a77-b52a83984728"/>
     <ATTRIBUTES>
       <ATT name="IsActive">false</ATT>
@@ -27,33 +34,33 @@
       <ATT name="IsLeaf">false</ATT>
       <ATT name="IsRoot">false</ATT>
       <ATT name="Visibility">Public</ATT>
-      <ATT name="Name"><![CDATA[jCapacite]]></ATT>
+      <ATT name="Name"><![CDATA[CreePersoGui]]></ATT>
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
       <COMP relation="OwnedOperation">
         <OBJECT>
-          <ID name="jCapacite" mc="Operation" uid="4377df64-6a9a-4601-b8d3-6e345de778c7"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="main" mc="Operation" uid="d42a3305-94bd-42ef-a040-e0f52bff4dc5"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Concurrency">false</ATT>
             <ATT name="Final">false</ATT>
             <ATT name="Passing">MethodOut</ATT>
             <ATT name="Visibility">Public</ATT>
-            <ATT name="IsClass">false</ATT>
+            <ATT name="IsClass">true</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[jCapacite]]></ATT>
+            <ATT name="Name"><![CDATA[main]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <COMP relation="IO">
               <OBJECT>
-                <ID name="title" mc="Parameter" uid="65a77682-f712-4fa9-947a-100ce11fbcb8"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="args" mc="Parameter" uid="9ee3453d-3334-4dcd-8815-1b977eb9e717"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="ParameterPassing">In</ATT>
-                  <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-                  <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
+                  <ATT name="MultiplicityMin"><![CDATA[0]]></ATT>
+                  <ATT name="MultiplicityMax"><![CDATA[*]]></ATT>
                   <ATT name="TypeConstraint"></ATT>
                   <ATT name="DefaultValue"></ATT>
                   <ATT name="IsOrdered">false</ATT>
@@ -61,12 +68,109 @@
                   <ATT name="IsException">false</ATT>
                   <ATT name="IsStream">false</ATT>
                   <ATT name="Effect">ReadEffect</ATT>
-                  <ATT name="Name"><![CDATA[title]]></ATT>
+                  <ATT name="Name"><![CDATA[args]]></ATT>
                   <ATT name="status">1970354901745664</ATT>
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <LINK relation="Type">
                     <FOREIGNID name="string" mc="DataType" uid="00000004-0000-000d-0000-000000000000"/>
+                  </LINK>
+                  <COMP relation="Tag">
+                    <OBJECT>
+                      <ID name="" mc="TaggedValue" uid="23ec6ed8-d43d-41ad-9710-a8323c4dccb9"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                      <ATTRIBUTES>
+                        <ATT name="Name"></ATT>
+                        <ATT name="status">1970354901745664</ATT>
+                      </ATTRIBUTES>
+                      <DEPENDENCIES>
+                        <COMP relation="Actual">
+                          <OBJECT>
+                            <ID name="" mc="TagParameter" uid="742d1785-f461-4888-9b37-53b5d4ade1ac"/>
+                            <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                            <ATTRIBUTES>
+                              <ATT name="Value"><![CDATA[Array]]></ATT>
+                              <ATT name="status">1970354901745664</ATT>
+                            </ATTRIBUTES>
+                            <DEPENDENCIES></DEPENDENCIES>
+                          </OBJECT>
+                        </COMP>
+                        <LINK relation="Definition">
+                          <FOREIGNID name="type" mc="TagType" uid="00000000-0000-3767-0000-000000000000"/>
+                        </LINK>
+                      </DEPENDENCIES>
+                    </OBJECT>
+                  </COMP>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+            <COMP relation="Descriptor">
+              <OBJECT>
+                <ID name="" mc="Note" uid="b965728e-d09d-4af8-a2dc-e137f40a684c"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[Launch the application.]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="d168ca68-4820-427b-a1e4-a10d3fb0e109"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[EventQueue.invokeLater(new Runnable() {
+    public void run() {
+        try {
+            CreePersoGui frame = new CreePersoGui();
+            frame.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+});
+]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="JavaCode" mc="NoteType" uid="003800a8-0000-018e-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+            </COMP>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="CreePersoGui" mc="Operation" uid="6a8d35b9-4011-467c-bccf-382189ed8ee2"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Concurrency">false</ATT>
+            <ATT name="Final">false</ATT>
+            <ATT name="Passing">MethodOut</ATT>
+            <ATT name="Visibility">Public</ATT>
+            <ATT name="IsClass">false</ATT>
+            <ATT name="IsAbstract">false</ATT>
+            <ATT name="Name"><![CDATA[CreePersoGui]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <COMP relation="Thrown">
+              <OBJECT>
+                <ID name="" mc="RaisedException" uid="92797eb9-b255-484d-916f-e4183a6ef464"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                <ATTRIBUTES>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="ThrownType">
+                    <ID name="Exception" mc="Class" uid="769ffac4-76d0-44d5-829c-126713b782a9"/>
                   </LINK>
                 </DEPENDENCIES>
               </OBJECT>
@@ -76,37 +180,90 @@
             </LINK>
             <COMP relation="Descriptor">
               <OBJECT>
-                <ID name="" mc="Note" uid="c36b1988-9006-4a9c-9a25-41a1b26f68ab"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="Note" uid="c0668f10-dc3b-4e74-9306-d16365e00565"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
-                  <ATT name="Content"><![CDATA[super();
-this.setBorder(new TitledBorder(null, title, TitledBorder.CENTER, TitledBorder.BELOW_TOP, null, null));
-this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+                  <ATT name="Content"><![CDATA[Create the frame.
+@throws Exception]]></ATT>
+                  <ATT name="Name"></ATT>
+                  <ATT name="status">1970354901745664</ATT>
+                </ATTRIBUTES>
+                <DEPENDENCIES>
+                  <LINK relation="Model">
+                    <FOREIGNID name="Javadoc" mc="NoteType" uid="003800a8-0000-015f-0000-000000000000"/>
+                  </LINK>
+                </DEPENDENCIES>
+              </OBJECT>
+              <OBJECT>
+                <ID name="" mc="Note" uid="f650c177-35bd-4389-aae2-249c3b3684de"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+                <ATTRIBUTES>
+                  <ATT name="Content"><![CDATA[setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setBounds(100, 100, 559, 470);
+contentPane = new JPanel();
+contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+contentPane.setLayout(new BorderLayout(0, 0));
+setContentPane(contentPane);
 
-//this.spinner.setModel(new SpinnerListModel(new String[] {"Eppe", "Bouclier", " ... "}));
+JPanel panel = new JPanel();
+contentPane.add(panel, BorderLayout.WEST);
+panel.setLayout(new BorderLayout(0, 0));
 
-caraPanel = new JPanel();
+JPanel Classe = new JPanel();
+panel.add(Classe, BorderLayout.CENTER);
+Classe.setBorder(new TitledBorder(null, "Classe", TitledBorder.CENTER, TitledBorder.TOP, null, null));
+Classe.setLayout(new GridLayout(0, 1, 0, 0));
 
-try {
-    cara1 = new PlusMoins("Impact", 20, 50, 20);
-    cara2 = new PlusMoins("Parade", 20, 50, 20);
-    cara3 = new PlusMoins("Impact", 20, 50, 20);
-} catch (Exception e) {
-    e.printStackTrace();
-}
-caraPanel.setLayout(new GridLayout(0, 4, 0, 0));
+radioButton = new JRadioButton("Guerrier");
+radioButton.setSelected(true);
+Classe.add(radioButton);
 
-spinner = new JSpinner();
-spinner.setModel(new SpinnerListModel(new String[] {"Epee", "Bouclier", "Remede", "SortDefensif", "..."}));
+radioButton_1 = new JRadioButton("Mage");
+Classe.add(radioButton_1);
 
+radioButton_2 = new JRadioButton("Athlete");
+Classe.add(radioButton_2);
 
-caraPanel.add(spinner);
+txtName = new JTextField();
+txtName.setText("Name");
+panel.add(txtName, BorderLayout.NORTH);
+txtName.setColumns(10);
 
-caraPanel.add(cara1);
-caraPanel.add(cara2);
-caraPanel.add(cara3);
+JPanel panel_1 = new JPanel();
+contentPane.add(panel_1, BorderLayout.EAST);
+panel_1.setLayout(new GridLayout(0, 1, 0, 0));
 
-this.add(caraPanel);
+PlusMoins plusMoins = new PlusMoins("Force", 0, 10, 0);
+panel_1.add(plusMoins);
+
+PlusMoins plusMoins_1 = new PlusMoins("Dexterite", 0, 10, 0);
+panel_1.add(plusMoins_1);
+
+PlusMoins plusMoins_2 = new PlusMoins("intelligence", 0, 10, 0);
+panel_1.add(plusMoins_2);
+
+PlusMoins plusMoins_3 = new PlusMoins("concentration", 0, 10, 0);
+panel_1.add(plusMoins_3);
+
+JScrollPane scrollPane = new JScrollPane();
+contentPane.add(scrollPane, BorderLayout.SOUTH);
+
+JPanel panel_2 = new JPanel();
+scrollPane.setViewportView(panel_2);
+panel_2.setLayout(new GridLayout(0, 1, 0, 0));
+
+jCapacite jCapacite__2 = new jCapacite((String) null);
+panel_2.add(jCapacite__2);
+
+jCapacite jCapacite__1 = new jCapacite((String) null);
+panel_2.add(jCapacite__1);
+
+jCapacite jCapacite_ = new jCapacite((String) null);
+panel_2.add(jCapacite_);
+
+JLabel Img = new JLabel("");
+contentPane.add(Img, BorderLayout.CENTER);
+Img.setIcon(new ImageIcon("src/guerrierR.png"));
 ]]></ATT>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -121,52 +278,10 @@ this.add(caraPanel);
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
-      <COMP relation="OwnedAttribute">
-        <OBJECT>
-          <ID name="serialVersionUID" mc="Attribute" uid="9484930d-a83f-4eaa-a78e-15568776b2ec"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
-          <ATTRIBUTES>
-            <ATT name="TypeConstraint"></ATT>
-            <ATT name="Value"><![CDATA[1L]]></ATT>
-            <ATT name="TargetIsClass">false</ATT>
-            <ATT name="Changeable">AccesNone</ATT>
-            <ATT name="IsDerived">false</ATT>
-            <ATT name="IsOrdered">false</ATT>
-            <ATT name="IsUnique">false</ATT>
-            <ATT name="MultiplicityMin"><![CDATA[1]]></ATT>
-            <ATT name="MultiplicityMax"><![CDATA[1]]></ATT>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="IsClass">true</ATT>
-            <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[serialVersionUID]]></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="Type">
-              <FOREIGNID name="long" mc="DataType" uid="00000004-0000-0011-0000-000000000000"/>
-            </LINK>
-            <COMP relation="Tag">
-              <OBJECT>
-                <ID name="" mc="TaggedValue" uid="5b40f817-6749-4a69-b600-b28d833d3268"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
-                <ATTRIBUTES>
-                  <ATT name="Name"></ATT>
-                  <ATT name="status">1970354901745664</ATT>
-                </ATTRIBUTES>
-                <DEPENDENCIES>
-                  <LINK relation="Definition">
-                    <FOREIGNID name="JavaFinal" mc="TagType" uid="003800a8-0000-0161-0000-000000000000"/>
-                  </LINK>
-                </DEPENDENCIES>
-              </OBJECT>
-            </COMP>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
       <COMP relation="OwnedEnd">
         <OBJECT>
-          <ID name="caraPanel" mc="AssociationEnd" uid="d2269df9-1a03-439f-aabe-21dcaaf6cbff"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="contentPane" mc="AssociationEnd" uid="3c03245b-b488-48ba-9af7-33a6fdde4f8b"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -179,7 +294,7 @@ this.add(caraPanel);
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[caraPanel]]></ATT>
+            <ATT name="Name"><![CDATA[contentPane]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
@@ -188,8 +303,8 @@ this.add(caraPanel);
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="4911a203-3226-4744-ac5e-c2513db1569d"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="AssociationEnd" uid="c15378da-e02f-4bed-baf3-8ac22785ae3a"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -207,12 +322,12 @@ this.add(caraPanel);
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="caraPanel" mc="AssociationEnd" uid="d2269df9-1a03-439f-aabe-21dcaaf6cbff"/>
+                    <COMPID name="contentPane" mc="AssociationEnd" uid="3c03245b-b488-48ba-9af7-33a6fdde4f8b"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="26d1e323-35ba-47f7-8f33-c0462aaa9422"/>
-                      <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                      <ID name="" mc="Association" uid="cd6f050c-08a4-4fba-9216-f42c471bc2e2"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -224,12 +339,12 @@ this.add(caraPanel);
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="26d1e323-35ba-47f7-8f33-c0462aaa9422"/>
+              <COMPID name="" mc="Association" uid="cd6f050c-08a4-4fba-9216-f42c471bc2e2"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="7eb5ebf1-954c-46c5-8e21-b951a8bfe265"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="TaggedValue" uid="31e7379c-ed15-4b3c-b3d0-30eccf27a4fe"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -244,8 +359,8 @@ this.add(caraPanel);
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="cara1" mc="AssociationEnd" uid="163fd0f4-112b-4bd8-bace-cfff4cbfa816"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="txtName" mc="AssociationEnd" uid="41b2ca15-6df8-49f4-b9ae-c80943599fc9"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -258,17 +373,17 @@ this.add(caraPanel);
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[cara1]]></ATT>
+            <ATT name="Name"><![CDATA[txtName]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
+              <ID name="JTextField" mc="Class" uid="662ab19c-6e75-4de4-a3c9-a7e5b0877255"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="d848404a-fddc-407a-89da-1953a2af808a"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="AssociationEnd" uid="ab9b82c8-0d57-4c0a-9f17-03236582980f"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -286,12 +401,12 @@ this.add(caraPanel);
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="cara1" mc="AssociationEnd" uid="163fd0f4-112b-4bd8-bace-cfff4cbfa816"/>
+                    <COMPID name="txtName" mc="AssociationEnd" uid="41b2ca15-6df8-49f4-b9ae-c80943599fc9"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="de152bde-2047-46ae-9b4e-178e26dfe8e4"/>
-                      <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                      <ID name="" mc="Association" uid="dd34f586-697d-4a79-8d49-49f98f1aed16"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -303,12 +418,12 @@ this.add(caraPanel);
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="de152bde-2047-46ae-9b4e-178e26dfe8e4"/>
+              <COMPID name="" mc="Association" uid="dd34f586-697d-4a79-8d49-49f98f1aed16"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="14e6dddb-eb05-4ff0-8227-27a8f8d2d1b4"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="TaggedValue" uid="bc063418-dbd3-4810-a304-e929c8acf75a"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -323,8 +438,8 @@ this.add(caraPanel);
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="cara2" mc="AssociationEnd" uid="4cca9bcf-f819-4a75-899d-e5d9c9868526"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="radioButton" mc="AssociationEnd" uid="50acc27e-801c-4eb6-bcbc-1d2984550ee6"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -337,17 +452,17 @@ this.add(caraPanel);
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[cara2]]></ATT>
+            <ATT name="Name"><![CDATA[radioButton]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
+              <ID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="e6186217-d526-448b-b847-4ba08c6dd775"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="AssociationEnd" uid="392ec086-14e0-4f87-9dee-24a31489c0d1"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -365,12 +480,12 @@ this.add(caraPanel);
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="cara2" mc="AssociationEnd" uid="4cca9bcf-f819-4a75-899d-e5d9c9868526"/>
+                    <COMPID name="radioButton" mc="AssociationEnd" uid="50acc27e-801c-4eb6-bcbc-1d2984550ee6"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="5df6fbab-2ffc-42e1-a643-7c918faecbe9"/>
-                      <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                      <ID name="" mc="Association" uid="a9a611c4-e49c-409c-8b7a-1731b1af2578"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -382,12 +497,12 @@ this.add(caraPanel);
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="5df6fbab-2ffc-42e1-a643-7c918faecbe9"/>
+              <COMPID name="" mc="Association" uid="a9a611c4-e49c-409c-8b7a-1731b1af2578"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="c0797333-4467-429d-a1e4-b57638ab7640"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="TaggedValue" uid="3be31909-6342-43e8-8a92-ea548f6781e6"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -402,8 +517,8 @@ this.add(caraPanel);
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="cara3" mc="AssociationEnd" uid="3d0bf266-3884-4514-ad80-e88ddaedd9b7"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="radioButton_1" mc="AssociationEnd" uid="d49beef2-9d6e-4f7c-8963-ccd55e223ca9"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -416,17 +531,17 @@ this.add(caraPanel);
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[cara3]]></ATT>
+            <ATT name="Name"><![CDATA[radioButton_1]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="PlusMoins" mc="Class" uid="1b36eaa9-c1e8-42da-b90e-2c817c837b62"/>
+              <ID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="0833d51a-1fc4-458a-a76b-85a1b78bd595"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="AssociationEnd" uid="89f95cb6-4add-49b0-ab63-29120327c4ea"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -444,12 +559,12 @@ this.add(caraPanel);
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="cara3" mc="AssociationEnd" uid="3d0bf266-3884-4514-ad80-e88ddaedd9b7"/>
+                    <COMPID name="radioButton_1" mc="AssociationEnd" uid="d49beef2-9d6e-4f7c-8963-ccd55e223ca9"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="0fc8b451-133f-4f9a-a335-86935dddf1ee"/>
-                      <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                      <ID name="" mc="Association" uid="7282e0af-fc8c-4db2-ba29-5f292ddcdc95"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -461,12 +576,12 @@ this.add(caraPanel);
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="0fc8b451-133f-4f9a-a335-86935dddf1ee"/>
+              <COMPID name="" mc="Association" uid="7282e0af-fc8c-4db2-ba29-5f292ddcdc95"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="79bb4826-6667-4ec5-b24b-42b62e27467e"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="TaggedValue" uid="b3943370-0886-4f3e-8e4a-e9679476a37c"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -481,8 +596,8 @@ this.add(caraPanel);
           </DEPENDENCIES>
         </OBJECT>
         <OBJECT>
-          <ID name="spinner" mc="AssociationEnd" uid="fbe700dc-5876-4648-a64b-d931c5a891e3"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="radioButton_2" mc="AssociationEnd" uid="a76bfc6c-d036-4fac-975f-591b313875e9"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Aggregation">KindIsAssociation</ATT>
             <ATT name="IsChangeable">true</ATT>
@@ -495,17 +610,17 @@ this.add(caraPanel);
             <ATT name="Visibility">Private</ATT>
             <ATT name="IsClass">false</ATT>
             <ATT name="IsAbstract">false</ATT>
-            <ATT name="Name"><![CDATA[spinner]]></ATT>
+            <ATT name="Name"><![CDATA[radioButton_2]]></ATT>
             <ATT name="status">1970354901745664</ATT>
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="Target">
-              <ID name="JSpinner" mc="Class" uid="627ec4a8-caa6-4180-abdf-04e0cda8c8e1"/>
+              <ID name="JRadioButton" mc="Class" uid="1cc84f1a-b26f-45f2-97e1-876eca058654"/>
             </LINK>
             <COMP relation="Opposite">
               <OBJECT>
-                <ID name="" mc="AssociationEnd" uid="049dd2ed-7e43-43f1-a77d-5fea2057d7f9"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="AssociationEnd" uid="6c82aa04-6795-4e00-b62b-77a920ddeb6d"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Aggregation">KindIsAssociation</ATT>
                   <ATT name="IsChangeable">true</ATT>
@@ -523,12 +638,12 @@ this.add(caraPanel);
                 </ATTRIBUTES>
                 <DEPENDENCIES>
                   <COMP relation="Opposite">
-                    <COMPID name="spinner" mc="AssociationEnd" uid="fbe700dc-5876-4648-a64b-d931c5a891e3"/>
+                    <COMPID name="radioButton_2" mc="AssociationEnd" uid="a76bfc6c-d036-4fac-975f-591b313875e9"/>
                   </COMP>
                   <COMP relation="Association">
                     <OBJECT>
-                      <ID name="" mc="Association" uid="d36989c6-32d1-48d9-9fa4-8a8301b20966"/>
-                      <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                      <ID name="" mc="Association" uid="c137b5ab-9bd3-4e47-a4ca-2f0d78e6f82d"/>
+                      <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                       <ATTRIBUTES>
                         <ATT name="Name"></ATT>
                         <ATT name="status">1970354901745664</ATT>
@@ -540,12 +655,12 @@ this.add(caraPanel);
               </OBJECT>
             </COMP>
             <COMP relation="Association">
-              <COMPID name="" mc="Association" uid="d36989c6-32d1-48d9-9fa4-8a8301b20966"/>
+              <COMPID name="" mc="Association" uid="c137b5ab-9bd3-4e47-a4ca-2f0d78e6f82d"/>
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="48705060-8b51-43fb-8c12-c546b536c3fb"/>
-                <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+                <ID name="" mc="TaggedValue" uid="a1a51161-45c2-49ff-82bd-9887e29eb28c"/>
+                <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
                   <ATT name="status">1970354901745664</ATT>
@@ -562,8 +677,8 @@ this.add(caraPanel);
       </COMP>
       <COMP relation="Parent">
         <OBJECT>
-          <ID name="" mc="Generalization" uid="90e80a7b-62fb-40ce-bc6d-4d7f82f7c025"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="" mc="Generalization" uid="830262e0-7fdd-4372-922f-6804c7e62013"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Discriminator"></ATT>
             <ATT name="Name"></ATT>
@@ -571,45 +686,99 @@ this.add(caraPanel);
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="SuperType">
-              <ID name="JPanel" mc="Class" uid="a4eb0b95-30bc-46a4-a12c-ce3e5ac3934f"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-      </COMP>
-      <COMP relation="OwnedPackageImport">
-        <OBJECT>
-          <ID name="" mc="PackageImport" uid="93501aa5-e0d1-4306-928f-369a804caa27"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedPackage">
-              <ID name="swing" mc="Package" uid="76e23c13-342b-4fa3-b1df-b25c114f02ad"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="PackageImport" uid="455a26b6-e98f-4c14-beb5-57d3f02f91f3"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedPackage">
-              <ID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
       </COMP>
       <COMP relation="OwnedImport">
         <OBJECT>
-          <ID name="" mc="ElementImport" uid="39a918fe-3e87-4204-af73-69f335b85d3c"/>
-          <PID name="jCapacite" mc="Class" uid="f47f236e-7f98-4cf3-b00e-82dd6ce111b9"/>
+          <ID name="" mc="ElementImport" uid="f0610d01-c66b-41e9-8af2-cdd3b540f9d7"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="BorderLayout" mc="Class" uid="7eb8228f-6757-440d-a7df-f72f833fa736"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="dcf5d2b0-c597-4d75-99b4-a4a1490a7104"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="EventQueue" mc="Class" uid="ffe462ef-7a05-4107-a483-b3fd351de45e"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="b47b8572-02be-4bc5-9f84-6f8397adfad3"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="EmptyBorder" mc="Class" uid="e0a59820-8f04-44c8-80e1-f9380be8abcd"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="3b1447f4-20dc-46a1-b87d-b11eba9ad581"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JLabel" mc="Class" uid="df36717f-e075-480e-aa53-9514323d79f5"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="0ff9971b-72da-4bd0-8452-fc1cf0a6ebd4"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="ImageIcon" mc="Class" uid="96d7810e-fe86-4e31-95fa-30ab8b0589cd"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="106fbeb8-f74f-4558-a3e4-28d5b9a49312"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="7a9cc36e-c3c3-4f9d-b311-14bfc4585e21"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
           <ATTRIBUTES>
             <ATT name="Visibility">Private</ATT>
             <ATT name="Name"></ATT>
@@ -618,6 +787,20 @@ this.add(caraPanel);
           <DEPENDENCIES>
             <LINK relation="ImportedElement">
               <ID name="GridLayout" mc="Class" uid="ab497997-6fd4-4c54-ae1e-b06e814d5abf"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+        <OBJECT>
+          <ID name="" mc="ElementImport" uid="1034cf19-4fd6-4f91-937f-ec83ce00b9e0"/>
+          <PID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
+          <ATTRIBUTES>
+            <ATT name="Visibility">Private</ATT>
+            <ATT name="Name"></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="ImportedElement">
+              <ID name="JScrollPane" mc="Class" uid="237fa301-eb00-41c7-af7e-bba8ddd773dd"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>

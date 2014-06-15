@@ -188,7 +188,7 @@ add(progressBar, BorderLayout.SOUTH);
             </LINK>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="3e2f351a-be6b-4e4e-aaf9-32e711c3033f"/>
+                <ID name="" mc="TaggedValue" uid="34990e30-3e4e-4110-b56d-fbb354bbe2bd"/>
                 <PID name="PersoInfo" mc="Class" uid="7906d434-f9b7-43ae-8ded-4a3ce06f24da"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>

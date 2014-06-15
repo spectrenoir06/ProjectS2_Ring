@@ -2,6 +2,7 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="border" version="3">
   <DEPS>
     <ID name="border" mc="Package" uid="3fa5a924-96cd-4522-9915-f87944a9f14f"/>
+    <COMPID name="EmptyBorder" mc="Class" uid="e0a59820-8f04-44c8-80e1-f9380be8abcd"/>
     <COMPID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
     <COMPID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
     <FOREIGNID name="JavaExtern" mc="TagType" uid="003800a8-0000-0197-0000-000000000000"/>
@@ -23,6 +24,7 @@
       <COMP relation="OwnedElement">
         <COMPID name="LineBorder" mc="Class" uid="b7cf0d1e-adc5-411c-aa48-0caae4f51ace"/>
         <COMPID name="TitledBorder" mc="Class" uid="4b7baac4-4195-4861-b1bc-7cc04731c203"/>
+        <COMPID name="EmptyBorder" mc="Class" uid="e0a59820-8f04-44c8-80e1-f9380be8abcd"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

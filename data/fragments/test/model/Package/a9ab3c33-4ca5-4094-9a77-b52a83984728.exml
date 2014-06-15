@@ -6,6 +6,8 @@
     <COMPID name="Bouclier" mc="Class" uid="00ca71f7-3659-487b-88f1-78c4fc3a1a0a"/>
     <COMPID name="Capacite" mc="Class" uid="9eef0ccb-3836-4f77-a84f-aaceed0e472c"/>
     <COMPID name="CapaciteException" mc="Class" uid="c835e468-f6f1-4506-a4ea-d44e1c522ee1"/>
+    <COMPID name="ChoisirCapaciteGui" mc="Class" uid="0283b38b-dfae-43c7-a4ed-ff1bda47fbdb"/>
+    <COMPID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
     <COMPID name="Epee" mc="Class" uid="29c9df37-9007-453f-a034-2219fdec1aa0"/>
     <COMPID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
     <COMPID name="GameConsol" mc="Class" uid="b5d42879-bdfb-452c-acd5-681f01be34fa"/>
@@ -58,6 +60,8 @@
         <COMPID name="Gui" mc="Class" uid="9835af97-355a-478f-867a-24a7d801ef5a"/>
         <COMPID name="CapaciteException" mc="Class" uid="c835e468-f6f1-4506-a4ea-d44e1c522ee1"/>
         <COMPID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
+        <COMPID name="ChoisirCapaciteGui" mc="Class" uid="0283b38b-dfae-43c7-a4ed-ff1bda47fbdb"/>
+        <COMPID name="CreePersoGui" mc="Class" uid="39ad14cb-875f-4874-b7e9-82a39375d665"/>
       </COMP>
       <LINK relation="Extension">
         <FOREIGNID name="JavaPackage" mc="Stereotype" uid="01ec23a8-0000-0126-0000-000000000000"/>

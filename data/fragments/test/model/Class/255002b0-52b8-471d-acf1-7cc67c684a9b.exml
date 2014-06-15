@@ -553,7 +553,7 @@ jCapa.add(capacite4);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="71cdd145-8336-4636-96c2-421cd20708db"/>
+                <ID name="" mc="TaggedValue" uid="45a8328e-8b1c-4ffe-8c15-66a08a5aca4b"/>
                 <PID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -727,7 +727,7 @@ jCapa.add(capacite4);
             </COMP>
             <COMP relation="Tag">
               <OBJECT>
-                <ID name="" mc="TaggedValue" uid="fddbb072-ad14-4fc6-b663-7a66f673b724"/>
+                <ID name="" mc="TaggedValue" uid="cba48969-d1d7-4a55-a882-be1b5d1063a1"/>
                 <PID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
                 <ATTRIBUTES>
                   <ATT name="Name"></ATT>
@@ -745,7 +745,7 @@ jCapa.add(capacite4);
       </COMP>
       <COMP relation="Parent">
         <OBJECT>
-          <ID name="" mc="Generalization" uid="eed30862-99c1-42fd-a332-06701a28e3c8"/>
+          <ID name="" mc="Generalization" uid="6b7e2839-f2e8-4f63-81cf-8756bee2b935"/>
           <PID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
           <ATTRIBUTES>
             <ATT name="Discriminator"></ATT>
@@ -754,7 +754,7 @@ jCapa.add(capacite4);
           </ATTRIBUTES>
           <DEPENDENCIES>
             <LINK relation="SuperType">
-              <ID name="Game" mc="Class" uid="3c87cb07-e5b2-4706-ac36-e5a91104d80f"/>
+              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
@@ -815,20 +815,6 @@ jCapa.add(capacite4);
           <DEPENDENCIES>
             <LINK relation="ImportedElement">
               <ID name="ActionListener" mc="Interface" uid="03899c2a-f398-49e3-9cdc-9bc4b936d00e"/>
-            </LINK>
-          </DEPENDENCIES>
-        </OBJECT>
-        <OBJECT>
-          <ID name="" mc="ElementImport" uid="70e04d68-58f9-4a5f-9808-8eba220f597a"/>
-          <PID name="GameGui" mc="Class" uid="255002b0-52b8-471d-acf1-7cc67c684a9b"/>
-          <ATTRIBUTES>
-            <ATT name="Visibility">Private</ATT>
-            <ATT name="Name"></ATT>
-            <ATT name="status">1970354901745664</ATT>
-          </ATTRIBUTES>
-          <DEPENDENCIES>
-            <LINK relation="ImportedElement">
-              <ID name="JFrame" mc="Class" uid="0d23fb1b-5e48-4454-b499-a465433d20ce"/>
             </LINK>
           </DEPENDENCIES>
         </OBJECT>
