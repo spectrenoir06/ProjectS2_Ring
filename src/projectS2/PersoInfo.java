@@ -2,8 +2,6 @@ package projectS2;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
-import java.awt.GridLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -15,7 +13,11 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("7906d434-f9b7-43ae-8ded-4a3ce06f24da")
 public class PersoInfo extends JPanel {
-    @objid ("059537b5-b5d6-4e48-8ddc-a5eb1cfeb838")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@objid ("059537b5-b5d6-4e48-8ddc-a5eb1cfeb838")
     private int initialpv;
 
     @objid ("ddb77e6f-2fc2-4b5e-b9cb-ce509201e408")

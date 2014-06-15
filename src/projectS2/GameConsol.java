@@ -155,15 +155,17 @@ public class GameConsol extends Game {
         System.out.println("+-----------------------------+");
         System.out.println("| 1  - Cree perso1            |");
         System.out.println("| 2  - Cree perso2            |");
-        System.out.println("| 3  - Add Capacite perso1    |");
-        System.out.println("| 4  - Voir perso1            |");
-        System.out.println("| 5  - Voir perso2            |");
-        System.out.println("| 6  - 1 Use capa1 sur 2      |");
-        System.out.println("| 7  - 1 use capa1 sur lui    |");
-        System.out.println("| 8  - serialise perso1       |");
-        System.out.println("| 9  - combat perso1/perso2   |");
-        System.out.println("| 10 - save perso1 in file    |");
-        System.out.println("| 11 - load perso1 from file  |");
+        System.out.println("|                             |");
+        System.out.println("| 3  - Voir perso1            |");
+        System.out.println("| 4  - Voir perso2            |");
+        System.out.println("|                             |");
+        System.out.println("| 5  - combat perso1/perso2   |");
+        System.out.println("|                             |");
+        System.out.println("| 6 -  save perso1 in file    |");
+        System.out.println("| 7 -  save perso2 in file    |");
+        System.out.println("|                             |");
+        System.out.println("| 8 -  load perso1 from file  |");
+        System.out.println("| 9 -  load perso2 from file  |");
         System.out.println("+-----------------------------+");
         System.out.println("cmd : ");
         try{
@@ -177,39 +179,23 @@ public class GameConsol extends Game {
                 System.out.println(this.getPerso2());
                 break;
             case 3:
-                Capacite c = this.createCapacite();
-                this.getPerso1().addCapacite(c);
-                break;
-            case 4:
                 System.out.println(this.getPerso1());
                 break;
-            case 5:
+            case 4:
                 System.out.println(this.getPerso2());
                 break;
-            case 6:
-                this.getPerso1().use(0, this.getPerso2());                  // epee sur adv
-                this.getPerso1().use(1,this.getPerso2());                // bouclier
-                this.getPerso1().use(2,this.getPerso2());                // sort offensif
-                this.getPerso1().use(3,this.getPerso2());                // remede
-                this.getPerso1().use(4,this.getPerso2());                // sort def
-                this.getPerso1().use(5,this.getPerso2());                // sort gue
-                break;
-            case 7:
-                this.getPerso1().use(0, this.getPerso1());
-                break;
-            case 8:
-                System.out.println(this.getPerso1().serialise());
-                break;
-            case 9:
+            case 5:
                 this.duel();
                 break;
-            case 10:
+            case 6:
                 this.save(this.getPerso1(), "perso1.perso");
                 break;
-            case 11:
+            case 7:
+                this.save(this.getPerso2(), "perso2.perso");
+                break;
+            case 8:
                 try {
                     this.setPerso1(this.load("perso1.perso"));
-                    this.setPerso2(this.load("perso2.perso"));
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
                 } catch (CapaciteException e) {
@@ -217,8 +203,15 @@ public class GameConsol extends Game {
                 }
         
                 break;
-            case 12:
-                tour(getPerso1(), getPerso2());
+            case 9:
+                try {
+                   this.setPerso2(this.load("perso2.perso"));
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                } catch (CapaciteException e) {
+                    e.printStackTrace();
+                }
+        
                 break;
             default:
                 break;
@@ -244,14 +237,18 @@ public class GameConsol extends Game {
         System.out.println(p1.getInfoCapaciteSimple());
         //System.out.println("nombre de capacite = " + p1.getCapaciteNb());
         while (true){
-            System.out.println("choisir un capacite:");
-            int nb = scan.nextInt();
-            if (nb == -1){
-                return -1;
-            }else if((nb>=0) && (nb < p1.getCapaciteNb())){
-                //System.out.println(p1.getCapacite(nb));
-                return nb;
-            }
+        	try{
+	            System.out.println("choisir un capacite:");
+	            int nb = scan.nextInt();
+	            if (nb == -1){
+	                return -1;
+	            }else if((nb>=0) && (nb < p1.getCapaciteNb())){
+	                //System.out.println(p1.getCapacite(nb));
+	                return nb;
+	            }
+        	}catch(InputMismatchException e){
+	    	   System.out.println("Entrer un chiffre");
+	       }
         }
     }
 
@@ -259,15 +256,19 @@ public class GameConsol extends Game {
     @Override
     public Perso chooseCible(Perso p1, Perso p2) {
         while(true){
-            System.out.println("Choisir cible: 1=moi, 2=adversaire");
-            switch (scan.nextInt()) {
-            case 1:
-                return p1;
-            case 2:
-                return p2;
-            default:
-                break;
-            }
+        	try{
+	            System.out.println("Choisir cible: 1=moi, 2=adversaire");
+	            switch (scan.nextInt()) {
+	            case 1:
+	                return p1;
+	            case 2:
+	                return p2;
+	            default:
+	                break;
+	            }
+        	}catch(InputMismatchException e){
+        		System.out.println("Entrer un chiffre");
+        	}
         }
     }
 

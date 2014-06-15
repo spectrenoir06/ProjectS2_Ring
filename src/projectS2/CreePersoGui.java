@@ -16,7 +16,12 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("39ad14cb-875f-4874-b7e9-82a39375d665")
 public class CreePersoGui extends JFrame {
-    @objid ("3c03245b-b488-48ba-9af7-33a6fdde4f8b")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	@objid ("3c03245b-b488-48ba-9af7-33a6fdde4f8b")
     private JPanel contentPane;
 
     @objid ("41b2ca15-6df8-49f4-b9ae-c80943599fc9")

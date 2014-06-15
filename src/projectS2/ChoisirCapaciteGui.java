@@ -9,7 +9,11 @@ import com.modeliosoft.modelio.javadesigner.annotations.objid;
 
 @objid ("0283b38b-dfae-43c7-a4ed-ff1bda47fbdb")
 public class ChoisirCapaciteGui extends JFrame {
-    @objid ("a565cab3-4284-4a87-be69-f76f3dd2bcca")
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@objid ("a565cab3-4284-4a87-be69-f76f3dd2bcca")
     private JPanel contentPane;
 
     @objid ("021a0c14-e65f-446d-a791-0647a906fa1b")

@@ -163,7 +163,7 @@ public abstract class Perso {
 
     @objid ("88c20f55-3b02-4c64-9589-8e21783cb538")
     public void resetVitalite() {
-        this.vitalite = 200 - (this.force+this.dexterite+this.intelligence+this.concentration) + this.experience * 3;
+        this.vitalite = (200 - (this.force+this.dexterite+this.intelligence+this.concentration)) + this.experience * 3;
         this.maxVitalite = (int) vitalite;
     }
 
