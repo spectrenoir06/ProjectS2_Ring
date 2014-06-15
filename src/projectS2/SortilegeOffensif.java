@@ -24,7 +24,16 @@ public class SortilegeOffensif extends Capacite {
     @objid ("7638945c-a33f-4603-87ac-988d6e7c81f7")
     @Override
     public void use(Perso p) {
-        super.use(p);
+        super.use(p);    
+        if (this.getReussite() >= Math.random()){
+            
+            System.out.println("attaque reussite" );
+            p.setParade(p.getParade() - getPuissance() );
+        
+        }else{
+            System.out.println("Capacite rate !");
+        }
+    
     }
 
     @objid ("f95d7c3e-2791-401e-bb25-1f627b307000")
@@ -59,7 +68,7 @@ public class SortilegeOffensif extends Capacite {
     @objid ("2d98bcd8-62ed-48f1-b8bb-f1b60a5e6b4b")
     @Override
     public double getReussite() {
-        return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
+        return ( (this.getPerso().getConcentration() * this.facilite) / 1000.0 );
     }
 
     @objid ("f6f7ca6b-efbc-4584-8261-b31ee5e5dca6")

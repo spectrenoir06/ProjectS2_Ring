@@ -25,6 +25,16 @@ public class SortilegeGuerisseur extends Capacite {
     @Override
     public void use(Perso p) {
         super.use(p);
+        if (this.getReussite() >= Math.random()){
+        	if ((getPerso().getVitalite() + getPuissance()) < getPerso().getMaxVitalite()){
+        		getPerso().setVitalite(getPerso().getVitalite() + getPuissance());
+        	}else{
+        		getPerso().setVitalite(getPerso().getMaxVitalite());
+        	}
+            System.out.println("soin reussi vitalite de " + this.getPerso().getNom() + " = " + this.getPerso().getVitalite());
+        }else{
+            System.out.println("Capacite rate !");
+        }
     }
 
     @objid ("7e698428-7dbc-465e-b9b0-779d33c13a26")
@@ -59,7 +69,7 @@ public class SortilegeGuerisseur extends Capacite {
     @objid ("2f78e301-005e-4b37-8d27-368e2eb73d01")
     @Override
     public double getReussite() {
-        return ( (this.getPerso().getConcentration() * this.facilite) / 10000.0 );
+        return ( (this.getPerso().getConcentration() * this.facilite) / 1000.0 );
     }
 
     @objid ("2d706a2b-4ac0-476e-9e30-1f2d60e40946")
